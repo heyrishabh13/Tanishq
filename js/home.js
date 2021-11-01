@@ -1,6 +1,33 @@
-import {products} from "../data/data.js"
-import {showProducts} from '../scripts/showProducts.js'
+import {navbar} from '../components/navbar.js'
+import {footer} from '../components/footer.js'
 
-let container = document.getElementById('container');
+document.querySelector('nav').innerHTML = navbar();
 
-showProducts(products,container);
+document.querySelector('footer').innerHTML = footer();
+
+var myIndex = 0;
+    carousel();
+    
+    function carousel() {
+      var i;
+      var x = document.getElementsByClassName("mySlides");
+      for (i = 0; i < x.length; i++) {
+        x[i].style.display = "none";  
+      }
+      myIndex++;
+      if (myIndex > x.length) {myIndex = 1}    
+      x[myIndex-1].style.display = "block";  
+      setTimeout(carousel, 2000); // Change image every 2 seconds
+    }
+
+    const buttonRight = document.getElementById('slideRight');
+    const buttonLeft = document.getElementById('slideLeft');
+
+    buttonRight.onclick = function() {
+       document.getElementById('category_img').scrollLeft += 330;
+       document.getElementById('slide_num').textContent = "2 / 2"
+    };
+    buttonLeft.onclick = function() {
+       document.getElementById('category_img').scrollLeft -= 330;
+       document.getElementById('slide_num').textContent = "1 / 2"
+    };
