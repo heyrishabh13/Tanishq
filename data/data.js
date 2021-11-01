@@ -1,79 +1,7 @@
+
+
+
 const products = [
-    {
-        name:"Odessa Pearl Stud Earrings",
-        newPrice:17188,
-        oldPrice:17429,
-        image:"https://staticimg.titan.co.in/Tanishq/Catalog/502217SEDABAPL_1.jpg?impolicy=pqmed&imwidth=640",
-        
-    },
-    {
-        name:"Ageless Ruby Stud Earrings",
-        newPrice:35023,
-        oldPrice:35496,
-        image:"https://staticimg.titan.co.in/Tanishq/Catalog/512318SAXABA18_1.jpg?impolicy=pqmed&imwidth=640",
-    },
-    {
-        name:"Kalika Floral Stud Earrings",
-        newPrice:34557,
-        oldPrice:35078,
-        image:"https://staticimg.titan.co.in/Tanishq/Catalog/512217SCKABA40_1.jpg?impolicy=pqmed&imwidth=640",
-    },
-    {
-        name:"Alina Pearl Stud Earrings",
-        newPrice:23075,
-        oldPrice:23434,
-        image:"https://staticimg.titan.co.in/Tanishq/Catalog/502217SEGABAPL_1.jpg?impolicy=pqmed&imwidth=640",
-    },
-    {
-        name:"Medha Ruby Stud Earrings",
-        newPrice:18181,
-        oldPrice:18466,
-        image:"https://staticimg.titan.co.in/Tanishq/Catalog/503216SBHABA18_1.jpg?impolicy=pqmed&imwidth=640",
-    },
-    {
-        name:"Mrigakshi Traditional Earrings",
-        newPrice:62200,
-        oldPrice:63181,
-        image:"https://staticimg.titan.co.in/Tanishq/Catalog/511183DQEABA40_1.jpg?impolicy=pqmed&imwidth=640",
-    },
-    {
-        name:"Laysa Geometric Stud Earrings",
-        newPrice:25309,
-        oldPrice:25434,
-        image:"https://staticimg.titan.co.in/Tanishq/Catalog/512217SABABA40_1.jpg?impolicy=pqmed&imwidth=640",
-    },
-    {
-        name:"Suhani Floral Stud Earrings",
-        newPrice:32977,
-        oldPrice:33500,
-        image:"https://staticimg.titan.co.in/Tanishq/Catalog/512318SBFABA18_1.jpg?impolicy=pqmed&imwidth=640",
-    },
-    {
-        name:"Admirable Ruby Drop Earrings",
-        newPrice:62407,
-        oldPrice:63400,
-        image:"https://staticimg.titan.co.in/Tanishq/Catalog/512318DBQABA18_1.jpg?impolicy=pqmed&imwidth=640",
-    },
-    {
-        name:"Seerat Ruby Stud Earrings",
-        newPrice:30481,
-        oldPrice:30975,
-        image:"https://staticimg.titan.co.in/Tanishq/Catalog/501095SABABA12_1.jpg?impolicy=pqmed&imwidth=640",
-    },
-    {
-        name:"Janaya Ruby Drop Earrings",
-        newPrice:46998,
-        oldPrice:47764,
-        image:"https://staticimg.titan.co.in/Tanishq/Catalog/512814DQYABA18_1.jpg?impolicy=pqmed&imwidth=640",
-    },
-    {
-        name:"Kauvery Floral Drop Earrings",
-        newPrice:50683,
-        oldPrice:51524,
-        image:"https://staticimg.titan.co.in/Tanishq/Catalog/512814DPFABA18_1.jpg?impolicy=pqmed&imwidth=640",
-    },
-
-
     {
         name: "Shimmering Gold Mangalsutra Pendant",
         newPrice: 14710,
@@ -81,7 +9,8 @@ const products = [
         images :["https://staticimg.titan.co.in/Tanishq/Catalog/511193PAJAAA00_1.jpg?impolicy=pqmed&imwidth=640",],
         purity: "22.00",
         jewelleryType: 'Plain Gold Jewellery',
-        occasion: "Casual Wear"
+        occasion: "Casual Wear",
+        product: "Pendant"
     },
     {
         name: "Traditional 22 Karat Gold Half Moon Pendant",
@@ -91,6 +20,7 @@ const products = [
         purity: "22.00",
         jewelleryType: "Plain Gold Jewellery" ,
         occasion : "Casual Wear",
+        product: "Pendant"
     },
     {
         name: "Captivating Gold Mangalsutra Pendant",
@@ -100,16 +30,17 @@ const products = [
         purity: "22.00",
         jewelleryType: "Plain Gold Jewellery",
         occasion: "Traditional and Ethnic Wear",
+        product: "Pendant"
     },
     {
         name: "Ornate Gold Mangalsutra Pendant",
         newPrice: 54216,
         oldPrice: 54746,
-        imgaes: ["https://staticimg.titan.co.in/Tanishq/Catalog/510161PHAAAA00_1.jpg?impolicy=pqmed&imwidth=640", "https://staticimg.titan.co.in/Tanishq/Catalog/510161PHAAAA00_2.jpg?impolicy=pqmed&imwidth=640"],
+        images: ["https://staticimg.titan.co.in/Tanishq/Catalog/510161PHAAAA00_1.jpg?impolicy=pqmed&imwidth=640", "https://staticimg.titan.co.in/Tanishq/Catalog/510161PHAAAA00_2.jpg?impolicy=pqmed&imwidth=640"],
         purity: "22.00",
         jewelleryType: "Plain Gold Jewellery",
         occasion: "Traditional and Ethnic Wear",
-
+        product: "Pendant"
     },
     {
         name: "Lustrous Royal Gold Mangalsutra Pendant",
@@ -119,6 +50,7 @@ const products = [
         purity: "22.00",
         jewelleryType: "Plain Gold Jewellery",
         occasion: "Traditional and Ethnic Wear",
+        product: "Pendant"
     },
     {
         name: "Enticing Inverted Tulip Gold Pendant",
@@ -128,7 +60,7 @@ const products = [
         purity: "22.00",
         jewelleryType: "Plain Gold Jewellery",
         occasion: "Traditional and Ethnic Wear",
-
+        product: "Pendant"
     },
     {
         name: "Surreal Gold Mangalsutra Pendant",
@@ -138,6 +70,7 @@ const products = [
         purity: "22.00",
         jewelleryType: "Plain Gold Jewellery",
         occasion : "Traditional and Ethnic Wear",
+        product: "Pendant"
     },
     {
         name: "18 Karat Pearl Pendant",
@@ -147,6 +80,7 @@ const products = [
         purity: "18.00",
         jewelleryType: "Studs",
         occasion: "Office Wear",
+        product: "Pendant"
     },
     {
         name: "Opulent Mangalsutra Pendant",
@@ -156,6 +90,7 @@ const products = [
         purity: "22.00",
         jewelleryType: "Plain Gold Jewellery",
         occasion: "Casual Wear",
+        product: "Pendant"
     },
     {
         name: "22 Karat Gold And Kundan Glass Pendant",
@@ -165,16 +100,33 @@ const products = [
         purity: "22.00",
         jewelleryType: "Plain Jewellery with Stones",
         occasion: "Modern Wear",
+        product: "Pendant"
     },
     {
-        name: "",
-        newPrice: ,
-        oldPrice: ,
-        images: [],
-        purity: "",
-        jewelleryType: "",
-        occasion: "",
+        name: "Opulent Ganesha Gold Pendant",
+        newPrice: 40679,
+        oldPrice: 41154,
+        images: ["https://staticimg.titan.co.in/Tanishq/Catalog/513016PQTAAA00_1.jpg?impolicy=pqmed&imwidth=640", "https://staticimg.titan.co.in/Tanishq/Catalog/513016PQTAAA00_2.jpg?impolicy=pqmed&imwidth=640", "https://staticimg.titan.co.in/Tanishq/Catalog/513016PQTAAA00_10.jpg?impolicy=pqmed&imwidth=640"],
+        purity: "22.00",
+        jewelleryType: "Plain Gold Jewellery",
+        occasion: "Traditional and Ethnic Wear",
+        product: "Pendant"
+    },
+    {
+        name: "Opulent Mangalsutra Pendant",
+        newPrice: 62170,
+        oldPrice: 62867,
+        images: ["https://staticimg.titan.co.in/Tanishq/Catalog/511156PRVAAA00_1.jpg?impolicy=pqmed&imwidth=640", "https://staticimg.titan.co.in/Tanishq/Catalog/511156PRVAAA00_2.jpg?impolicy=pqmed&imwidth=640", "https://staticimg.titan.co.in/Tanishq/Catalog/511156PRVAAA00_10.jpg?impolicy=pqmed&imwidth=640"],
+        purity: "22.00",
+        jewelleryType: "Plain Gold Jewellery",
+        occasion: "Traditional and Ethnic Wear",
+        product: "Pendant"
+    },
+    {
+
     }
 
 
 ]
+
+export {products};
