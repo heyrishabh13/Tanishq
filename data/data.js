@@ -122,6 +122,119 @@ const products = [
         occasion: "Traditional and Ethnic Wear",
         product: "Pendant"
     },
+    {
+        name: "Exquisite Traditional Stud Earrings",
+        newPrice: 35382,
+        oldPrice: 35992,
+        images: ["https://staticimg.titan.co.in/Tanishq/Catalog/51O1PPSAYABA00_1.jpg?impolicy=pqmed&imwidth=640"],
+        purity: "22.00",
+        jewelleryType: "Plain Gold Jewellery",
+        occasion: "Office Wear",
+        product: "Earrings"
+    },
+    {
+        name: "Traditional Stylish Gold Stud Earrings",
+        newPrice: 49406,
+        oldPrice: 49973,
+        images: ["https://staticimg.titan.co.in/Tanishq/Catalog/51O1PPSFDABAP1_1.jpg?impolicy=pqmed&imwidth=640"],
+        purity: "22.00",
+        jewelleryType: "Plain Jewellery with Stones",
+        occasion: "Office Wear",
+        product: "Earrings"
+    },
+    {
+        name: "Lovely Gold Drop Earrings",
+        newPrice: 54909,
+        oldPrice: 55578,
+        images: ["https://staticimg.titan.co.in/Tanishq/Catalog/51O1PPDFSAAAP1_1.jpg?impolicy=pqmed&imwidth=640"],
+        purity: "22.00",
+        jewelleryType: "Plain Jewellery with Stones",
+        occasion: "Office Wear",
+        product: "Earrings"
+    },
+    {
+        name: "Majestic Traditional Stud Earrings",
+        newPrice: 58679,
+        oldPrice: 59353,
+        images: ["https://staticimg.titan.co.in/Tanishq/Catalog/51O1PPSFKABAP1_1.jpg?impolicy=pqmed&imwidth=640"],
+        purity: "22.00",
+        jewelleryType: "Plain Jewellery with Stones",
+        occasion: "Traditional and Ethnic Wear",
+        product: "Earrings"
+    },
+    {
+        name: "Dainty Textured Gold Stud Earrings",
+        newPrice: 65462,
+        oldPrice: 66216,
+        images: ["https://staticimg.titan.co.in/Tanishq/Catalog/51O1PPSFAABA00_1.jpg?impolicy=pqmed&imwidth=640"],
+        purity: "22.00",
+        jewelleryType: "Plain Gold Jewellery",
+        occasion: "Casual Wear",
+        product: "Earrings"
+    },
+    {
+        name: "Majestic Charming Stud Earrings",
+        newPrice: 84401,
+        oldPrice: 85438,
+        images: ["https://staticimg.titan.co.in/Tanishq/Catalog/51O1PPSFHABAP1_1.jpg?impolicy=pqmed&imwidth=640"],
+        purity: "22.00",
+        jewelleryType: "Plain Jewellery with Stones",
+        occasion: "Traditional and Ethnic Wear",
+        product: "Earrings"
+    },
+    {
+        name: "Luminous Glam Stud Earrings",
+        newPrice: 85610,
+        oldPrice: 86666,
+        images: ["https://staticimg.titan.co.in/Tanishq/Catalog/51O1PPSFIABAP1_1.jpg?impolicy=pqmed&imwidth=640"],
+        purity: "22.00",
+        jewelleryType: "Plain Jewellery with Stones",
+        occasion: "Office Wear",
+        product: "Earrings"
+    },
+    {
+        name: "Surreal Detachable Gold Jhumkas",
+        newPrice: 111911,
+        oldPrice: 114725,
+        images: ["https://staticimg.titan.co.in/Tanishq/Catalog/51O1PPJCVABA00_1.jpg?impolicy=pqmed&imwidth=640"],
+        purity: "22.00",
+        jewelleryType: "Plain Gold Jewellery",
+        occasion: "Traditional and Ethnic Wear",
+        product: "Earrings"
+    },
+    {
+        name: "Ornate Dazzling Gold Jhumkas",
+        newPrice: 132739,
+        oldPrice: 136077,
+        images: ["https://staticimg.titan.co.in/Tanishq/Catalog/51O1PPJCSABA00_1.jpg?impolicy=pqmed&imwidth=640"],
+        purity: "22.00",
+        jewelleryType: "Plain Gold Jewellery",
+        occasion: "Traditional and Ethnic Wear",
+        product: "Earrings"
+    },
+    {
+        name: "Traditional Regal Gold Jhumkas",
+        newPrice: 151699,
+        oldPrice: 155445,
+        images: ["https://staticimg.titan.co.in/Tanishq/Catalog/51O1PPJCQABAP3_1.jpg?impolicy=pqmed&imwidth=640"],
+        purity: "22.00",
+        jewelleryType: "Plain Jewellery with Stones",
+        occasion: "Traditional and Ethnic Wear",
+        product: "Earrings"
+    },
+    {
+        name: "Casual Gold Stud Earrings",
+        newPrice: 10571,
+        oldPrice: 10695,
+        images: ["https://staticimg.titan.co.in/Tanishq/Catalog/511166SESAJA00_1.jpg?impolicy=pqmed&imwidth=640"],
+        purity: "22.00",
+        jewelleryType: "Plain Jewellery with Stones",
+        occasion: "Casual Wear",
+        product: "Earrings"
+    }
+
+
+
 
 
 ]
