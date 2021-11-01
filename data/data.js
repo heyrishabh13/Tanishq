@@ -122,16 +122,6 @@ const products = [
         occasion: "Traditional and Ethnic Wear",
         product: "Pendant"
     },
-    {
-        name: "Opulent Mangalsutra Pendant",
-        newPrice: 62170,
-        oldPrice: 62867,
-        images: ["https://staticimg.titan.co.in/Tanishq/Catalog/511156PRVAAA00_1.jpg?impolicy=pqmed&imwidth=640", "https://staticimg.titan.co.in/Tanishq/Catalog/511156PRVAAA00_2.jpg?impolicy=pqmed&imwidth=640", "https://staticimg.titan.co.in/Tanishq/Catalog/511156PRVAAA00_10.jpg?impolicy=pqmed&imwidth=640"],
-        purity: "22.00",
-        jewelleryType: "Plain Gold Jewellery",
-        occasion: "Traditional and Ethnic Wear",
-        product: "Pendant"
-    }
 
 
 ]
