@@ -231,7 +231,18 @@ const products = [
         jewelleryType: "Plain Jewellery with Stones",
         occasion: "Casual Wear",
         product: "Earrings"
+    },
+    {
+        name: "Casual Gold Stud Earrings",
+        newPrice: 10571,
+        oldPrice: 10695,
+        images: ["https://staticimg.titan.co.in/Tanishq/Catalog/511166SESAJA00_1.jpg?impolicy=pqmed&imwidth=640"],
+        purity: "22.00",
+        jewelleryType: "Plain Jewellery with Stones",
+        occasion: "Casual Wear",
+        product: "Earrings"
     }
+
 
 
 
