@@ -245,6 +245,139 @@ const products = [
 
 
 
+    //Necklace
+
+    {
+        name: "18 Karat Gold Diamond And Ruby Pendant With Chain",
+        newPrice: 149427 ,
+        oldPrice: 164206,
+        images: ["https://staticimg.titan.co.in/Tanishq/Catalog/502517GFFAA32_1.jpg?impolicy=pqmed&imwidth=640"],
+        purity: "18.00",
+        jewelleryType: "Diamond Jewellery",
+        occasion: "Modern Wear",
+        product:"Necklace"
+    },
+    {
+        name: "Charming Ruby Pendant With Chain",
+        newPrice: 72948,
+        oldPrice: 73603,
+        images: ["https://staticimg.titan.co.in/Tanishq/Catalog/513318GDJAB18_1.jpg?impolicy=pqmed&imwidth=640"],
+        purity: "22.00",
+        jewelleryType: "Jewellery with Gemstones",
+        occasion: "Traditional and Ethnic Wear",
+        product:"Necklace"
+    },
+    {
+        name: "Elegant Emerald And Ruby Pendant With Chain",
+        newPrice: 53994,
+        oldPrice:  54468,
+        images: ["https://staticimg.titan.co.in/Tanishq/Catalog/513318GEBAA40_1.jpg?impolicy=pqmed&imwidth=640"],
+        purity: "22.00",
+        jewelleryType: "Jewellery with Gemstones",
+        occasion: "Traditional and Ethnic Wear",
+        product:"Necklace"
+    },
+    {
+        name: "Filigree Work Gold Neckwear",
+        newPrice: 137055,
+        oldPrice: 140164,
+        images: ["https://staticimg.titan.co.in/Tanishq/Catalog/513220NPLAA00_1.jpg?impolicy=pqmed&imwidth=640"],
+        purity: "22.00",
+        jewelleryType: "Plain Gold Jewellery",
+        occasion: "Traditional and Ethnic Wear",
+        product:"Necklace"
+    },
+    {
+        name: "Glorious Detailed Gold Haaram",
+        newPrice: 306930,
+        oldPrice: 318408,
+        images: ["https://staticimg.titan.co.in/Tanishq/Catalog/513719EDH1AAP1_1.jpg?impolicy=pqmed&imwidth=640"],
+        purity: "22.00",
+        jewelleryType: "Plain Jewellery with Stones",
+        occasion: "Traditional and Ethnic Wear",
+        product:"Necklace"
+    },
+    {
+        name: "Traditional Gold Leaf Pattern Haaram",
+        newPrice: 303080,
+        oldPrice:314092 ,
+        images: ["https://staticimg.titan.co.in/Tanishq/Catalog/513719EEV1AA00_1.jpg?impolicy=pqmed&imwidth=640"],
+        purity: "22.00",
+        jewelleryType: "Plain Gold Jewellery",
+        occasion: "Traditional and Ethnic Wear",
+        product:"Necklace"
+    },
+    {
+        name: "Alluring Neckwear With Cutwork Design",
+        newPrice:387480 ,
+        oldPrice:400565 ,
+        images: ["https://staticimg.titan.co.in/Tanishq/Catalog/511T20NAHAAP1_1.jpg?impolicy=pqmed&imwidth=640"],
+        purity: "22.00",
+        jewelleryType: "Plain Jewellery with Stones",
+        occasion: "Indian Bridal",
+        product:"Necklace"
+    },
+    {
+        name: "Cutwork Design Choker Neckwear",
+        newPrice: 339737 ,
+        oldPrice:  351432,
+        images: ["https://staticimg.titan.co.in/Tanishq/Catalog/511T20NAMAAP1_1.jpg?impolicy=pqmed&imwidth=640"],
+        purity: "22.00",
+        jewelleryType: "Plain Jewellery with Stones",
+        occasion: "Bridal Wear",
+        product:"Necklace"
+    },
+    {
+        name: "Choker Style Neckwear With Small Hangings",
+        newPrice: 285365,
+        oldPrice: 295324,
+        images: ["https://staticimg.titan.co.in/Tanishq/Catalog/511T20NAVAA00_1.jpg?impolicy=pqmed&imwidth=640"],
+        purity: "22.00",
+        jewelleryType: "Plain Gold Jewellery",
+        occasion: "Bridal Wear",
+        product:"Necklace"
+    },
+    {
+        name: "Geometric Design Filigree Neckwear",
+        newPrice: 306427 ,
+        oldPrice: 317121,
+        images: ["https://staticimg.titan.co.in/Tanishq/Catalog/511T20NAWAA00_1.jpg?impolicy=pqmed&imwidth=640"],
+        purity: "22.00",
+        jewelleryType: "Plain Gold Jewellery",
+        occasion: "Bridal Wear",
+        product:"Necklace"
+    },
+    {
+        name: "Blooming Lotus Gold Neckwear",
+        newPrice: 154333,
+        oldPrice:158074 ,
+        images: ["https://staticimg.titan.co.in/Tanishq/Catalog/513920NHPAA00_1.jpg?impolicy=pqmed&imwidth=640"],
+        purity: "22.00",
+        jewelleryType: "Plain Gold Jewellery",
+        occasion: "Traditional and Ethnic Wear",
+        product:"Necklace"
+    },
+    {
+        name: "Bird Motif Gold Neckwear",
+        newPrice: 157960,
+        oldPrice: 161788,
+        images: ["https://staticimg.titan.co.in/Tanishq/Catalog/513920NHZAA00_1.jpg?impolicy=pqmed&imwidth=640"],
+        purity: "22.00",
+        jewelleryType: "Plain Gold Jewellery",
+        occasion: "Traditional and Ethnic Wear",
+        product:"Necklace"
+    },
+    {
+        name: "Surreal Gold Neckwear",
+        newPrice: 174752 ,
+        oldPrice: 178287,
+        images: ["https://staticimg.titan.co.in/Tanishq/Catalog/510087NYAAA00_1.jpg?impolicy=pqmed&imwidth=640"],
+        purity: "22.00",
+        jewelleryType: "Plane Gold Jewellery",
+        occasion: "Modern Wear",
+        product:"Necklace"
+    },
+
 
 
 ]
