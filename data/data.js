@@ -234,6 +234,7 @@ const products = [
     },
 
 
+
     //Necklace
 
     {
@@ -366,6 +367,7 @@ const products = [
         occasion: "Modern Wear",
         product:"Necklace"
     },
+
 
 
 ]
