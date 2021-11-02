@@ -2,6 +2,9 @@
 
 
 const products = [
+
+    // Pendants
+
     {
         name: "Shimmering Gold Mangalsutra Pendant",
         newPrice: 14710,
@@ -122,6 +125,9 @@ const products = [
         occasion: "Traditional and Ethnic Wear",
         product: "Pendant"
     },
+
+    // Earrings
+
     {
         name: "Exquisite Traditional Stud Earrings",
         newPrice: 35382,
@@ -241,7 +247,7 @@ const products = [
         jewelleryType: "Plain Gold Jewellery",
         occasion: "Traditional and Ethnic Wear",
         product: "Earrings"
-    }
+    },
 
 
 
