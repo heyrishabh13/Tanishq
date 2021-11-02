@@ -232,6 +232,16 @@ const products = [
         occasion: "Casual Wear",
         product: "Earrings"
     },
+    {
+        name: "Intricate Enchanting Gold Jhumkas",
+        newPrice: 155957,
+        oldPrice: 159879,
+        images: ["https://staticimg.titan.co.in/Tanishq/Catalog/51O1PPJCUABA00_1.jpg?impolicy=pqmed&imwidth=640"],
+        purity: "22.00",
+        jewelleryType: "Plain Gold Jewellery",
+        occasion: "Traditional and Ethnic Wear",
+        product: "Earrings"
+    }
 
 
 
