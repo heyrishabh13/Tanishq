@@ -8,7 +8,7 @@
     <title>navbar</title>
     <style>
         #nav-top{
-    height: 25px;
+    height: 30px;
     border-bottom: 1px solid #5d5d5d;
 }
 
@@ -56,6 +56,7 @@
     /* border: 1px solid black; */
     justify-content: space-evenly;
     padding-top: 10px;
+   
 }
 #nav-bottom > div{
     /* border: 1px solid red; */
@@ -86,14 +87,92 @@ a{
 .search_location a {
     margin-right: 50px;
 }
+
+.panel-heading a:hover .dropdown-content{
+    display: block;
+}
+#sel_curr{
+    display: none;
+    
+    width: 100%;
+    height: 150px;
+    background-color: black;
+}
+#sel_curr p {
+    text-align: center;
+    font-size: 18px;
+    padding-top: 10px;
+    word-spacing: 3px;
+    letter-spacing: 3px;
+    color: white;
+}
+#inr, #usd{
+    width: 200px;
+    height: 52px;
+    margin-left: 30px;
+    color: white;
+    background-color: black;
+    border: none;
+    border: 1px solid white;
+    margin-top: 25px;
+}
+#brand_curr{
+    display: flex;
+    font-size: 12px;
+    margin-top: -9px;
+    flex-grow: 1;
+    font-family: 'Raleway';
+    font-weight: 800;
+    color: #5d5d5d;
+    cursor: pointer;
+}
+#three_div{
+    
+    width: 100%;
+    height: 150px;
+    /* border: 1px solid black; */
+    background-color: #b1a16e;
+}
+#three_butt{
+    display: grid;
+    grid-template-columns: 320px 320px 320px;
+    grid-template-rows: 50px;
+    gap: 30px;
+    padding: 50px;
+    margin-left: 130px;
+}
+#three_butt button {
+    border: none;
+    border: 2px solid white;
+    background-color: #b1a16e;
+    color: white;
+}
+
+
     </style>
 </head>
 <body>
+    <div id = "sel_curr">
+        <p>SELECT A CURRENCY</p>
+        <div>
+            <button id = "inr">INR ₹</button>
+            <button id = "usd">USD $</button>
+        </div>
+    </div>
+    <div id = "three_div">
+        <div id = "three_butt">
+            <button>18 KT GOLD RATE 1GM = ₹3820.08</button>
+            <button>22 KT GOLD RATE 1GM = ₹4669.00</button>
+            <button>24 KT GOLD RATE 1GM = ₹5093.41</button>
+        </div>
+    </div>
+    
+
     <div id='nav-top'>
-        <div >
-            <a href="#">BRANDS</a>
-            <a href="#" id = "currency">CURRENCY SELECTOR</a>
-            <a href="#" id = "gold_rate">GOLD RATE</a>
+        <div id = "brand_curr">
+            <p>BRANDS</p>
+            <p id = "currency">CURRENCY SELECTOR</p>
+            <p id = "gold_rate">GOLD RATE</p>
         </div>
         
         <div>
@@ -112,8 +191,10 @@ a{
             <a href="#"><span><img src="https://www.tanishq.co.in/wps/wcm/connect/tanishq/cb53f671-01d0-449e-b18d-a4e61e6ffa0b/TanishqLogo.png?MOD=AJPERES&CACHEID=ROOTWORKSPACE.Z18_90IA1H80O0RT10QIMVSTFU3006-cb53f671-01d0-449e-b18d-a4e61e6ffa0b-mC036IT" alt=""></span></a>
     
             <div class="panel-heading">
-                <a href="#" id = "all_jewellery">ALL JEWELLERY</a>
+                <a href="#" id = "all">ALL JEWELLERY</a>
+                
             </div>
+            
     
             <div class="panel-heading">
                 <a href="#" id = "gold">GOLD</a>
@@ -154,11 +235,47 @@ a{
                 
             </div>
     </div>
+   
 </body>
 </html>
 <script>
-    document.getElementById("all_jewellery").onclick = () =>{
-        let p_div = document.createElement('div')
+    
+        let select = document.getElementById("currency")
+        let sel_cur = document.getElementById("sel_curr")
+        
+        sel_cur.style.display = "none";
+        select.onclick = () => {
+           if(sel_cur.style.display == "block"){
+               sel_cur.style.display = "none";
+           } else {
+               sel_cur.style.display = "block";
+               three_div.style.display = "none";
+           }
+        }
 
-    }
+        let gold_rate = document.getElementById("gold_rate")
+        let three_div = document.getElementById("three_div")
+        
+        three_div.style.display = "none";
+        gold_rate.onclick = () => {
+           if(three_div.style.display == "block"){
+            three_div.style.display = "none";
+           } else {
+            three_div.style.display = "block";
+            sel_cur.style.display = "none"
+           }
+        }
+        
+   
+    
+    
+    // document.getElementById("currency").onclick = () => {
+    //     let select = document.getElementById("sel_cur")
+    //     ind++;
+    //     select.style.display = "block"
+        // if(ind == 1){
+        //     select.style.display = "block";
+        //     ind = 0;
+        // }
+    //}
 </script>
