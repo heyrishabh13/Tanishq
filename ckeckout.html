@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>checkout</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&family=Raleway:wght@200&display=swap" rel="stylesheet">
+    <style>
+        #page_layout{
+            width: 100%;
+        }
+        #place_order{
+            width: 100%;
+            height: 40px;
+            border: none;
+            border-bottom: 1px solid black;
+            margin: 0 0 0 15px;
+            
+        }
+        #place_order h3 {
+            font-family: 'Raleway', sans-serif;
+            font-size: 12px;
+            /* font-weight: 900; */
+            margin: 25px 0 0 65px;
+            letter-spacing:1.5px;
+        }
+        #page_layout2{
+            width: 95%;
+            margin-left: 3%;
+           
+            
+        }
+        #signed{
+            width: 88%;
+            height: 85px;
+            /* border: 1px solid black; */
+            display: grid;
+            grid-template-columns: 50px 160px 500px;
+            grid-template-rows: 60px;
+            gap: 10px;
+            margin-left: 70px;
+            border: none;
+            border-bottom: 1px solid black;
+        }
+        #count_mark {
+            border: 1px solid black;
+            border-radius: 50%;
+            font-size: 30px;
+            padding: 5px 0 0 15px;
+            margin-top: 10px;
+        }
+        #signed div:nth-child(2) h2{
+            font-family: Playfair Display;
+            font-size: 24px;
+            font-weight: 400;
+        }
+        #signed div:nth-child(3) h2{
+            font-family: Playfair Display;
+            font-size: 24px;
+            font-weight: 400;
+        }
+        #review{
+            width: 88%;
+            height: 85px;
+            /* border: 1px solid black; */
+            display: grid;
+            grid-template-columns: 50px 300px;
+            grid-template-rows: 60px;
+            gap: 10px;
+            margin-left: 70px;
+            border: none;
+            border-bottom: 1px solid black;
+        }
+        #review div:nth-child(2) h2{
+            font-family: Playfair Display;
+            font-size: 24px;
+            font-weight: 400;
+        }
+        #delivery{
+            width: 88%;
+            
+            /* border: 1px solid black; */
+            display: grid;
+            grid-template-columns: 50px 550px;
+            grid-template-rows: 60px;
+            gap: 10px;
+            margin-left: 70px;
+            border: none;
+            border-bottom: 1px solid black;
+        }
+        #delivery div:nth-child(2) h2{
+            font-family: Playfair Display;
+            font-size: 24px;
+            font-weight: 400;
+        }
+        #delivery p {
+            font-size: 18px;
+            font-family: "Playfair Display", sans-serif;
+        }
+        #delivery h1{
+            font-family: Playfair Display;
+            font-size: 28px;
+            font-weight: 400;
+        }
+        #delivery div:nth-child(4) div div{
+            width: 270px;
+            height: 350px;
+            border: 2px solid black;
+        }
+        #delivery div:nth-child(4) div div p{
+            margin-left: 10px;
+            font-size: 16px;
+            font-family: Roboto, serif;
+        }
+        #address_butt{
+            display: grid;
+            grid-template-columns: 50% 50%;
+            grid-template-rows: 50px;
+            gap: 10px;
+        }
+        #address_butt button:nth-child(1), #address_butt button:nth-child(2){
+            width: 100%;
+            height: 45px;
+            border: none;
+            background-color: black;
+            color: white;
+        }
+        #disp1{
+            display: block;
+        }
+        
+        #disp2{
+            display: grid;
+            grid-template-columns: 40% 40%;
+            grid-template-rows: 150px;
+            /* border: 1px solid blue; */
+            gap: 70px;
+            display: none;
+        }
+        #disp2{
+            display: none;
+        }
+        #disp2 h3{
+            font-family: Playfair Display;
+            font-size: 12px;
+            font-weight: 500;
+        }
+        #disp2 p{
+            font-family: Roboto, serif;
+            font-size: 16px;
+            font-weight: 500;
+        }
+    </style>
+</head>
+<body>
+    <div id = "page_layout">
+        <div id = "place_order">
+            <h3>PLACE YOUR ORDER IN 4 EASY STEPS</h3>
+        </div>
+        <div id = "page_layout2">
+            <div id = "signed">
+                <div id = "count_mark">
+                    &#10003;
+                </div>
+                <div>
+                    <h2>SIGNED IN AS</h2>
+                </div>
+                <div>
+                    <h2>wattamwargaj@gmail.com</h2>
+                </div>
+            </div>
+
+            <div id = "delivery">
+                <div id = "count_mark">
+                    2
+                </div>
+                <div>
+                    <h2 id = "oncl">DELIVERY INFORMATION</h2>
+                </div>
+                <div>&nbsp;</div>
+                <div id = "disp1">
+                    <div>
+                        <p>In order to deliver your order, we need to gather some information from you. Please fill the form below.</p>
+                
+                        <h1>YOUR ADDRESS</h1>
+                        <div>
+                            <p>GAJANAN (DEFAULT)</p>
+                            </br>
+                            <p>Mr. Gajanan Wattamwar</p>
+                            <p>+91 9156015117</p>
+                            <p>1-21-1550, Nanded - 431605</p>
+                            <p>MAHARASHTRA, India</p>
+                            </br>
+                            </br>
+                            </br>
+                            </br>
+                            </br>
+                            <p>EDIT</p>
+                        </div>
+                    </div>
+                    <div>&nbsp;</div>
+                    <div>&nbsp;</div>
+                    <div id = "address_butt">
+                        <button>USE SELECTED ADDRESS</button>
+                        <button>DELIVERY TO NEW ADDRESS</button>
+                    </div>
+                </div>
+                
+                
+                    <div id = "disp2">
+                        <div>
+                            <h3>CONTACT DETAILS</h3>
+                            <P>Mr. Gajanan Wattamwar</P>
+                            <p>+91 9156015117</p>
+                            <p>wattamwargaj@gmail.com</p>
+                        </div>
+                        <div>
+                            <h3>ADDRESS DETAILS</h3>
+                            <P>1-21-1550</P>
+                            <P>Nanded-431605</P>
+                            <p>MAHARASHTRA, India</p>
+                        </div>
+                    </div>
+                
+                
+                
+                   
+            </div>
+
+            <div id = "review">
+                <div id = "count_mark">
+                    3
+                </div>
+                <div>
+                    <h2>ORDER REVIEW</h2>
+                </div>
+                <!-- <div>
+                    <h2>wattamwargaj@gmail.com</h2>
+                </div> -->
+            </div>
+            
+            
+            <div id = "review">
+                <div id = "count_mark">
+                    4
+                </div>
+                <div>
+                    <h2>PAYMENT INFORMATION</h2>
+                </div>
+                <!-- <div>
+                    <h2>wattamwargaj@gmail.com</h2>
+                </div> -->
+            </div>
+
+        </div>
+    </div>
+</body>
+</html>
+<script>
+    let stage2 = document.getElementById("oncl");
+    let disp1 = document.getElementById("disp1");
+    let disp2 = document.getElementById("disp2");
+    
+
+       
+    
+    stage2.onclick = () =>{
+        
+        if(disp1.style.display== "block"){
+            disp1.style.display = "none";
+            disp2.style.display = "block";
+        } else {
+            disp2.style.display = "none";
+            disp1.style.display = "block";
+        }
+        
+    }
+</script>
