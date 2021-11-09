@@ -133,17 +133,16 @@
             display: block;
         }
         
-        #disp2{
+        /* #disp2{
             display: grid;
             grid-template-columns: 40% 40%;
             grid-template-rows: 150px;
-            /* border: 1px solid blue; */
             gap: 70px;
             display: none;
         }
         #disp2{
             display: none;
-        }
+        } */
         #disp2 h3{
             font-family: Playfair Display;
             font-size: 12px;
@@ -266,13 +265,17 @@
     let disp2 = document.getElementById("disp2");
     
 
-       
+    disp2.style.display = "none";
     
     stage2.onclick = () =>{
         
         if(disp1.style.display== "block"){
             disp1.style.display = "none";
             disp2.style.display = "block";
+            disp2.style.display = "grid";
+            disp2.style.gridTemplateColumns = "40% 40%"
+            disp2.style.gridTemplateRows = "150px"
+            disp2.style.gap = "70px"
         } else {
             disp2.style.display = "none";
             disp1.style.display = "block";
