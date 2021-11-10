@@ -12,159 +12,22 @@
 
     <link rel="stylesheet" href="css/navbar.css">
     <link rel="stylesheet" href="css/footer.css">
+    <link rel="stylesheet" href="css/prod_detail.css">
 </head>
 <style>
-    body{
-        padding-left: 4%;
-        padding-right: 9%;
-    }
-    .path{
-        display: flex;
-        margin-left: -54%;
-        margin-bottom: 56%;
-
-        
-    }
-    #prod{
-        display: grid;
-        grid-template-columns: 50% 50%;
-        padding-left: 10%;
-        margin-right: 10%;
-        width: 75%;
-        padding: 4%;
-    }
-    #prod-id-star{
-        display: flex;
-        flex-direction: ;
-    }
-    #prod-star{
-        display: flex;
-       /* padding-left: 1%; */
-       flex-direction: ;
-       
-
-    }
-    #unique-id{
-        display: flex;
-        flex-direction: row;
-    }
-    #prod-details{
-        
-        color: rgb(1880, 180, 170);
-        /* padding: 4%; */
-        
-    }
-
-    .prod-detail-1{
-        display: flex;
-    }
-    #prod-detail-try-avl{
-        width: 139px;
-        height: auto;
-        background-color: rgb(223, 182, 80);
-        padding: 1%;
-        padding-left: 3%;
-        color: honeydew;
-        font-size: 13px;
-        font-family: Arial, Helvetica, sans-serif;
-    }
-    .curr{
-    display: flex;
     
-    
-    }
-
-    #curr-rs{
-        display: flex;
-        justify-content: center;
-        height: 47px;
-        width: 47px;
-        border: 1px solid black;
-        font-size: 2rem;
-        font-weight: 200;
-
-    }
-    
-
-    #curr-usd{
-        display: flex;
-        justify-content: center;
-        
-        height: 47px;
-        width: 47px;
-        border: 1px solid rgb(94, 90, 90);
-        font-size: 2rem;
-        font-weight: 200;
-    }
-    .prod-img{
-        
-        width: 80%;
-        height: auto;
-        
-    }
-    .prod-img-down{
-        display: flex;
-        padding-left: 15%;
-        padding-top: 25px;
-        justify-content: center;
-        
-    }
-    #prod-img-down-1{
-        width: 20%;
-        height: auto;
-        border: 1px solid black;
-        margin: 4%;
-    }
-    #prod-img-down-2{
-        width: 17%;
-        height: auto;
-        border: 1px solid rgb(212, 197, 197);
-        margin: 4%;
-    }
-    #prod-img-down-1-1{
-        width: 100%;
-    }
-    #prod-img-down-2-2{
-        width: 100%;
-    }
-
-    #curr-img{
-        width: 90%;
-        height: auto;
-    }
-    .btn-try{
-        background-color: black;
-        color: white;
-        width: 177px;
-        height: 27px;
-        margin-left: 10%;
-        margin-top: 5px;
-    }
-    #zoom-btn{
-        text-decoration: none;
-        color: black;
-        margin-left: 10%;
-        margin-bottom: 5px;
-        font-size: medium;
-        font-weight: 200;
-    }
-    #btns{
-        
-    }
     
 </style>
 <body>
     <nav></nav>
     
+    <div class="path">
+        HOME > PRODUCT > <span id="product-name">Surreal Gold Neckwear</span>
+    </div>
     <div id="prod">
         <div class="part1">
-            <div>
-                <div class="path">
-                    HOME > PRODUCT > <span id="product-name">Surreal Gold Neckwear</span>
-                </div>
-                <div class="prod-img">
-                    <img id="curr-img" src="https://staticimg.titan.co.in/Tanishq/Catalog/510087NYAAA00_1.jpg?impolicy=pqmed&imwidth=640"/>
-                </div>
+            <div class="prod-img">
+                <img id="curr-img" src="https://staticimg.titan.co.in/Tanishq/Catalog/510087NYAAA00_1.jpg?impolicy=pqmed&imwidth=640"/>
             </div>
 
             <div id="btns">
@@ -188,28 +51,56 @@
                 <div>
                     <div class="prod-id-star">
                         <div id="unique-id">510228VEAP1A002EA007411</div>
-                        <div id="prod-star">&star;&star;&star;&star;&star;</div><span>Write a review</span> 
+                        
                     </div>
-                    
-                    <h1>Sleek Gold Bangle</h1>
-                    <h1>PRICE &#8377; 49 657.00</h1>
-                    <p><span>(Incl. of all taxes)</span><span>Price Breakup</span> </p>
+
+                    <h2 id="prod-name">Sleek Gold Bangle</h2>
+                    <p id="prod-price">PRICE &#8377; <span>49 657.00</span></p>
+                    <p><span id="incl-tax">(Incl. of all taxes)</span><a id="price-breakup">Price Breakup</a></p>
                 </div>
                 <div>
-                    <div class="curr">
-                        <div id="curr-rs">&#8377; </div> <div id="curr-usd">$</div>
-                    </div>
+                   
                 </div>
             </div>
             
             
-            <p>*Weight and Price may vary subject to the stock available.</p>
+            <p id="vary-alert">*Weight and Price may vary subject to the stock available.</p>
             <div id="prod-detail-try-avl">TRY ON AVAILABLE</div>
-            <p>Elegant Minimalistic Bangle set in 22 Karat Yellow Gold</p>
-            <a id=prod-details href="#"><u>Product details</u7y></a>
-           
+            <p id="style-info">Elegant Minimalistic Bangle set in 22 Karat Yellow Gold</p>
+            <a id=prod-details href="#"><u>Product details</u></a>
+            <p>Gross Weight</p>
+            <div id="gross-wt">
+                29.027g
+            </div>
+           <div id="cart-appointment">
+               <div id="add-to-cart">
+                    ADD TO CART
+               </div>
+               <div id="appointment">
+                    BOOK AN APPOINTMENT
+               </div>
+           </div>
+           <h3>&#10003; ONLY 1 LEFT IN STOCK</h3>
 
         </div> 
+
+        <div id="part3">
+            <div id="prod-star">
+                <p><span id="five-star"> &star;&star;&star;&star;&star;</span><span>Write a review</span></p>
+            </div> 
+
+            <div class="curr">
+                <div id="curr-rs">&#8377; </div>
+                 <div id="curr-usd">$</div>
+            </div>
+
+            <div class="share-love">
+                <div id="share">S </div>
+                <div id="love">L</div>
+            </div>
+        </div>
+
+        
 
     </div>
     
