@@ -5,13 +5,25 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Product Detail</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&family=Raleway:wght@200&display=swap" rel="stylesheet">
+
     <link rel="stylesheet" href="css/navbar.css">
     <link rel="stylesheet" href="css/footer.css">
 </head>
 <style>
     body{
-        padding-left: 8%;
-        padding-right: 8%;
+        padding-left: 4%;
+        padding-right: 9%;
+    }
+    .path{
+        display: flex;
+        margin-left: -54%;
+        margin-bottom: 56%;
+
+        
     }
     #prod{
         display: grid;
@@ -21,22 +33,68 @@
         width: 75%;
         padding: 4%;
     }
+    #prod-id-star{
+        display: flex;
+        flex-direction: ;
+    }
     #prod-star{
+        display: flex;
+       /* padding-left: 1%; */
+       flex-direction: ;
        
+
+    }
+    #unique-id{
+        display: flex;
+        flex-direction: row;
     }
     #prod-details{
         
-        color: rgb(180, 180, 170);
-        padding: 4%;
+        color: rgb(1880, 180, 170);
+        /* padding: 4%; */
         
     }
-    #curr-rs #curr-usd{
-        height: 25px;
-        width: 25px;
-        border: 1px solid black;
 
+    .prod-detail-1{
+        display: flex;
+    }
+    #prod-detail-try-avl{
+        width: 139px;
+        height: auto;
+        background-color: rgb(223, 182, 80);
+        padding: 1%;
+        padding-left: 3%;
+        color: honeydew;
+        font-size: 13px;
+        font-family: Arial, Helvetica, sans-serif;
+    }
+    .curr{
+    display: flex;
+    
+    
+    }
+
+    #curr-rs{
+        display: flex;
+        justify-content: center;
+        height: 47px;
+        width: 47px;
+        border: 1px solid black;
+        font-size: 2rem;
+        font-weight: 200;
+
+    }
+    
+
+    #curr-usd{
+        display: flex;
+        justify-content: center;
         
-        
+        height: 47px;
+        width: 47px;
+        border: 1px solid rgb(94, 90, 90);
+        font-size: 2rem;
+        font-weight: 200;
     }
     .prod-img{
         
@@ -93,21 +151,27 @@
     #btns{
         
     }
+    
 </style>
 <body>
     <nav></nav>
     
     <div id="prod">
-        <div>
+        <div class="part1">
             <div>
+                <div class="path">
+                    HOME > PRODUCT > <span id="product-name">Surreal Gold Neckwear</span>
+                </div>
                 <div class="prod-img">
                     <img id="curr-img" src="https://staticimg.titan.co.in/Tanishq/Catalog/510087NYAAA00_1.jpg?impolicy=pqmed&imwidth=640"/>
                 </div>
             </div>
+
             <div id="btns">
                 <a id="zoom-btn" href="#" ><u>CLICK TO ZOOM</u></a>
                 <button class="btn-try">TRY IT ON</button>
             </div>
+
             <div class="prod-img-down">
                 <div id="prod-img-down-1">
                    <img id="prod-img-down-1-1" src="https://staticimg.titan.co.in/Tanishq/Catalog/510087NYAAA00_1.jpg?impolicy=pqmedlow&imwidth=320"/>
@@ -117,19 +181,32 @@
                 </div>
             </div>
         </div>
+
+
         <div class="prod-detail">
-            <p><span>510228VEAP1A002EA007411</span><span id="prod-star">&star;&star;&star;&star;&star;</span><span>Write a review</span> 
-            </p>
-            <h1>Sleek Gold Bangle</h1>
-            <h1>PRICE &#8377; 49 657.00</h1>
-            <p><span>(Incl. of all taxes)</span><span>Price Breakup</span> </p>
-            <div>
-                <span id="curr-rs">&#8377; </span> <span id="curr-usd">$</span>
+            <div class="prod-detail-1">
+                <div>
+                    <div class="prod-id-star">
+                        <div id="unique-id">510228VEAP1A002EA007411</div>
+                        <div id="prod-star">&star;&star;&star;&star;&star;</div><span>Write a review</span> 
+                    </div>
+                    
+                    <h1>Sleek Gold Bangle</h1>
+                    <h1>PRICE &#8377; 49 657.00</h1>
+                    <p><span>(Incl. of all taxes)</span><span>Price Breakup</span> </p>
+                </div>
+                <div>
+                    <div class="curr">
+                        <div id="curr-rs">&#8377; </div> <div id="curr-usd">$</div>
+                    </div>
+                </div>
             </div>
+            
+            
             <p>*Weight and Price may vary subject to the stock available.</p>
-            <div>TRY ON AVAILABLE</div>
+            <div id="prod-detail-try-avl">TRY ON AVAILABLE</div>
             <p>Elegant Minimalistic Bangle set in 22 Karat Yellow Gold</p>
-            <a id=prod-details href="#"><u>Product details</u></a>
+            <a id=prod-details href="#"><u>Product details</u7y></a>
            
 
         </div> 
