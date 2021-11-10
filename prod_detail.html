@@ -5,94 +5,118 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Product Detail</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&family=Raleway:wght@200&display=swap" rel="stylesheet">
+
     <link rel="stylesheet" href="css/navbar.css">
     <link rel="stylesheet" href="css/footer.css">
+    <link rel="stylesheet" href="css/prod_detail.css">
 </head>
 <style>
-    #prod{
-        display: grid;
-        grid-template-columns: 50% 50%;
-        padding-left: 10%;
-        margin-right: 10%;
-        width: 80%;
-    }
-    #prod-star{
-       
-    }
-    #prod-details{
-        
-        color: rgb(180, 180, 170);
-        
-    }
-    #curr-rs #curr-usd{
-        height: 25px;
-        width: 25px;
-        border: 1px solid black;
-
-        
-        
-    }
-    .prod-img{
-        
-        width: auto;
-        height: auto;
-        
-    }
-    #curr-img{
-        width: 90%;
-        height: auto;
-    }
-    .btn-try{
-        background-color: black;
-        color: white;
-        width: 177px;
-        height: 27px;
-        margin-left: 10%;
-        margin-top: 5px;
-    }
-    #zoom-btn{
-        text-decoration: none;
-        color: black;
-        margin-left: 10%;
-        margin-bottom: 5px;
-        font-size: medium;
-        font-weight: 200;
-    }
-    #btns{
-        
-    }
+    
+    
 </style>
 <body>
     <nav></nav>
     
+    <div class="path">
+        HOME > PRODUCT > <span id="product-name">Surreal Gold Neckwear</span>
+    </div>
     <div id="prod">
-        <div>
-            <div>
-                <div class="prod-img">
-                    <img id="curr-img" src="https://staticimg.titan.co.in/Tanishq/Catalog/510087NYAAA00_1.jpg?impolicy=pqmed&imwidth=640"/>
-                </div>
+        <div class="part1">
+            <div class="prod-img">
+                <img id="curr-img" src="https://staticimg.titan.co.in/Tanishq/Catalog/510087NYAAA00_1.jpg?impolicy=pqmed&imwidth=640"/>
             </div>
+
             <div id="btns">
                 <a id="zoom-btn" href="#" ><u>CLICK TO ZOOM</u></a>
                 <button class="btn-try">TRY IT ON</button>
             </div>
-        </div>
-        <div class="prod-detail">
-            <p><span>510228VEAP1A002EA007411</span><span id="prod-star">&star;&star;&star;&star;&star;</span><span>Write a review</span> 
-            </p>
-            <h1>Sleek Gold Bangle</h1>
-            <h1>PRICE &#8377; 49 657.00</h1>
-            <p><span>(Incl. of all taxes)</span><span>Price Breakup</span> </p>
-            <div>
-                <span id="curr-rs">&#8377; </span> <span id="curr-usd">$</span>
+
+            <div class="prod-img-down">
+                <div id="prod-img-down-1">
+                   <img id="prod-img-down-1-1" src="https://staticimg.titan.co.in/Tanishq/Catalog/510087NYAAA00_1.jpg?impolicy=pqmedlow&imwidth=320"/>
+                </div>
+                <div id="prod-img-down-2">
+                    <img id="prod-img-down-2-2" src="https://staticimg.titan.co.in/Tanishq/Catalog/510087NYAAA00_2.jpg?impolicy=pqmedlow&imwidth=320"/>
+                </div>
             </div>
-            <p>*Weight and Price may vary subject to the stock available.</p>
-            <div>TRY ON AVAILABLE</div>
-            <p>Elegant Minimalistic Bangle set in 22 Karat Yellow Gold</p>
+        </div>
+
+
+        <div class="prod-detail">
+            <div class="prod-detail-1">
+                <div>
+                    <div class="prod-id-star">
+                        <div id="unique-id">510228VEAP1A002EA007411</div>
+                        
+                    </div>
+
+                    <h2 id="prod-name">Sleek Gold Bangle</h2>
+                    <p id="prod-price">PRICE &#8377; <span>49 657.00</span></p>
+                    <p><span id="incl-tax">(Incl. of all taxes)</span><a id="price-breakup">Price Breakup</a></p>
+                </div>
+                <div>
+                   
+                </div>
+            </div>
+            
+            
+            <p id="vary-alert">*Weight and Price may vary subject to the stock available.</p>
+            <div id="prod-detail-try-avl">TRY ON AVAILABLE</div>
+            <p id="style-info">Elegant Minimalistic Bangle set in 22 Karat Yellow Gold</p>
             <a id=prod-details href="#"><u>Product details</u></a>
-           
+            <p>Gross Weight</p>
+            <div id="gross-wt">
+                29.027g
+            </div>
+           <div id="cart-appointment">
+               <div id="add-to-cart">
+                    ADD TO CART
+               </div>
+               <div id="appointment">
+                    BOOK AN APPOINTMENT
+               </div>
+           </div>
+           <h3>&#10003; ONLY 1 LEFT IN STOCK</h3>
 
         </div> 
+
+        <div id="part3">
+            <div id="prod-star">
+                <p><span id="five-star"> &star;&star;&star;&star;&star;</span><span>Write a review</span></p>
+            </div> 
+
+            <div class="curr">
+                <div id="curr-rs">&#8377; </div>
+                 <div id="curr-usd">$</div>
+            </div>
+
+            <div class="share-love">
+                <div id="share">S </div>
+                <div id="love">L</div>
+            </div>
+        </div>
+
+        
+
+    </div>
+
+    <div class="bottom">
+        <div class="bottom 1">
+            <div class="pin-check">
+                <h2>Pincode / Zipcode Check </h2>
+            </div>
+    
+        </div>
+    </div>
+
+    <div class="bottom 1">
+        <div class="pin-check">
+            <h2>Pincode / Zipcode Check </h2>
+        </div>
 
     </div>
     
