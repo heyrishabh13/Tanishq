@@ -9,12 +9,17 @@
     <link rel="stylesheet" href="css/footer.css">
 </head>
 <style>
+    body{
+        padding-left: 8%;
+        padding-right: 8%;
+    }
     #prod{
         display: grid;
         grid-template-columns: 50% 50%;
         padding-left: 10%;
         margin-right: 10%;
-        width: 80%;
+        width: 75%;
+        padding: 4%;
     }
     #prod-star{
        
@@ -22,6 +27,7 @@
     #prod-details{
         
         color: rgb(180, 180, 170);
+        padding: 4%;
         
     }
     #curr-rs #curr-usd{
@@ -34,10 +40,36 @@
     }
     .prod-img{
         
-        width: auto;
+        width: 80%;
         height: auto;
         
     }
+    .prod-img-down{
+        display: flex;
+        padding-left: 15%;
+        padding-top: 25px;
+        justify-content: center;
+        
+    }
+    #prod-img-down-1{
+        width: 20%;
+        height: auto;
+        border: 1px solid black;
+        margin: 4%;
+    }
+    #prod-img-down-2{
+        width: 17%;
+        height: auto;
+        border: 1px solid rgb(212, 197, 197);
+        margin: 4%;
+    }
+    #prod-img-down-1-1{
+        width: 100%;
+    }
+    #prod-img-down-2-2{
+        width: 100%;
+    }
+
     #curr-img{
         width: 90%;
         height: auto;
@@ -75,6 +107,14 @@
             <div id="btns">
                 <a id="zoom-btn" href="#" ><u>CLICK TO ZOOM</u></a>
                 <button class="btn-try">TRY IT ON</button>
+            </div>
+            <div class="prod-img-down">
+                <div id="prod-img-down-1">
+                   <img id="prod-img-down-1-1" src="https://staticimg.titan.co.in/Tanishq/Catalog/510087NYAAA00_1.jpg?impolicy=pqmedlow&imwidth=320"/>
+                </div>
+                <div id="prod-img-down-2">
+                    <img id="prod-img-down-2-2" src="https://staticimg.titan.co.in/Tanishq/Catalog/510087NYAAA00_2.jpg?impolicy=pqmedlow&imwidth=320"/>
+                </div>
             </div>
         </div>
         <div class="prod-detail">
