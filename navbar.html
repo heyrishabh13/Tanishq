@@ -203,7 +203,7 @@
         .dropdown-content {
         display: none;
         position: absolute;
-        background-color: whitesmoke;
+        background-color: white;
         width: 100%;
         left: 0;
         box-shadow: 2px 8px 16px 0px rgba(0, 0, 0, 0.2);
@@ -215,6 +215,10 @@
         }
         .dropdown:hover .dropdown-content {
         display: block;
+        font-family: Roboto, sans-serif;
+        font-weight: 400;
+        line-height: 10px;
+        font-size: 12px;
         text-decoration: underline;
         }
         .dropbtn {
@@ -237,7 +241,8 @@
         float: left;
         width: 30%;
         padding: 10px;
-        background-color: #fafafa;
+        margin-left: 20px;
+        background-color: white;
         height: 450px;
         }
 
@@ -251,7 +256,8 @@
         text-align: left;
         }
         .column a:hover {
-        color: #181818;
+        /* color: #181818; */
+        font-weight: 900;
         }
         .icn-1 {
         margin-left: 80px;
@@ -317,12 +323,12 @@
                             <div class="column">
                                 <h3>CATEGORY </h3>
                                 <a href="#">ALL JEWELLERY</a>
-                                <a href="earrings.html">EARRINGS</a>
-                                <a href="#">PENDANTS</a>
-                                <a href="#">FINGER RINGS</a>
-                                <a href="#">MANGALSUTRA</a>
+                                <a href="earrings.html" id = "earrings">EARRINGS</a>
+                                <a href="#" id = "pendants">PENDANTS</a>
+                                <a href="#" >FINGER RINGS</a>
+                                <a href="#" id = "mangalsutra">MANGALSUTRA</a>
                                 <a href="#">CHAIN</a>
-                                <a href="#">NECKLACE</a>
+                                <a href="#" id = "necklace">NECKLACE</a>
                                 <a href="#">NOSE PIN</a>
                             </div>
 
@@ -669,6 +675,8 @@
 </body>
 </html>
 <script>
+
+    
     
         let select = document.getElementById("currency")
         let sel_cur = document.getElementById("sel_curr")
@@ -696,7 +704,7 @@
            }
         }
         
-   
+        
     
     
     // document.getElementById("currency").onclick = () => {
@@ -708,4 +716,71 @@
         //     ind = 0;
         // }
     //}
+</script>
+<script type="module">
+    import {products} from "./data/data.js"
+        console.log(products);
+
+    
+
+    if(localStorage.getItem("specific_category") == null){
+        localStorage.setItem("specific_category", JSON.stringify([]));
+    }
+
+    function push(){
+        let earrings = document.getElementById("earrings");
+        let pendants = document.getElementById("pendants");
+        let mangalsutra = document.getElementById("mangalsutra");
+        let necklace = document.getElementById("necklace");
+        let array = [];
+        earrings.onclick = () =>{
+            products.forEach(element => {
+            
+            //console.log(element.product);
+                if(element.product == "Earrings"){
+                    array.push(element);
+                }
+            });
+            localStorage.setItem("specific_category", JSON.stringify(array));
+            array = [];
+        }
+        pendants.onclick = () =>{
+            products.forEach(element => {
+            
+            //console.log(element.product);
+                if(element.product == "Pendant"){
+                    array.push(element);
+                }
+            });
+            localStorage.setItem("specific_category", JSON.stringify(array));
+            array = [];
+        }
+        mangalsutra.onclick = () =>{
+            products.forEach(element => {
+            
+            //console.log(element.product);
+                if(element.product == "Mangalsutra"){
+                    array.push(element);
+                }
+            });
+            localStorage.setItem("specific_category", JSON.stringify(array));
+            array = [];
+
+        }
+        necklace.onclick = () =>{
+            products.forEach(element => {
+            
+            //console.log(element.product);
+                if(element.product == "Necklace"){
+                    array.push(element);
+                }
+            });
+            localStorage.setItem("specific_category", JSON.stringify(array));
+            array = [];
+        }
+                
+        
+    }
+    push();
+        
 </script>
