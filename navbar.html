@@ -492,7 +492,7 @@
         </div>
         
         <div>
-            <a href="#">LOGIN</a>
+            <a href="loginpage.html" id = "user_l">LOGIN</a>
             <a href="#">ENCIRCLE</a>
             <a href="#">GOLDEN HARVEST</a>
             <a href="">BOOK AN APPOINTMENT</a>
@@ -873,7 +873,15 @@
 </body>
 </html>
 <script>
+    // user_name_at_login
 
+    let user_l = document.getElementById("user_l");
+    let user = JSON.parse(localStorage.getItem("user"));
+    if(user == null){
+        user_l.textContent = "Login";
+    } else {
+        user_l.textContent = (user.name +" " +"(Logout)");
+    }
     
     
         let select = document.getElementById("currency")

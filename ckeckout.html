@@ -188,10 +188,10 @@
                 
                         <h1>YOUR ADDRESS</h1>
                         <div>
-                            <p>GAJANAN (DEFAULT)</p>
+                            <p id = "username_ch">GAJANAN (DEFAULT)</p>
                             </br>
-                            <p>Mr. Gajanan Wattamwar</p>
-                            <p>+91 9156015117</p>
+                            <p id = "name_ch">Mr. Gajanan Wattamwar</p>
+                            <p id = "mob_ch">+91 9156015117</p>
                             <p>1-21-1550, Nanded - 431605</p>
                             <p>MAHARASHTRA, India</p>
                             </br>
@@ -214,9 +214,9 @@
                     <div id = "disp2">
                         <div>
                             <h3>CONTACT DETAILS</h3>
-                            <P>Mr. Gajanan Wattamwar</P>
-                            <p>+91 9156015117</p>
-                            <p>wattamwargaj@gmail.com</p>
+                            <P id = "name_ch">Mr. Gajanan Wattamwar</P>
+                            <p id = "mob_ch">+91 9156015117</p>
+                            <p id = "email_ch">wattamwargaj@gmail.com</p>
                         </div>
                         <div>
                             <h3>ADDRESS DETAILS</h3>
@@ -279,4 +279,22 @@
         }
         
     }
+
+    let name_ch = document.getElementById("name_ch")
+    let mob_ch = document.getElementById("mob_ch")
+    let email_ch = document.getElementById("email_ch")
+    let username_ch = document.getElementById("username_ch")
+
+
+
+    let user = JSON.parse(localStorage.getItem("user"));
+    
+    name_ch.textContent = "Mr." + " " + user.name;
+    mob_ch.textContent = user.mobile;
+    email_ch.textContent = user.email;
+    username_ch.textContent = user.username;
+
+
+
+
 </script>
