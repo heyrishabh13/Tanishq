@@ -114,12 +114,35 @@ function navTop(){
     }
 
     push();
+
+    // script_of_mediaquery
+    
+    let menu = document.getElementById("menu");
+    let ham_drop = document.getElementById("ham_drop")
+    menu.onclick = () =>{
+        if(ham_drop.style.display == "none"){
+            ham_drop.style.display = "block";
+        } else {
+            ham_drop.style.display = "none";
+        }
+    }
+        
+
+    let search = document.getElementById("search");
+    let search_div = document.getElementById("search_div");
+    search.onclick = () =>{
+        if(search_div.style.display == "none"){
+            search_div.style.display = "block";
+        } else {
+            search_div.style.display = "none";
+        }
+    }
     
 }
 
 
 function search(query){
-    let arr = [];
+    
 
     products.forEach((product) => {
         if(product.name.toLowerCase().split(' ').includes('pendant')){
@@ -137,12 +160,4 @@ export {navTop, search};
    
     
     
-    // document.getElementById("currency").onclick = () => {
-    //     let select = document.getElementById("sel_cur")
-    //     ind++;
-    //     select.style.display = "block"
-        // if(ind == 1){
-        //     select.style.display = "block";
-        //     ind = 0;
-        // }
-    //}
+   
