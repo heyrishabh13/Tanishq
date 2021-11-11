@@ -1,5 +1,7 @@
 body{
-    
+    /* padding-left: 9%;
+    padding-right: 1%; */
+
 }
 .path{
     padding-top: 1%;
@@ -13,6 +15,7 @@ body{
     margin-right: 5%;
     
     padding: 4%;
+    padding-left: 11%;
     padding-left: 9%;
     padding-right: 1%;
 }
@@ -97,19 +100,26 @@ font-family:Roboto, sans-serif;
 }
 
 #gross-wt{
-    width: 85%;
-    height: 50px;
+    width: 65%;
+    text-align: center;
+    /* height: 50px; */
     border: 1px solid rgb(37, 36, 36);
+    padding: 12px;
+    padding-left: 15px;
+    color:rgb(24, 24, 24);
 }
 #cart-appointment{
     display: flex;
-    padding-top: 45px;
+    padding-top: 37px;
+    /* border: 1px solid red; */
 }
 #add-to-cart{
-    align-items: center;
-  justify-content: center;
-width: 40%;
-height: 50px;
+align-items: center;
+justify-content: center;
+width: 36%;
+/* height: 47px; */
+padding: 12px;
+padding-left: 15px;
 border: 1px solid black;
 margin-right: 23px;
 background-color: black;
@@ -118,10 +128,13 @@ color: white;
 #appointment{
     align-items: center;
   justify-content: center;
-width: 60%;
-height: 50px;
+width: 63%;
+/* height: 47px; */
 border: 1px solid black;
 margin-left: 22px;
+padding: 9px;
+/* padding-left: 15px; */
+color:rgb(24, 24, 24);
 
 }
 /* IMAGE */
@@ -268,21 +281,30 @@ margin-left: 22px;
     .bottom{
 
     }
-        
+
+    }
+    .bottom1{
+
+    }
+
+    .bottom2{
+
+    }
+
+    #buying-guide{
+        display: flex;
+        flex-direction: row;
+    }
     .bottom-1{
 
     }
     #pin-check{
         text-align: center;
         margin: 5%;
-        color:
-rgb(24, 24, 24);
-font-family (stack):
-"Playfair Display", serif;
-font-size:
-26px;
-font-weight:
-400;
+          color: rgb(24, 24, 24);
+        font-family (stack): "Playfair Display", serif;
+        font-size: 26px;
+        font-weight: 400;
 
     }
     
@@ -366,8 +388,3 @@ color:white;
         height: 300px;
         background-color: rgb(238, 236, 134);
     }
-
-    
-   
-
-    
