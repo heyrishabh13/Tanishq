@@ -2,6 +2,9 @@
 
 
 const products = [
+
+    // Pendants
+
     {
         name: "Shimmering Gold Mangalsutra Pendant",
         newPrice: 14710,
@@ -122,11 +125,14 @@ const products = [
         occasion: "Traditional and Ethnic Wear",
         product: "Pendant"
     },
+
+    // Earrings
+
     {
         name: "Exquisite Traditional Stud Earrings",
         newPrice: 35382,
         oldPrice: 35992,
-        images: ["https://staticimg.titan.co.in/Tanishq/Catalog/51O1PPSAYABA00_1.jpg?impolicy=pqmed&imwidth=640"],
+        images: ["https://staticimg.titan.co.in/Tanishq/Catalog/51O1PPSAYABA00_1.jpg?impolicy=pqmed&imwidth=640", "https://staticimg.titan.co.in/Tanishq/Catalog/51O1PPSAYABA00_2.jpg?impolicy=pqmed&imwidth=640"],
         purity: "22.00",
         jewelleryType: "Plain Gold Jewellery",
         occasion: "Office Wear",
@@ -136,7 +142,7 @@ const products = [
         name: "Traditional Stylish Gold Stud Earrings",
         newPrice: 49406,
         oldPrice: 49973,
-        images: ["https://staticimg.titan.co.in/Tanishq/Catalog/51O1PPSFDABAP1_1.jpg?impolicy=pqmed&imwidth=640"],
+        images: ["https://staticimg.titan.co.in/Tanishq/Catalog/51O1PPSFDABAP1_1.jpg?impolicy=pqmed&imwidth=640", "https://staticimg.titan.co.in/Tanishq/Catalog/51O1PPSFDABAP1_2.jpg?impolicy=pqmed&imwidth=640"],
         purity: "22.00",
         jewelleryType: "Plain Jewellery with Stones",
         occasion: "Office Wear",
@@ -146,7 +152,7 @@ const products = [
         name: "Lovely Gold Drop Earrings",
         newPrice: 54909,
         oldPrice: 55578,
-        images: ["https://staticimg.titan.co.in/Tanishq/Catalog/51O1PPDFSAAAP1_1.jpg?impolicy=pqmed&imwidth=640"],
+        images: ["https://staticimg.titan.co.in/Tanishq/Catalog/51O1PPDFSAAAP1_1.jpg?impolicy=pqmed&imwidth=640", "https://staticimg.titan.co.in/Tanishq/Catalog/51O1PPDFSAAAP1_2.jpg?impolicy=pqmed&imwidth=640"],
         purity: "22.00",
         jewelleryType: "Plain Jewellery with Stones",
         occasion: "Office Wear",
@@ -156,7 +162,7 @@ const products = [
         name: "Majestic Traditional Stud Earrings",
         newPrice: 58679,
         oldPrice: 59353,
-        images: ["https://staticimg.titan.co.in/Tanishq/Catalog/51O1PPSFKABAP1_1.jpg?impolicy=pqmed&imwidth=640"],
+        images: ["https://staticimg.titan.co.in/Tanishq/Catalog/51O1PPSFKABAP1_1.jpg?impolicy=pqmed&imwidth=640", "https://staticimg.titan.co.in/Tanishq/Catalog/51O1PPSFKABAP1_2.jpg?impolicy=pqmed&imwidth=640"],
         purity: "22.00",
         jewelleryType: "Plain Jewellery with Stones",
         occasion: "Traditional and Ethnic Wear",
@@ -166,7 +172,7 @@ const products = [
         name: "Dainty Textured Gold Stud Earrings",
         newPrice: 65462,
         oldPrice: 66216,
-        images: ["https://staticimg.titan.co.in/Tanishq/Catalog/51O1PPSFAABA00_1.jpg?impolicy=pqmed&imwidth=640"],
+        images: ["https://staticimg.titan.co.in/Tanishq/Catalog/51O1PPSFAABA00_1.jpg?impolicy=pqmed&imwidth=640","https://staticimg.titan.co.in/Tanishq/Catalog/51O1PPSFAABA00_2.jpg?impolicy=pqmed&imwidth=640"],
         purity: "22.00",
         jewelleryType: "Plain Gold Jewellery",
         occasion: "Casual Wear",
@@ -176,7 +182,7 @@ const products = [
         name: "Majestic Charming Stud Earrings",
         newPrice: 84401,
         oldPrice: 85438,
-        images: ["https://staticimg.titan.co.in/Tanishq/Catalog/51O1PPSFHABAP1_1.jpg?impolicy=pqmed&imwidth=640"],
+        images: ["https://staticimg.titan.co.in/Tanishq/Catalog/51O1PPSFHABAP1_1.jpg?impolicy=pqmed&imwidth=640", "https://staticimg.titan.co.in/Tanishq/Catalog/51O1PPSFHABAP1_2.jpg?impolicy=pqmed&imwidth=640"],
         purity: "22.00",
         jewelleryType: "Plain Jewellery with Stones",
         occasion: "Traditional and Ethnic Wear",
@@ -186,7 +192,7 @@ const products = [
         name: "Luminous Glam Stud Earrings",
         newPrice: 85610,
         oldPrice: 86666,
-        images: ["https://staticimg.titan.co.in/Tanishq/Catalog/51O1PPSFIABAP1_1.jpg?impolicy=pqmed&imwidth=640"],
+        images: ["https://staticimg.titan.co.in/Tanishq/Catalog/51O1PPSFIABAP1_1.jpg?impolicy=pqmed&imwidth=640", "https://staticimg.titan.co.in/Tanishq/Catalog/51O1PPSFIABAP1_2.jpg?impolicy=pqmed&imwidth=640"],
         purity: "22.00",
         jewelleryType: "Plain Jewellery with Stones",
         occasion: "Office Wear",
@@ -196,7 +202,7 @@ const products = [
         name: "Surreal Detachable Gold Jhumkas",
         newPrice: 111911,
         oldPrice: 114725,
-        images: ["https://staticimg.titan.co.in/Tanishq/Catalog/51O1PPJCVABA00_1.jpg?impolicy=pqmed&imwidth=640"],
+        images: ["https://staticimg.titan.co.in/Tanishq/Catalog/51O1PPJCVABA00_1.jpg?impolicy=pqmed&imwidth=640","https://staticimg.titan.co.in/Tanishq/Catalog/51O1PPJCVABA00_2.jpg?impolicy=pqmed&imwidth=640","https://staticimg.titan.co.in/Tanishq/Catalog/51O1PPJCVABA00_3.jpg?impolicy=pqmed&imwidth=640", "https://staticimg.titan.co.in/Tanishq/Catalog/51O1PPJCVABA00_4.jpg?impolicy=pqmed&imwidth=640"],
         purity: "22.00",
         jewelleryType: "Plain Gold Jewellery",
         occasion: "Traditional and Ethnic Wear",
@@ -206,7 +212,7 @@ const products = [
         name: "Ornate Dazzling Gold Jhumkas",
         newPrice: 132739,
         oldPrice: 136077,
-        images: ["https://staticimg.titan.co.in/Tanishq/Catalog/51O1PPJCSABA00_1.jpg?impolicy=pqmed&imwidth=640"],
+        images: ["https://staticimg.titan.co.in/Tanishq/Catalog/51O1PPJCSABA00_1.jpg?impolicy=pqmed&imwidth=640", "https://staticimg.titan.co.in/Tanishq/Catalog/51O1PPJCSABA00_2.jpg?impolicy=pqmed&imwidth=640"],
         purity: "22.00",
         jewelleryType: "Plain Gold Jewellery",
         occasion: "Traditional and Ethnic Wear",
@@ -216,7 +222,7 @@ const products = [
         name: "Traditional Regal Gold Jhumkas",
         newPrice: 151699,
         oldPrice: 155445,
-        images: ["https://staticimg.titan.co.in/Tanishq/Catalog/51O1PPJCQABAP3_1.jpg?impolicy=pqmed&imwidth=640"],
+        images: ["https://staticimg.titan.co.in/Tanishq/Catalog/51O1PPJCQABAP3_1.jpg?impolicy=pqmed&imwidth=640", "https://staticimg.titan.co.in/Tanishq/Catalog/51O1PPJCQABAP3_2.jpg?impolicy=pqmed&imwidth=640"],
         purity: "22.00",
         jewelleryType: "Plain Jewellery with Stones",
         occasion: "Traditional and Ethnic Wear",
@@ -233,13 +239,13 @@ const products = [
         product: "Earrings"
     },
     {
-        name: "Casual Gold Stud Earrings",
-        newPrice: 10571,
-        oldPrice: 10695,
-        images: ["https://staticimg.titan.co.in/Tanishq/Catalog/511166SESAJA00_1.jpg?impolicy=pqmed&imwidth=640"],
+        name: "Intricate Enchanting Gold Jhumkas",
+        newPrice: 155957,
+        oldPrice: 159879,
+        images: ["https://staticimg.titan.co.in/Tanishq/Catalog/51O1PPJCUABA00_1.jpg?impolicy=pqmed&imwidth=640"],
         purity: "22.00",
-        jewelleryType: "Plain Jewellery with Stones",
-        occasion: "Casual Wear",
+        jewelleryType: "Plain Gold Jewellery",
+        occasion: "Traditional and Ethnic Wear",
         product: "Earrings"
     },
     //mangalsutra data below
@@ -369,8 +375,6 @@ const products = [
         product: "Mangalsutra"
     },
 
-
-//p-11
     {
         name: "Radiant Floral Diamond Mangalsutra",
         newPrice: 62968,
@@ -382,8 +386,6 @@ const products = [
         product: "Mangalsutra"
     },
 
-
-//p-12
     {
         name: "18 Karat Gold And Diamond Mangalsutra",
         newPrice: 68588,
@@ -395,6 +397,141 @@ const products = [
         product: "Mangalsutra"
     },
 
+
+
+
+    //Necklace
+
+    {
+        name: "18 Karat Gold Diamond And Ruby Pendant With Chain",
+        newPrice: 149427 ,
+        oldPrice: 164206,
+        images: ["https://staticimg.titan.co.in/Tanishq/Catalog/502517GFFAA32_1.jpg?impolicy=pqmed&imwidth=640"],
+        purity: "18.00",
+        jewelleryType: "Diamond Jewellery",
+        occasion: "Modern Wear",
+        product:"Necklace"
+    },
+    {
+        name: "Charming Ruby Pendant With Chain",
+        newPrice: 72948,
+        oldPrice: 73603,
+        images: ["https://staticimg.titan.co.in/Tanishq/Catalog/513318GDJAB18_1.jpg?impolicy=pqmed&imwidth=640"],
+        purity: "22.00",
+        jewelleryType: "Jewellery with Gemstones",
+        occasion: "Traditional and Ethnic Wear",
+        product:"Necklace"
+    },
+    {
+        name: "Elegant Emerald And Ruby Pendant With Chain",
+        newPrice: 53994,
+        oldPrice:  54468,
+        images: ["https://staticimg.titan.co.in/Tanishq/Catalog/513318GEBAA40_1.jpg?impolicy=pqmed&imwidth=640"],
+        purity: "22.00",
+        jewelleryType: "Jewellery with Gemstones",
+        occasion: "Traditional and Ethnic Wear",
+        product:"Necklace"
+    },
+    {
+        name: "Filigree Work Gold Neckwear",
+        newPrice: 137055,
+        oldPrice: 140164,
+        images: ["https://staticimg.titan.co.in/Tanishq/Catalog/513220NPLAA00_1.jpg?impolicy=pqmed&imwidth=640"],
+        purity: "22.00",
+        jewelleryType: "Plain Gold Jewellery",
+        occasion: "Traditional and Ethnic Wear",
+        product:"Necklace"
+    },
+    {
+        name: "Glorious Detailed Gold Haaram",
+        newPrice: 306930,
+        oldPrice: 318408,
+        images: ["https://staticimg.titan.co.in/Tanishq/Catalog/513719EDH1AAP1_1.jpg?impolicy=pqmed&imwidth=640"],
+        purity: "22.00",
+        jewelleryType: "Plain Jewellery with Stones",
+        occasion: "Traditional and Ethnic Wear",
+        product:"Necklace"
+    },
+    {
+        name: "Traditional Gold Leaf Pattern Haaram",
+        newPrice: 303080,
+        oldPrice:314092 ,
+        images: ["https://staticimg.titan.co.in/Tanishq/Catalog/513719EEV1AA00_1.jpg?impolicy=pqmed&imwidth=640"],
+        purity: "22.00",
+        jewelleryType: "Plain Gold Jewellery",
+        occasion: "Traditional and Ethnic Wear",
+        product:"Necklace"
+    },
+    {
+        name: "Alluring Neckwear With Cutwork Design",
+        newPrice:387480 ,
+        oldPrice:400565 ,
+        images: ["https://staticimg.titan.co.in/Tanishq/Catalog/511T20NAHAAP1_1.jpg?impolicy=pqmed&imwidth=640"],
+        purity: "22.00",
+        jewelleryType: "Plain Jewellery with Stones",
+        occasion: "Indian Bridal",
+        product:"Necklace"
+    },
+    {
+        name: "Cutwork Design Choker Neckwear",
+        newPrice: 339737 ,
+        oldPrice:  351432,
+        images: ["https://staticimg.titan.co.in/Tanishq/Catalog/511T20NAMAAP1_1.jpg?impolicy=pqmed&imwidth=640"],
+        purity: "22.00",
+        jewelleryType: "Plain Jewellery with Stones",
+        occasion: "Bridal Wear",
+        product:"Necklace"
+    },
+    {
+        name: "Choker Style Neckwear With Small Hangings",
+        newPrice: 285365,
+        oldPrice: 295324,
+        images: ["https://staticimg.titan.co.in/Tanishq/Catalog/511T20NAVAA00_1.jpg?impolicy=pqmed&imwidth=640"],
+        purity: "22.00",
+        jewelleryType: "Plain Gold Jewellery",
+        occasion: "Bridal Wear",
+        product:"Necklace"
+    },
+    {
+        name: "Geometric Design Filigree Neckwear",
+        newPrice: 306427 ,
+        oldPrice: 317121,
+        images: ["https://staticimg.titan.co.in/Tanishq/Catalog/511T20NAWAA00_1.jpg?impolicy=pqmed&imwidth=640"],
+        purity: "22.00",
+        jewelleryType: "Plain Gold Jewellery",
+        occasion: "Bridal Wear",
+        product:"Necklace"
+    },
+    {
+        name: "Blooming Lotus Gold Neckwear",
+        newPrice: 154333,
+        oldPrice:158074 ,
+        images: ["https://staticimg.titan.co.in/Tanishq/Catalog/513920NHPAA00_1.jpg?impolicy=pqmed&imwidth=640"],
+        purity: "22.00",
+        jewelleryType: "Plain Gold Jewellery",
+        occasion: "Traditional and Ethnic Wear",
+        product:"Necklace"
+    },
+    {
+        name: "Bird Motif Gold Neckwear",
+        newPrice: 157960,
+        oldPrice: 161788,
+        images: ["https://staticimg.titan.co.in/Tanishq/Catalog/513920NHZAA00_1.jpg?impolicy=pqmed&imwidth=640"],
+        purity: "22.00",
+        jewelleryType: "Plain Gold Jewellery",
+        occasion: "Traditional and Ethnic Wear",
+        product:"Necklace"
+    },
+    {
+        name: "Surreal Gold Neckwear",
+        newPrice: 174752 ,
+        oldPrice: 178287,
+        images: ["https://staticimg.titan.co.in/Tanishq/Catalog/510087NYAAA00_1.jpg?impolicy=pqmed&imwidth=640"],
+        purity: "22.00",
+        jewelleryType: "Plane Gold Jewellery",
+        occasion: "Modern Wear",
+        product:"Necklace"
+    },
 
 
 
