@@ -266,3 +266,15 @@ margin-left: 22px;
     .bottom{
         
     }
+    .bottom1{
+
+    }
+
+    .bottom2{
+
+    }
+
+    #buying-guide{
+        display: flex;
+        flex-direction: row;
+    }
