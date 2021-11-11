@@ -259,19 +259,215 @@
         /* color: #181818; */
         font-weight: 900;
         }
-        .icn-1 {
-        margin-left: 80px;
+        #search {
+        margin-left: 50px;
+        margin-right: 30px;
         width: 10px;
         cursor: pointer;
         }
-        .icn-2 {
-        cursor: pointer;
-        }
+        
 
+/* mediaquery */
+
+        #mediaQ{
+            display: none;       
+        }
+        @media only screen and (max-width:800px){
+            #page_layout{
+                display: none;
+            }
+            #mediaQ{
+                width: 100%;
+                display: block;
+            }
+            #nav-m-top{
+                height: 30px;
+                border-bottom: 1px solid #5d5d5d;
+                display: flex;
+            }
+            #nav-m-top > div{
+                /* border: 1px solid red; */
+                justify-content: space-evenly;
+            }
+            #nav-m-top > div:nth-child(1){
+                /* flex-grow: 1; */
+                text-align: center;
+                margin-left: 40px;
+            }
+            #nav-m-top > div:nth-child(1) a {
+                margin-right: 20px;
+                margin-left: 20px;
+                font-size: 12px;
+                font-family: 'Raleway';
+                font-weight: 600;
+                color: #5d5d5d;
+            }
+            #brand_curr{
+                width: 100%;
+                display: flex;
+                font-size: 12px;
+                margin-top: -9px;
+                /* flex-grow: 1; */
+                font-family: 'Raleway';
+                flex-grow:1;
+                font-weight: 800;
+                color: #57544d;
+                cursor: pointer;
+                flex-wrap: wrap;
+            }
+            #brand_curr p:nth-child(1){
+                text-align: left;
+                margin-left: -28%;
+            }
+            #brand_curr p:nth-child(2){
+                text-align: center;
+                margin-left: 5%;
+            }
+            #brand_curr p:nth-child(3){
+                text-align: right;
+                margin-right: -20%;
+            }
+            #nav-m-bottom{
+                height: 60px;
+                border-bottom: 1px solid #5d5d5d;
+                display: flex;
+            }
+            #ham{
+                width: 100%;
+                display: grid;
+                grid-template-columns: 10% 60% 10%;
+                grid-template-rows: 100%;
+                gap: 10%;
+                
+            }
+            #ham div:nth-child(1){
+                border-right: 1px solid grey;
+            }
+            #ham div:nth-child(2) img{
+                width: 25%;
+                margin-left: 40%;
+                margin-top: 2%;
+            }
+            #ham div:nth-child(1) i{
+                padding: 25%; 
+                margin-left: 5%;
+                
+            }
+            #ham div:nth-child(3) {
+                border-left: 1px solid grey;
+            }
+            #ham div:nth-child(3) i{
+                 padding: 25%;
+                margin-left: 10%;
+            }
+            #ham_drop{
+                width: 100%;
+                display: none;
+            }
+            #cell{
+                height: 50px;
+                border-bottom: 1px solid grey;
+                /* justify-content: space-around; */
+            }
+            #cell h3 {
+                padding: 2%;
+                font-size: 12px;
+                font-family: 'Raleway';
+                color: #1a1e1f;
+                letter-spacing: 2px;
+                font-weight: 700;
+                
+            }
+            /* #cell h3 span{
+                margin-left: 80%;
+                margin-top: 5%;
+                font-size: 25px;
+                font-weight: 900;
+            } */
+            
+        }
 
     </style>
 </head>
 <body>
+    <!-- mediaqeury -->
+    <div id = "mediaQ">
+        <div id='nav-m-top'>
+            <div id = "brand_curr">
+                <p>BRANDS</p>
+                <p id = "currency">MY ACCOUNT</p>
+                <p id = "gold_rate">CART(0)</p>
+            </div>
+        </div>
+
+        <div id='nav-m-bottom'>
+            <div id = "ham">
+                <div><i class="material-icons" id = "menu">menu</i></div>
+                <div><img src="https://www.tanishq.co.in/wps/wcm/connect/tanishq/c5124844-8ad5-41af-99bd-1e561480f9fb/TanishqLogo-mobile.png?MOD=AJPERES&CACHEID=ROOTWORKSPACE.Z18_90IA1H80O0RT10QIMVSTFU3006-c5124844-8ad5-41af-99bd-1e561480f9fb-mC0fAsK" alt=""></div>
+                <div><i class="material-icons">search</i></div>
+            </div>
+        </div>
+
+        <div id = "ham_drop">
+            <div id = "cell">
+                <h3>GOLD RATE </h3>
+            </div>
+            <div id = "cell">
+                <h3>BOOK AN APPOINTMENT</h3>
+            </div>
+            <div id = "cell">
+                <h3>LIVE VIDEO CALL</h3>
+            </div>
+            <div id = "cell">
+                <h3>CONNECT ON WHATSAPP</h3>
+            </div>
+            <div id = "cell">
+                <h3>ALL JEWELLERY</h3>
+            </div>
+            <div id = "cell">
+                <h3>GOLD</h3>
+            </div>
+            <div id = "cell">
+                <h3>DIAMOND</h3>
+            </div>
+            <div id = "cell">
+                <h3>ENGAEMENT RINGS</h3>
+            </div>
+            <div id = "cell">
+                <h3>DIGITAL GOLD</h3>
+            </div>
+            <div id = "cell">
+                <h3>COLLECTIONS</h3>
+            </div>
+            <div id = "cell">
+                <h3>RIVAAH</h3>
+            </div>
+            <div id = "cell">
+                <h3>MIA</h3>
+            </div>
+            <div id = "cell">
+                <h3>GOLDEN HARVEST</h3>
+            </div>
+            <div id = "cell">
+                <h3>RIVAAH AASHIRWAAD</h3>
+            </div>
+            <div id = "cell">
+                <h3>ENCIRCLE</h3>
+            </div>
+            <div id = "cell">
+                <h3>FIND A STORE</h3>
+            </div>
+            <div id = "cell">
+                <h3>WISHLIST</h3>
+            </div>
+            <div id = "cell">
+                <h3>CURRENCY</h3>
+            </div>
+        </div>
+    </div>
+
+    <!-- without_mediaquery -->
+<div id = "page_layout">
     <div id = "sel_curr">
         <p>SELECT A CURRENCY</p>
         <div>
@@ -296,7 +492,7 @@
         </div>
         
         <div>
-            <a href="#">LOGIN</a>
+            <a href="loginpage.html" id = "user_l">LOGIN</a>
             <a href="#">ENCIRCLE</a>
             <a href="#">GOLDEN HARVEST</a>
             <a href="">BOOK AN APPOINTMENT</a>
@@ -316,7 +512,7 @@
             <div class="navbar">
 
                 <div class="dropdown">
-                    <button class="dropbtn">JEWELLERY</button>
+                    <button class="dropbtn">ALL JEWELLERY</button>
                     <div class="dropdown-content">
                         <div class="header"></div>
                         <div class="row">
@@ -664,18 +860,28 @@
 
                     </div>
                 </div>
+                
             </div>
-
-            <li class="icn-1"><i class="fas fa-map-marker-alt"></i></li>
-            <li class="icn-2"><i class="fas fa-search"></i></li>
+            <i class="material-icons" id = "search">room</i>
+            <i class="material-icons" id = "search">search</i>
+            <!-- <li class="icn-1"><i class="fas fa-map-marker-alt"></i></li>
+            <li class="icn-2"><i class="fas fa-search"></i></li> -->
         </ul>
 
     </div>
-   
+</div>
 </body>
 </html>
 <script>
+    // user_name_at_login
 
+    let user_l = document.getElementById("user_l");
+    let user = JSON.parse(localStorage.getItem("user"));
+    if(user == null){
+        user_l.textContent = "Login";
+    } else {
+        user_l.textContent = (user.name +" " +"(Logout)");
+    }
     
     
         let select = document.getElementById("currency")
@@ -782,5 +988,18 @@
         
     }
     push();
+
+
+    // script_of_mediaquery
+    
+    let menu = document.getElementById("menu");
+    let ham_drop = document.getElementById("ham_drop")
+    menu.onclick = () =>{
+        if(ham_drop.style.display == "none"){
+            ham_drop.style.display = "block";
+        } else {
+            ham_drop.style.display = "none";
+        }
+    }
         
 </script>

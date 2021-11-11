@@ -1,6 +1,7 @@
 body{
     /* padding-left: 9%;
     padding-right: 1%; */
+
 }
 .path{
     padding-top: 1%;
@@ -15,6 +16,7 @@ body{
     
     padding: 4%;
     padding-left: 11%;
+    padding-left: 9%;
     padding-right: 1%;
 }
 
@@ -277,7 +279,9 @@ color:rgb(24, 24, 24);
 
     /* BOTTOM */
     .bottom{
-        
+
+    }
+
     }
     .bottom1{
 
@@ -290,4 +294,97 @@ color:rgb(24, 24, 24);
     #buying-guide{
         display: flex;
         flex-direction: row;
+    }
+    .bottom-1{
+
+    }
+    #pin-check{
+        text-align: center;
+        margin: 5%;
+          color: rgb(24, 24, 24);
+        font-family (stack): "Playfair Display", serif;
+        font-size: 26px;
+        font-weight: 400;
+
+    }
+    
+    .bottom-2{
+    
+    }
+
+    /* BOTTOM 3 */
+
+    .bottom-3{
+    background-color:rgb(176, 161, 110);
+    background-size: auto 50% ;   
+}
+#buying-guide-plate{
+    text-align: justify;
+    font-size:30px;
+font-family (stack):"Playfair Display", serif;
+padding-top:50px;
+padding-left:12%;
+font-weight:400;
+color:white;
+
+
+
+
+}
+    
+    #buying-guide{
+        width:90%;
+        display: flex;
+        flex-direction: row;
+        
+        
+        
+
+    }  
+    #diamond, #gemstone,#metal {
+        width: 90%;
+        height: auto;
+        padding: 1.1%;
+    }
+    /* {
+        width: 90%;
+        padding: 2%;
+    } */
+    /* {
+        width: 90%;
+        padding: 2%;
+    } */
+    #diamond{
+        padding-left: 14%;
+    }
+    #img-diamond{
+        width: 100%;
+        height: auto;
+        
+    }
+    #img-gemstone{
+        width: 100%;
+        height: auto;
+    }
+    #img-metal{
+        width: 100%;
+        height: auto;
+    }
+
+    .bottom-4,.bottom-5{
+
+    }
+
+    #bottom-4-plate, #bottom-5-plate{
+        margin: 5%;
+        text-align: center;
+        color:rgb(24, 24, 24);
+        font-family (stack):"Playfair Display", serif;
+        font-size:27px;
+
+    }
+    #items-bottom-4, #items-bottom-5{
+        width: 100%;
+        height: 300px;
+        background-color: rgb(238, 236, 134);
     }
