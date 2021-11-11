@@ -1,5 +1,7 @@
 body{
-    
+    /* padding-left: 9%;
+    padding-right: 1%; */
+
 }
 .path{
     padding-top: 1%;
@@ -30,6 +32,8 @@ body{
     
     padding: 4%;
     padding-left: 13%;
+    padding-left: 11%;
+    padding-left: 9%;
     padding-right: 1%;
 }
 
@@ -142,6 +146,13 @@ grid-template-columns: 70% 30%;
     color:rgb(24, 24, 24);
     border: 1px solid rgb(37, 36, 36);
     
+    width: 65%;
+    text-align: center;
+    /* height: 50px; */
+    border: 1px solid rgb(37, 36, 36);
+    padding: 12px;
+    padding-left: 15px;
+    color:rgb(24, 24, 24);
 }
 #gross-weight-style, #net-qty-style{
     font-family:Raleway, sans-serif;
@@ -184,6 +195,30 @@ grid-template-columns: 70% 30%;
     font-size:11px;
     padding-left: 12%;
     font-weight: 500;
+    /* border: 1px solid red; */
+}
+#add-to-cart{
+align-items: center;
+justify-content: center;
+width: 36%;
+/* height: 47px; */
+padding: 12px;
+padding-left: 15px;
+border: 1px solid black;
+margin-right: 23px;
+background-color: black;
+color: white;
+}
+#appointment{
+    align-items: center;
+  justify-content: center;
+width: 63%;
+/* height: 47px; */
+border: 1px solid black;
+margin-left: 22px;
+padding: 9px;
+/* padding-left: 15px; */
+color:rgb(24, 24, 24);
 
     }
 /* IMAGE */
@@ -352,7 +387,20 @@ font-weight:
     .bottom{
 
     }
-        
+
+    }
+    .bottom1{
+
+    }
+
+    .bottom2{
+
+    }
+
+    #buying-guide{
+        display: flex;
+        flex-direction: row;
+    }
     .bottom-1{
 
     }
@@ -364,6 +412,11 @@ font-weight:
         font-family:"Playfair Display", serif;
         font-size:29px;
         font-weight:400;
+        margin: 5%;
+          color: rgb(24, 24, 24);
+        font-family (stack): "Playfair Display", serif;
+        font-size: 26px;
+        font-weight: 400;
 
     }
     
@@ -448,8 +501,3 @@ color:white;
         height: 300px;
         background-color: rgb(238, 236, 134);
     }
-
-    
-   
-
-    
