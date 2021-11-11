@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cart</title>
+    <link rel="stylesheet" href="css/cart.css" />
+    <link rel="stylesheet" href="css/navbar.css" />
+    <!-- <link rel="stylesheet" href="css/footer.css"> -->
+  </head>
+  <body>
+    <nav></nav>
+    <div id="cart_main_div">
+      <div id="quick_nav">
+        <a href="index.html"><span>Home</span></a>
+        >
+        <span>Cart</span>
+      </div>
+      <div id="cart">
+        <div id="empty_cart">
+          <h1>Cart</h1>
+          <h2>YOUR CART IS EMPTY.</h2>
+           <a href="index.html"><button>Continue Shopping</button></a>
+        </div>
+       <div id="!empty_cart">
+           <div id="count"></div>
+        <div id="cart_main">
+            <div id="items_details">
+                <div id="headings">
+                    <div>ITEM(S)</div>
+                    <div>QUANTITY</div>
+                    <div>TOTAL</div>
+                   
+                </div>
+             
+                <div id="parent"></div>
+            </div>
+            <div id="order_summray">
+              <h2>Order Summary</h2>
+              <div id="promocode_btns">
+                <button>ENTER VOUCHER CODE</button>
+                <button>VIEW PROMO CODES</button>
+              </div>
+              <div id="display_cont">
+                <div id="input-box">
+                  <input type="text">
+                  <button>APPLY</button>
+                </div>
+
+              </div>
+          <div id="checkout_btns">
+                <a href="#"><button>PROCEED TO CHECKOUT</button></a>
+              <a href="index.html"><button>CONTINUE SHOPPING</button></a>
+          </div>
+            </div>
+        </div>
+       </div>
+      </div>
+    </div>
+    <footer></footer>
+  </body>
+</html>
+<script type="module" src="/js/cart.js"></script>

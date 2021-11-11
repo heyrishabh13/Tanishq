@@ -5,96 +5,188 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Product Detail</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&family=Raleway:wght@200&display=swap" rel="stylesheet">
+
     <link rel="stylesheet" href="css/navbar.css">
     <link rel="stylesheet" href="css/footer.css">
+    <link rel="stylesheet" href="css/prod_detail.css">
 </head>
 <style>
-    #prod{
-        display: grid;
-        grid-template-columns: 50% 50%;
-        padding-left: 10%;
-        margin-right: 10%;
-        width: 80%;
-    }
-    #prod-star{
-       
-    }
-    #prod-details{
-        
-        color: rgb(180, 180, 170);
-        
-    }
-    #curr-rs #curr-usd{
-        height: 25px;
-        width: 25px;
-        border: 1px solid black;
-
-        
-        
-    }
-    .prod-img{
-        
-        width: auto;
-        height: auto;
-        
-    }
-    #curr-img{
-        width: 90%;
-        height: auto;
-    }
-    .btn-try{
-        background-color: black;
-        color: white;
-        width: 177px;
-        height: 27px;
-        margin-left: 10%;
-        margin-top: 5px;
-    }
-    #zoom-btn{
-        text-decoration: none;
-        color: black;
-        margin-left: 10%;
-        margin-bottom: 5px;
-        font-size: medium;
-        font-weight: 200;
-    }
-    #btns{
-        
-    }
+    
+    
 </style>
 <body>
     <nav></nav>
     
+    <div class="path">
+        HOME > PRODUCT > <span id="product-name">Surreal Gold Neckwear</span>
+    </div>
     <div id="prod">
-        <div>
-            <div>
-                <div class="prod-img">
-                    <img id="curr-img" src="https://staticimg.titan.co.in/Tanishq/Catalog/510087NYAAA00_1.jpg?impolicy=pqmed&imwidth=640"/>
-                </div>
+        <div class="part1">
+            <div class="prod-img">
+                <img id="curr-img" src="https://staticimg.titan.co.in/Tanishq/Catalog/510087NYAAA00_1.jpg?impolicy=pqmed&imwidth=640"/>
             </div>
+
             <div id="btns">
                 <a id="zoom-btn" href="#" ><u>CLICK TO ZOOM</u></a>
                 <button class="btn-try">TRY IT ON</button>
             </div>
-        </div>
-        <div class="prod-detail">
-            <p><span>510228VEAP1A002EA007411</span><span id="prod-star">&star;&star;&star;&star;&star;</span><span>Write a review</span> 
-            </p>
-            <h1>Sleek Gold Bangle</h1>
-            <h1>PRICE &#8377; 49 657.00</h1>
-            <p><span>(Incl. of all taxes)</span><span>Price Breakup</span> </p>
-            <div>
-                <span id="curr-rs">&#8377; </span> <span id="curr-usd">$</span>
+
+            <div class="prod-img-down">
+                <div id="prod-img-down-1">
+                   <img id="prod-img-down-1-1" src="https://staticimg.titan.co.in/Tanishq/Catalog/510087NYAAA00_1.jpg?impolicy=pqmedlow&imwidth=320"/>
+                </div>
+                <div id="prod-img-down-2">
+                    <img id="prod-img-down-2-2" src="https://staticimg.titan.co.in/Tanishq/Catalog/510087NYAAA00_2.jpg?impolicy=pqmedlow&imwidth=320"/>
+                </div>
             </div>
-            <p>*Weight and Price may vary subject to the stock available.</p>
-            <div>TRY ON AVAILABLE</div>
-            <p>Elegant Minimalistic Bangle set in 22 Karat Yellow Gold</p>
+        </div>
+
+
+        <div class="prod-detail">
+            <div class="prod-detail-1">
+                <div>
+                    <div class="prod-id-star">
+                        <div id="unique-id">510228VEAP1A002EA007411</div>
+                        
+                    </div>
+
+                    <h2 id="prod-name">Sleek Gold Bangle</h2>
+                    <p id="prod-price">PRICE &#8377; <span>49 657.00</span></p>
+                    <p><span id="incl-tax">(Incl. of all taxes)</span><a id="price-breakup">Price Breakup</a></p>
+                </div>
+                <div>
+                </div>
+            </div>
+            
+            
+            <p id="vary-alert">*Weight and Price may vary subject to the stock available.</p>
+            <div id="prod-detail-try-avl">TRY ON AVAILABLE</div>
+            <p id="style-info">Elegant Minimalistic Bangle set in 22 Karat Yellow Gold</p>
             <a id=prod-details href="#"><u>Product details</u></a>
+            <div>
+                <div>
+                    <p>Gross Weight</p>
+                    <div id="gross-wt">
+                        29.027g
+                    </div>
+                </div>
+                <div id="net-Qty-N">
+                    <p>Net Qty</p>
+                    <div>
+                        1 N hii
+                    </div>
+                </div>
+            </div>
            
+           <div id="cart-appointment">
+               <div id="add-to-cart">
+                    ADD TO CART
+               </div>
+               <div id="appointment">
+                    BOOK AN APPOINTMENT
+               </div>
+           </div>
+           <h3>&#10003; ONLY 1 LEFT IN STOCK</h3>
+           <img id="" src="https://www.tanishq.co.in/wps/wcm/connect/tanishq/1018d041-8048-466a-9cbd-4175282d71a9/desktop/2nd-scroll-dt-all.png?MOD=AJPERES&CACHEID=ROOTWORKSPACE.Z18_90IA1H80O0RT10QIMVSTFU3006-1018d041-8048-466a-9cbd-4175282d71a9-desktop-nODZ0Q8"/>
 
         </div> 
 
+        <div id="part3">
+            <div id="prod-star">
+                <p><span id="five-star"> &star;&star;&star;&star;&star;</span><span>Write a review</span></p>
+            </div> 
+
+            <div class="curr">
+                <div id="curr-rs">&#8377; </div>
+                 <div id="curr-usd">$</div>
+            </div>
+
+            <div class="share-love">
+                <div id="share">S </div>
+                <div id="love">L</div>
+            </div>
+        </div>
+
+        
+
     </div>
+
+    <div class="bottom">
+        <div class="bottom-1">
+            <div id="">
+                <h2 id="pin-check">Pincode / Zipcode Check </h2>
+            </div>
+        </div>
+    </div>
+
+    <div class="bottom-2">
+        <div class="">
+
+        </div>
+    </div>
+
+    <div class="bottom-3">
+        <h1 id="buying-guide-plate">BUYING GUIDES</h1>
+
+        <div id="buying-guide">
+            <div id="diamond">
+                <img id="img-diamond" src="https://www.tanishq.co.in/wps/wcm/connect/tanishq/3da153bb-9189-40de-940e-c5155b08b515/Guides-Ecomm-Banner-2.jpg?MOD=AJPERES&amp;CACHEID=ROOTWORKSPACE.Z18_90IA1H80O0RT10QIMVSTFU3006-3da153bb-9189-40de-940e-c5155b08b515-m-yFjiV"/>
+            </div>
+            <div id="gemstone">
+                <img id="img-gemstone" src="https://www.tanishq.co.in/wps/wcm/connect/tanishq/f546eb67-a13a-46bb-a8ea-91e2b3eaa50a/Guides-Ecomm-Banner-3.jpg?MOD=AJPERES&amp;CACHEID=ROOTWORKSPACE.Z18_90IA1H80O0RT10QIMVSTFU3006-f546eb67-a13a-46bb-a8ea-91e2b3eaa50a-m-yFjiV"/>
+            </div>
+            <div id="metal">
+                <img id="img-metal" src="https://www.tanishq.co.in/wps/wcm/connect/tanishq/6b9c9176-df13-4b5c-aff3-761857772999/Guides-Ecomm-Banner-1.jpg?MOD=AJPERES&amp;CACHEID=ROOTWORKSPACE.Z18_90IA1H80O0RT10QIMVSTFU3006-6b9c9176-df13-4b5c-aff3-761857772999-m-yFjiV"/>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="bottom 2">
+        <div class="">
+
+        </div>
+    </div>
+
+    <div>
+        <h1>BUYING GUIDES</h1>
+
+        <div id="buying-guide">
+            <div id="">
+                <img id="" src="https://www.tanishq.co.in/wps/wcm/connect/tanishq/3da153bb-9189-40de-940e-c5155b08b515/Guides-Ecomm-Banner-2.jpg?MOD=AJPERES&amp;CACHEID=ROOTWORKSPACE.Z18_90IA1H80O0RT10QIMVSTFU3006-3da153bb-9189-40de-940e-c5155b08b515-m-yFjiV"/>
+            </div>
+            <div>
+                <img id="" src="https://www.tanishq.co.in/wps/wcm/connect/tanishq/f546eb67-a13a-46bb-a8ea-91e2b3eaa50a/Guides-Ecomm-Banner-3.jpg?MOD=AJPERES&amp;CACHEID=ROOTWORKSPACE.Z18_90IA1H80O0RT10QIMVSTFU3006-f546eb67-a13a-46bb-a8ea-91e2b3eaa50a-m-yFjiV"/>
+            </div>
+            <div>
+                <img id="" src="https://www.tanishq.co.in/wps/wcm/connect/tanishq/f546eb67-a13a-46bb-a8ea-91e2b3eaa50a/Guides-Ecomm-Banner-3.jpg?MOD=AJPERES&amp;CACHEID=ROOTWORKSPACE.Z18_90IA1H80O0RT10QIMVSTFU3006-f546eb67-a13a-46bb-a8ea-91e2b3eaa50a-m-yFjiV"/>
+            </div>
+            
+    <div class="bottom-4">
+        <div id="bottom-4-plate">
+            You May Also Like 
+        </div>
+
+        <div id="items-bottom-4">
+
+        </div>
+    </div>
+
+    <div class="bottom-5">
+        <div id="bottom-5-plate">
+            Customers Who Viewed This Also Viewed
+        </div>
+
+        <div id="items-bottom-5">
+
+        </div>
+    </div>
+
+
     
 
     <footer></footer>

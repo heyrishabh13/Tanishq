@@ -29,7 +29,7 @@ function navbar(){
         <a href="#">GOLDEN HARVEST</a>
         <a href="">BOOK AN APPOINTMENT</a>
         <a href="">WISHLIST</a>
-        <a href="">CART(0)</a>
+        <a href="cart.html">CART(0)</a>
     </div>
 
 </div>

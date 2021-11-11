@@ -1,0 +1,33 @@
+#cart {
+    /* border : 1px solid red; */
+    border: 1px solid red;
+    
+}
+#quick_nav {
+    border: 1px solid black;
+}
+#empty_cart {
+    display: none;
+}
+#headings {
+    display: flex;
+    justify-content: space-around;
+}
+#parent > div {
+    display: flex;
+    justify-content: space-around;
+}
+.image {
+    width : 30%
+}
+#order_summray {
+    border: 1px solid green;
+}
+#checkout_btns {
+    display : flex;
+    flex-direction: column;
+  
+}
+button {
+    cursor : pointer;
+}
