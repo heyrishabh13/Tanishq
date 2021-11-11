@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- <link rel="stylesheet" href="../CSS/laginpage.css"> -->
+    <title>Document</title>
+    <style>
+
+#logo {
+    margin: 0% 37%;
+}
+#logo > img{
+    width: 100%;
+    height: 200px;
+}
+#content {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+}
+#login {
+    display: flex;
+    flex-direction: column;
+    font-family: bold;
+    width: 100%;
+    /*border: 1px solid red;*/
+}
+.border {
+    border: 1px solid black;
+    padding: 0% 5%;
+    margin: 3% 15%;
+    text-align: center;
+}
+.border1 {
+    border: 1px solid black;
+    padding: 0% 5%;
+    margin: 3% 15%;
+    text-align: center;
+}
+#newuser {
+    width: 100%;
+    /*border: 1px solid black;*/
+    display: flex;
+    flex-direction: column;
+}
+#newuser > div {
+    margin: 1% 15%;
+    font-size: 25px;
+}
+#newuser > ul {
+    margin: 1% 15%;
+    font-size: 18px;
+}
+#newuser > button {
+    background-color: black;
+    color: white;
+    margin: 3% 15%;
+    padding: 2% 0;
+    color: white;
+    list-style-type: none;
+}
+#div {
+    display: flex;
+    /* grid-template-columns: 50% 50%;
+    grid-template-rows: 20px; */
+    flex-direction: row;
+}
+/* #div > p {
+    padding: 0% 2%;
+} */
+#div > #div1 {
+    padding: 0% 0% 0% 0%;
+}
+#div > #div2 {
+    padding: 0% 0% 0% 20%;
+} 
+ .border1 , .border1 > form {
+    display: flex;
+    flex-direction: column;
+}
+.border1 > form > input {
+    background-color: whitesmoke;
+    height: 50px;
+    margin: 2% 0;
+} 
+#email, #password {
+    border: none;
+}
+.border1 > form > button {
+    background-color: black;
+    height: 50px;
+    margin: 2% 0;
+    color: white;
+}
+input {
+    border: none;
+}
+button > a {
+    color: white;
+    text-decoration: none;
+}
+    </style>
+</head>
+<body>
+    <div>
+        <div id="logo">
+            <img src="https://www.tanishq.co.in/wps/wcm/connect/tanishq/4417c959-3482-4f71-942a-a12e015997b6/tanishq.svg?MOD=AJPERES&amp;CACHEID=ROOTWORKSPACE.Z18_90IA1H80O0RT10QIMVSTFU3006-4417c959-3482-4f71-942a-a12e015997b6-nv8w2CB">
+        </div>
+        <div id="content">
+            <div id="login">
+                <div class="border"><h3>LOGIN VIA OTP</h3></div>
+                <div class="border1">
+                    <h3>LOGIN USING PASSWORD</h3>
+                    <form onsubmit="login(event)" id="login-form">
+                        <input type="text" id="username" placeholder="ENTER YOUR USERNAME">
+                        <input  type="password" id="password" placeholder="PASSWORD" />
+                        <div id="div">
+                            <p id="div1"><input type="checkbox">REMEMBER ME</p>
+                            <p id="div2">FORGOT PASSWORD</p>
+                        </div>
+                        <button  id="sun"><b>SUBMIT</b></button>
+                    </form>
+                </div>
+                <div class="border"><h3>LOGIN VIA FACEBOOK/GOOGLE</h3></div>
+            </div>
+            <div id="line"></div>
+            <div id="newuser">
+                <div>NEW USER? <B>CREAT AN ACCOUNT</B></div>
+                <div><b>Benefits of Creating an New Account</b></div>
+                <ul>
+                    <li>You will get Benefits from our loyalty Program called Encircle Which entitles you to earn points for your Purchase which you can redeem in Subsequent Purchases</li>
+                    <li>You will get Special Previews to our Limited Collections and Sales.</li>
+                    <li>You will Receive offers tailor-made for you.</li>
+                </ul>
+                <button><a href="signuppage1.html"><b>SIGN UP NOW</b></a></button>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
+
+<script>
+
+    function login(event){
+        event.preventDefault();
+
+        form = document.getElementById("login-form");
+
+        let user_data = {
+            //email : form.email.value,
+            password : form.password.value,
+            username : form.username.value,
+
+        }
+        //console.log(user_data);
+
+        let data = JSON.stringify(user_data);
+        
+        fetch("https://masai-api-mocker.herokuapp.com/auth/login",{
+            method : "POST",
+            body : data,
+            headers : {
+                "Content-Type" : "application/json",
+            },
+        })
+        .then((res) => {
+            return res.json();
+        })
+        .then((res)=>{
+            console.log("res:",res);
+
+            fetchmyData(user_data.username, res.token)
+        })
+        .catch((err) => {
+            console.log("err:",err);
+        });
+    }
+
+    if(localStorage.getItem("user") == null){
+        localStorage.setItem("user", JSON.stringify([]));
+    }
+
+    function fetchmyData(username, token){
+        //console.log(username, token);
+    fetch(`https://masai-api-mocker.herokuapp.com/user/${username}`, {
+
+
+        headers: {
+        "Content-Type": "application/json",
+    
+    "Authorization" : `Bearer ${token}`,
+    },
+    })
+.then((res) => {
+    return res.json();
+})
+.then((res) => {
+    console.log("res:",res);
+    localStorage.setItem("user", JSON.stringify(res));
+    
+})
+.catch((err) =>{
+    console.log("err:",err);
+    
+})    
+
+}
+
+</script>
