@@ -3,7 +3,7 @@ import { navbar } from '/components/navbar.js'
 document.querySelector('nav').innerHTML = navbar()
 
 //created a dummy data for ls
-/*
+
 let dummy_data = [
   {
     name: 'Shimmering Gold Mangalsutra Pendant',
@@ -37,7 +37,7 @@ let dummy_data = [
   },
 ]
 localStorage.setItem('cart',JSON.stringify(dummy_data))
-*/
+
 let count = document.getElementById('count')
 
 

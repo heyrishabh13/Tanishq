@@ -46,7 +46,7 @@
             border: none;
             border-bottom: 1px solid black;
         }
-        #count_mark {
+        .count_mark {
             border: 1px solid black;
             border-radius: 50%;
             font-size: 30px;
@@ -63,10 +63,10 @@
             font-size: 24px;
             font-weight: 400;
         }
-        #review{
+        #review_disp1{
             width: 88%;
             height: 85px;
-            /* border: 1px solid black; */
+            border: 1px solid black;
             display: grid;
             grid-template-columns: 50px 300px;
             grid-template-rows: 60px;
@@ -134,12 +134,18 @@
         }
         
         #disp2{
-            display: grid;
-            grid-template-columns: 40% 40%;
+            /* display: grid;
+            grid-template-rows: 40% 40%;
             grid-template-rows: 150px;
-            /* border: 1px solid blue; */
+            border: 1px solid blue;
             gap: 70px;
-            display: none;
+            display: none; */
+            /* border: 1px solid blue; */
+        }
+        #disp2 > div{
+            display: inline-block;
+            /* border: 1px solid black; */
+            width: 49%;
         }
         #disp2{
             display: none;
@@ -154,6 +160,59 @@
             font-size: 16px;
             font-weight: 500;
         }
+        table th{
+            /* border:  1px solid black; */
+        }
+        #review_disp2{
+            margin-left: 70px;
+            display: none;
+        }
+        #payment_disp1{
+            width: 88%;
+            /* height: 85px; */
+            /* border: 1px solid black; */
+            display: grid;
+            grid-template-columns: 50px 700px 500px;
+            grid-template-rows: 60px;
+            gap: 10px;
+            margin-left: 70px;
+            border: none;
+        }
+        #payment_disp2{
+            width: 600px;
+            margin-left: 130px;
+            display: none;
+        }
+        .img-width{
+            height: 25px;
+            /* vertical-align: center; */
+            /* height: 30px; */
+            
+        }
+        .border{
+            border: 1px solid black;
+        }
+        .text-center{
+            text-align: center;
+        }
+        #upi{
+            margin-top: 20px;
+        }
+        #WhatsApp{
+            color: green;
+            vertical-align: bottom;
+        }
+        #whatsapp-img{
+            /* width: 20px; */
+            height: 18px;
+
+        }
+        th > h1, th > h3 {
+            margin: 0px;
+        }
+        #payment-info{
+            display: none;
+        }
     </style>
 </head>
 <body>
@@ -163,7 +222,7 @@
         </div>
         <div id = "page_layout2">
             <div id = "signed">
-                <div id = "count_mark">
+                <div class = "count_mark">
                     &#10003;
                 </div>
                 <div>
@@ -175,7 +234,7 @@
             </div>
 
             <div id = "delivery">
-                <div id = "count_mark">
+                <div id = "2nd_count_mark" class='count_mark'>
                     2
                 </div>
                 <div>
@@ -205,7 +264,7 @@
                     <div>&nbsp;</div>
                     <div>&nbsp;</div>
                     <div id = "address_butt">
-                        <button>USE SELECTED ADDRESS</button>
+                        <button onclick="infoDone()" >USE SELECTED ADDRESS</button>
                         <button>DELIVERY TO NEW ADDRESS</button>
                     </div>
                 </div>
@@ -232,28 +291,146 @@
             </div>
 
             <div id = "review">
-                <div id = "count_mark">
-                    3
+               <div id='review_disp1'>
+                    <div id = "3rd_count_mark" class='count_mark'>
+                        3
+                    </div>
+
+                    <div>
+                        <h2 onclick="">ORDER REVIEW</h2>
+                    </div>
+               </div>
+
+                <div id = "review_disp2">
+                    <h3>Please review your order to ensure your details are correct.</h3>    
+                    <h3>If you have reviewed your order, you can proceed to the next stage and make the payment.</h3>
+
+                    <table>
+                        <thead>
+                            <tr>
+                                <th><h3>ITEM(S)</h3></th>
+                                <th><h3>QUANTITY</h3></th>
+                                <th><h3>TOTAL</h3></th>
+                                <th ><h3>DELIVERY METHOD</h3></th>
+                            </tr>
+                        </thead>
+
+                        <tbody>
+                            
+                        </tbody>
+                    </table>
+                    
+                    <hr>
+
+                    <h1>TOTAL BREAKDOWN</h1>
+
+                    <table>
+                        <tbody>
+                            <tr>
+                                <th colspan="4">ORDER SUBTOTAL</th>
+                                <th>1000</th>
+                            </tr>
+                            <tr>
+                                <th colspan="4">DISCOUNT</th>
+                                <th>0</th>
+                            </tr>
+                            <tr>
+                                <th colspan="4">SHIPPING</th>
+                                <th>FREE</th>
+                            </tr>
+                            <tr>
+                                <th colspan="4">
+                                    <h1>YOU PAY</h1>
+                                    
+                                </th>
+                                <th><h1>1000</h1></th>
+
+
+                            </tr>
+                            <tr><th><h3>INCLUSIVE OF ALL TAXES*</h3></th></tr>
+
+                        </tbody>
+                    </table>
+
+                    <button onclick="gotoPayment()">CONTINUE TO PAYMENT</button>
+
                 </div>
-                <div>
-                    <h2>ORDER REVIEW</h2>
-                </div>
-                <!-- <div>
-                    <h2>wattamwargaj@gmail.com</h2>
-                </div> -->
+                
+
             </div>
             
             
-            <div id = "review">
-                <div id = "count_mark">
-                    4
+            <div id = "payment">
+                <div id="payment_disp1">
+                    <div id = "4th_count_mark" class='count_mark'>
+                        4
+                    </div>
+                    <div>
+                        <h2>PAYMENT INFORMATION</h2>
+                    </div>
+                    <div id='payment-info'>
+                        <h1>TOTAL BREAKDOWN</h1>
+                        <table>
+                            <tbody>
+                                <tr>
+                                    <th colspan="4">ORDER SUBTOTAL</th>
+                                    <th>1000</th>
+                                </tr>
+                                <tr>
+                                    <th colspan="4">DISCOUNT</th>
+                                    <th>0</th>
+                                </tr>
+                                <tr>
+                                    <th colspan="4">SHIPPING</th>
+                                    <th>FREE</th>
+                                </tr>
+                                <tr>
+                                    <th colspan="4">
+                                        <h1>YOU PAY</h1>
+                                        
+                                    </th>
+                                    <th><h1>1000</h1></th>
+    
+    
+                                </tr>
+                                <tr><th><p>INCLUSIVE OF ALL TAXES*</p></th></tr>
+                                <tr><th><input type="checkbox"> Mobile Number * <span id='WhatsApp'><img id='whatsapp-img' src="https://www.bing.com/th?id=AMMS_dbf45ebd6b4bf7de1e499c0277c519ca&w=110&h=110&c=7&rs=1&qlt=80&pcl=f9f9f9&o=6&cdv=1&dpr=1.5&pid=16.1" alt=""> WhatsApp</span></th></tr>
+                            </tbody>
+                        </table>
+                    </div>
                 </div>
-                <div>
-                    <h2>PAYMENT INFORMATION</h2>
+                
+                <div id="payment_disp2">
+                    <h3>In order to process your order, we need to gather your payment details.
+                        Please select a mode of payment below. You will be securely
+                        redirected to our partner site to process this order.</h3>
+                    <hr>
+                    <h3>You have some payment left to pay.
+                        Complete your order using another payment method</h3>
+                    
+                    <div id='card-info' class='border'>
+                        <h3>CREDIT CARD / DEBIT CARD / NET BANKING / WALLET</h3>
+                        <h3>Use your Credit Cards, Debit Cards, Wallets or Netbanking</h3>
+                        
+                        <div>
+                            <img class='img-width' src="https://www.tanishq.co.in/wps/wcm/connect/tanishq/c2e24c1f-930d-453b-a829-58027175d6e8/Visa_Razorpay.svg?MOD=AJPERES&CACHEID=ROOTWORKSPACE.Z18_90IA1H80O0RT10QIMVSTFU3006-c2e24c1f-930d-453b-a829-58027175d6e8-nNmx7rM" alt="">
+                            <img class='img-width' src="https://www.tanishq.co.in/wps/wcm/connect/tanishq/a49ec125-3082-47bc-aa70-3cd826536ddb/MasterCard_Razorpay.svg?MOD=AJPERES&CACHEID=ROOTWORKSPACE.Z18_90IA1H80O0RT10QIMVSTFU3006-a49ec125-3082-47bc-aa70-3cd826536ddb-nNmwrR3" alt="">
+                            <img class='img-width' src="https://www.tanishq.co.in/wps/wcm/connect/tanishq/de0bafe7-d87e-46d8-8773-44a05603d1e8/Maestro_Razorpay.svg?MOD=AJPERES&CACHEID=ROOTWORKSPACE.Z18_90IA1H80O0RT10QIMVSTFU3006-de0bafe7-d87e-46d8-8773-44a05603d1e8-nNmwlPn" alt="">
+                            <img class='img-width' src="https://www.tanishq.co.in/wps/wcm/connect/tanishq/b1df0c3e-c9e3-4473-b595-3037b938d69f/Rupay_Razorpay.svg?MOD=AJPERES&CACHEID=ROOTWORKSPACE.Z18_90IA1H80O0RT10QIMVSTFU3006-b1df0c3e-c9e3-4473-b595-3037b938d69f-nNmwXNE" alt="">
+                            <img class='img-width' src="https://www.tanishq.co.in/wps/wcm/connect/tanishq/4239bc8b-45d3-445a-a5eb-d1f125e5f5ea/Amex_Razorpay.svg?MOD=AJPERES&CACHEID=ROOTWORKSPACE.Z18_90IA1H80O0RT10QIMVSTFU3006-4239bc8b-45d3-445a-a5eb-d1f125e5f5ea-nNmvWkk" alt="">
+                            <img class='img-width' src="https://www.tanishq.co.in/wps/wcm/connect/tanishq/4393ecb6-0d51-4c8b-b4ea-f8b276a12ea1/Diners_Razorpay.svg?MOD=AJPERES&CACHEID=ROOTWORKSPACE.Z18_90IA1H80O0RT10QIMVSTFU3006-4393ecb6-0d51-4c8b-b4ea-f8b276a12ea1-nNmw5Lo" alt="">
+                            <img class='img-width' src="https://www.tanishq.co.in/wps/wcm/connect/tanishq/95860dc1-e524-41b6-b912-91569181d58a/International_Razorpay.svg?MOD=AJPERES&CACHEID=ROOTWORKSPACE.Z18_90IA1H80O0RT10QIMVSTFU3006-95860dc1-e524-41b6-b912-91569181d58a-nOygmGy" alt="">
+                        </div>
+                        <button>PAY FOR YOUR ORDER</button>
+                        
+                        <p>By placing the order, you have read and agreed the <a href="#">Terms and Conditions</a> and <a href="#">Privacy Policy</a> of Tanishq.co.in</p>
+                    </div> 
+                    
+                    <div id='upi' class='border'>
+                        <p class='text-center'>PAY USING</p>
+                        <h3 class= 'text-center'>UPI / DYNAMIC QR CODE</h3>
+                    </div>
                 </div>
-                <!-- <div>
-                    <h2>wattamwargaj@gmail.com</h2>
-                </div> -->
             </div>
 
         </div>
@@ -264,6 +441,8 @@
     let stage2 = document.getElementById("oncl");
     let disp1 = document.getElementById("disp1");
     let disp2 = document.getElementById("disp2");
+    let payment_disp2 = document.getElementById('payment_disp2');
+    let payment_info = document.getElementById('payment-info')
     
 
        
@@ -284,6 +463,7 @@
     let mob_ch = document.getElementById("mob_ch")
     let email_ch = document.getElementById("email_ch")
     let username_ch = document.getElementById("username_ch")
+    let review_disp2 = document.getElementById('review_disp2');
 
 
 
@@ -295,6 +475,74 @@
     username_ch.textContent = user.username;
 
 
+    function infoDone(){
+        let count_mark = document.getElementById('2nd_count_mark');
+        
+        count_mark.innerHTML = "&#10003";
 
+        disp1.style.display = 'none';
+        disp2.style.display = 'inline-block';
+
+        review_disp2.style.display = 'block';
+
+        let tbody = document.querySelector('tbody');
+
+        // arr.forEach((product) => {
+            let tr = document.createElement('tr');
+
+            let th1 = document.createElement('th');
+            // th2.style.columnSpan = '12';
+            
+            let img = document.createElement('img');
+            img.src= 'https://staticimg.titan.co.in/Tanishq/Catalog/GCTanishq_1.jpg?pView=listing';
+            img.style.width = '200px';
+
+            th1.append(img);
+
+            let th2 = document.createElement('th');
+            let p = document.createElement('p');
+            p.innerText = '1';
+            p.style.border = '1px solid black';
+
+            th2.append(p);
+
+            let th3 = document.createElement('th');
+            let h3  = document.createElement('h3');
+            h3.innerText = '1000';
+            th3.append(h3);
+
+            let th4 = document.createElement('th');
+            let div = document.createElement('div');
+            let p1 = document.createElement('p');
+            p1.innerText = 'STANDARD DELIVERY';
+            let p2 = document.createElement('p');
+            p2.innerText = '17TH NOV :FREE';
+            div.append(p1,p2);
+            div.style.border = '1px solid black';
+            th4.append(div);
+
+            tr.append(th1,th2, th3,th4);
+
+            
+            tbody.append(tr);
+            
+        // })
+
+    }
+
+
+
+    function gotoPayment(){
+        let count_mark = document.getElementById('3rd_count_mark');
+        count_mark.innerHTML= "&#10003;";
+
+        
+
+        review_disp2.style.display = 'none';
+
+        
+        payment_info.style.display= 'block';
+        payment_disp2.style.display = 'block';
+    }
 
 </script>
