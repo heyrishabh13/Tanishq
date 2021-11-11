@@ -51,12 +51,12 @@ function navbar(){
                         <div class="column">
                             <h3>CATEGORY </h3>
                             <a href="#">ALL JEWELLERY</a>
-                            <a href="earrings.html">EARRINGS</a>
-                            <a href="#">PENDANTS</a>
-                            <a href="#">FINGER RINGS</a>
-                            <a href="#">MANGALSUTRA</a>
+                            <a href="#" id = "earrings">EARRINGS</a>
+                            <a href="#" id = "pendants">PENDANTS</a>
+                            <a href="#" >FINGER RINGS</a>
+                            <a href="#" id = "mangalsutra">MANGALSUTRA</a>
                             <a href="#">CHAIN</a>
-                            <a href="#">NECKLACE</a>
+                            <a href="#" id = "necklace">NECKLACE</a>
                             <a href="#">NOSE PIN</a>
                         </div>
 

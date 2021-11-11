@@ -194,7 +194,7 @@
         .dropdown-content {
         display: none;
         position: absolute;
-        background-color: whitesmoke;
+        background-color: white;
         width: 100%;
         left: 0;
         box-shadow: 2px 8px 16px 0px rgba(0, 0, 0, 0.2);
@@ -206,6 +206,10 @@
         }
         .dropdown:hover .dropdown-content {
         display: block;
+        font-family: Roboto, sans-serif;
+        font-weight: 400;
+        line-height: 10px;
+        font-size: 12px;
         text-decoration: underline;
         }
         .dropbtn {
@@ -228,8 +232,9 @@
         float: left;
         width: 30%;
         padding: 10px;
-        background-color: #fafafa;
-        height: 450px;
+        margin-left: 20px;
+        background-color: white;
+        height: fit-content;
         }
 
         .column a {
@@ -242,7 +247,8 @@
         text-align: left;
         }
         .column a:hover {
-        color: #181818;
+        /* color: #181818; */
+        font-weight: 900;
         }
         .icn-1 {
         margin-left: 80px;
