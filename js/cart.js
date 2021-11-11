@@ -1,9 +1,9 @@
 import { navbar } from '/components/navbar.js'
 
-document.querySelector('nav').innerHTML = navbar()
+// document.querySelector('nav').innerHTML = navbar()
 
 //created a dummy data for ls
-/*
+
 let dummy_data = [
   {
     name: 'Shimmering Gold Mangalsutra Pendant',
@@ -37,83 +37,91 @@ let dummy_data = [
   },
 ]
 localStorage.setItem('cart',JSON.stringify(dummy_data))
-*/
+
 let count = document.getElementById('count')
 
-
+let cart = JSON.parse(localStorage.getItem("cart"))
+console.log('cart:', cart)
+let empty_cart = document.getElementById('empty_cart')
+let parent = document.getElementById('parent')
+let not_empty_cart = document.getElementById('not_empty_cart')
+console.log('kya h ye',localStorage.getItem("cart") )
+if (localStorage.getItem("cart") == null) {
+empty_cart.style.display = 'block';
+not_empty_cart.style.display= 'none';
+console.log('empty')
+}
 //   console.log(localStorage.getItem("cart"))
-if (localStorage.getItem("cart")) {
+else if (localStorage.getItem("cart")) {
+  empty_cart.style.display = 'none';
+  not_empty_cart.style.display= 'block';
 function showItems() {
-    let empty_cart = document.getElementById('empty_cart')
+  // recover data from local storage
+   
+
+  count.innerHTML = `CART: ${cart.length} ITEMS`
+
+
+  cart.forEach(({name , newPrice,images, size, weight }) => {
+    // working
+    console.log(name, newPrice,images[0], size, weight );
+//creating details container having image, name , price add other imp. stuff
+    let main_div = document.createElement('div');
+
+    let img_div = document.createElement('div');
+
+    let name_div =  document.createElement('div');
+
+    let quantity_div = document.createElement('div');
+
+    let quantity =  document.createElement('div');
+    quantity.innerHTML = "- 1 +"
+
+   
+
+    let p_name = document.createElement('div')
+    p_name.innerHTML = name
+    
+    let p_img = document.createElement('img')
+    p_img.src = images[0]
+    p_img.setAttribute('class','image')
+
+    let p_weight = document.createElement('div')
+    p_weight.innerHTML = weight
+
+    let p_size = document.createElement('div')
+    p_size.innerHTML = size;
+
+
+    let total = document.createElement('div')
+    total.innerHTML = `₹${newPrice}`
+
+    let remove_btn = document.createElement('button')
+    remove_btn.innerHTML = 'Remove'
+
+    remove_btn.onclick =  () =>{
+      removeItem(name,main_div,parent)
+    }
+    let items_div = document.createElement('div')
+
+    img_div.append(p_img);
+
+    name_div.append(p_name , p_weight , p_size)
+
+    items_div.append(p_img , name_div)
+    items_div.setAttribute('class','items_div')
+
+    quantity_div.append(quantity, remove_btn)
+
+    main_div.append(items_div, quantity_div , total)
+
+    parent.append(main_div);
   
+
+  })
+
       // let products = JSON.parse(localStorage.getItem("cart"));
      
-
-      // recover data from local storage
-      let cart = JSON.parse(localStorage.getItem("cart"))
-      console.log('cart:', cart)
-
-        
-      count.innerHTML = `CART: ${cart.length} ITEMS`
-
-      let parent = document.getElementById('parent')
-      cart.forEach(({name , newPrice,images, size, weight }) => {
-        // working
-        console.log(name, newPrice,images[0], size, weight );
-//creating details container having image, name , price add other imp. stuff
-        let main_div = document.createElement('div');
-
-        let img_div = document.createElement('div');
-
-        let name_div =  document.createElement('div');
-
-        let quantity_div = document.createElement('div');
-
-        let quantity =  document.createElement('div');
-        quantity.innerHTML = "- 1 +"
-
-       
-
-        let p_name = document.createElement('div')
-        p_name.innerHTML = name
-        
-        let p_img = document.createElement('img')
-        p_img.src = images[0]
-        p_img.setAttribute('class','image')
-
-        let p_weight = document.createElement('div')
-        p_weight.innerHTML = weight
-
-        let p_size = document.createElement('div')
-        p_size.innerHTML = size;
-
-
-        let total = document.createElement('div')
-        total.innerHTML = `₹${newPrice}`
-
-        let remove_btn = document.createElement('button')
-        remove_btn.innerHTML = 'Remove'
-
-        remove_btn.onclick =  () =>{
-          removeItem(name,main_div,parent)
-        }
-
-        img_div.append(p_img);
-
-        name_div.append(p_name , p_weight , p_size)
-
-        quantity_div.append(quantity, remove_btn)
-
-        main_div.append(img_div, name_div, quantity_div , total)
-
-        parent.append(main_div);
-      
-
-      })
-
-
-      
-
 
   }
   showItems()
@@ -137,7 +145,12 @@ function showItems() {
     let display_cont = document.getElementById('display_cont')
     display_cont.innerHTML = null
     showTotal()
+    if (cart.length === 0) {
+      empty_cart.style.display = 'block';
+      not_empty_cart.style.display= 'none';
+      console.log('empty')
   }
+}
 
   function showTotal() {
     let parent = document.getElementById('display_cont')
@@ -168,3 +181,4 @@ function showItems() {
 
 
 }
+
