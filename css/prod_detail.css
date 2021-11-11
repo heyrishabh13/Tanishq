@@ -170,7 +170,7 @@ grid-template-columns: 70% 30%;
     justify-content: center;
     width: 36%;
     /* height: 47px; */
-    padding: 12px;
+    padding: 10px;
     padding-left: 15px;
     border: 1px solid black;
     margin-right: 23px;
@@ -374,8 +374,8 @@ font-weight:
     #love{
         display: flex;
         justify-content: center;
-        color: white;
-        background-color: black;
+        /* color: white;
+        background-color: black; */
         height: 47px;
         width: 47px;
         border: 1px solid rgb(94, 90, 90);
@@ -428,11 +428,12 @@ font-weight:
 
     .bottom-3{
     background-color:rgb(176, 161, 110);
-    background-size: auto 50% ;   
+    height: 300px;
+    /* background-size: auto 50% ;    */
 }
 #buying-guide-plate{
     text-align: justify;
-    font-size:30px;
+    font-size:38px;
 font-family (stack):"Playfair Display", serif;
 padding-top:50px;
 padding-left:12%;
@@ -484,7 +485,7 @@ color:white;
     }
 
     .bottom-4,.bottom-5{
-
+        margin-top: 380px;
     }
 
     #bottom-4-plate, #bottom-5-plate{
