@@ -213,6 +213,44 @@
         #payment-info{
             display: none;
         }
+        #items_details {
+            border : 1px solid green;
+            width : 60%;
+        }
+        #headings {
+            display: grid;
+            grid-template-columns: 70% 20% 10%; 
+            border : 2px dashed black ;
+            margin: 10px;
+            font-size: 18px;
+        }
+        #parent > div {
+            display: grid;
+            grid-template-columns: 70% 20% 10%;
+            border : 2px dashed black ;
+            margin : 10px;
+        }
+        #parent > div > div {
+            border : 1px solid green;
+            margin-top : 10px;
+        }
+        .image {
+            width : 160px;
+        }
+        .name {
+            font-size : 18px;
+            font-weight : 800;
+        }
+        .quantity {
+            color: black;
+            display : inline-block;
+            border : 1px solid black;
+            /* width : 15px;
+        /*   height : 30px;  */
+            padding: 5px 10px; 
+            /* padding-left : 10px; */
+            font-size: 18px;
+        }
     </style>
 </head>
 <body>
@@ -305,24 +343,66 @@
                     <h3>Please review your order to ensure your details are correct.</h3>    
                     <h3>If you have reviewed your order, you can proceed to the next stage and make the payment.</h3>
 
-                    <table>
-                        <thead>
-                            <tr>
-                                <th><h3>ITEM(S)</h3></th>
-                                <th><h3>QUANTITY</h3></th>
-                                <th><h3>TOTAL</h3></th>
-                                <th ><h3>DELIVERY METHOD</h3></th>
-                            </tr>
-                        </thead>
+                    <div id="not_empty_cart">
+                        <div id="count"></div>
+             
+                        <div id="cart_main">
 
-                        <tbody>
-                            
-                        </tbody>
-                    </table>
-                    
-                    <hr>
+                            <div id="items_details">
 
-                    <h1>TOTAL BREAKDOWN</h1>
+                                 <div id="headings">
+                                     <div>ITEM(S)</div>
+                                    <div>QUANTITY</div>
+                                    <div>TOTAL</div>
+                                </div>
+                          
+                                 <div id="parent"></div>
+                            </div>
+
+                            <!-- <div id="order_summray">
+                                <h2>Order Summary</h2>
+                                <div id="promocode_btns">
+                                    <button>ENTER VOUCHER CODE</button>
+                                    <button>VIEW PROMO CODES</button>
+                                </div>
+
+                                <div id="display_cont">
+                                    <div id="input-box">
+                                        <input type="text">
+                                        <button>APPLY</button>
+                                    </div> 
+
+                                     <table>
+                                            <tbody>
+                                            <tr>
+                                                    <td>ORDER TOTAL (2 ITEMS) </td>
+                                                    <td id="amt"></td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Discount</td>
+                                                    <td>₹0</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>SHIPPING </td>
+                                                    <td>FREE</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>YOU PAY</td>
+                                                    <td id='final_amt'></td>
+                                                </tr>
+                                     </tbody>
+                                 </table>
+
+                            <div>INCLUSIVE OF ALL TAXES*</div> -->
+             
+                        </div>
+
+                        <!-- <div id="checkout_btns">
+                             a href="../ckeckout.html"><button>PROCEED TO CHECKOUT</button></a>
+                            <a href="../index.html"><button>CONTINUE SHOPPING</button></a>
+                        </div> --> 
+
+                    <!-- <h1>TOTAL BREAKDOWN</h1>
 
                     <table>
                         <tbody>
@@ -350,7 +430,7 @@
                             <tr><th><h3>INCLUSIVE OF ALL TAXES*</h3></th></tr>
 
                         </tbody>
-                    </table>
+                    </table> -->
 
                     <button onclick="gotoPayment()">CONTINUE TO PAYMENT</button>
 
@@ -485,48 +565,10 @@
 
         review_disp2.style.display = 'block';
 
-        let tbody = document.querySelector('tbody');
+        showItems();
 
-        // arr.forEach((product) => {
-            let tr = document.createElement('tr');
 
-            let th1 = document.createElement('th');
-            // th2.style.columnSpan = '12';
-            
-            let img = document.createElement('img');
-            img.src= 'https://staticimg.titan.co.in/Tanishq/Catalog/GCTanishq_1.jpg?pView=listing';
-            img.style.width = '200px';
 
-            th1.append(img);
-
-            let th2 = document.createElement('th');
-            let p = document.createElement('p');
-            p.innerText = '1';
-            p.style.border = '1px solid black';
-
-            th2.append(p);
-
-            let th3 = document.createElement('th');
-            let h3  = document.createElement('h3');
-            h3.innerText = '1000';
-            th3.append(h3);
-
-            let th4 = document.createElement('th');
-            let div = document.createElement('div');
-            let p1 = document.createElement('p');
-            p1.innerText = 'STANDARD DELIVERY';
-            let p2 = document.createElement('p');
-            p2.innerText = '17TH NOV :FREE';
-            div.append(p1,p2);
-            div.style.border = '1px solid black';
-            th4.append(div);
-
-            tr.append(th1,th2, th3,th4);
-
-            
-            tbody.append(tr);
-            
-        // })
 
     }
 
@@ -545,4 +587,79 @@
         payment_disp2.style.display = 'block';
     }
 
+
+
+    function showItems() {
+  // recover data from local storage having name cart
+   
+  let cart = JSON.parse(localStorage.getItem('prod_for_cart'))
+  let parent = document.getElementById('parent');
+
+//   count.innerHTML = `CART: ${cart.length} ITEMS`
+
+
+  cart.forEach(({name , newPrice,images }) => {
+//creating details container having image, name , price add other imp. stuff
+    let main_div = document.createElement('div');
+
+    let img_div = document.createElement('div');
+
+    let name_div =  document.createElement('div');
+
+    let quantity_div = document.createElement('div');
+
+    let quantity =  document.createElement('div');
+    quantity.innerHTML = "<div class='signs'>-</div> <div class='quantity'>1</div><div class='signs'>+</div> "
+    quantity.setAttribute('class','quan')
+
+   
+
+    let p_name = document.createElement('div')
+    p_name.innerHTML = name
+    p_name.setAttribute('class','name')
+
+    let code =  document.createElement('div');
+    code.innerHTML = `<b>511518JCZABA002EA005967</b>`
+    
+    let p_img = document.createElement('img')
+    p_img.src = images[0]
+    p_img.setAttribute('class','image')
+
+    let p_weight = document.createElement('div')
+    p_weight.innerHTML = `Weight (g): ${Math.random()*5+1}`
+
+   
+
+    let price = document.createElement('div')
+    price.innerHTML = `<b>₹${newPrice}</b>`
+
+    let total = document.createElement('div')
+    total.innerHTML = `<b>₹${newPrice}</b>`
+
+    let remove_btn = document.createElement('button')
+    remove_btn.innerHTML = 'Remove'
+
+    remove_btn.onclick =  () =>{
+      setTimeout(()=>{
+        removeItem(name,main_div,parent)
+      },500)
+    }
+    let items_div = document.createElement('div')
+
+    img_div.append(p_img);
+
+    name_div.append(p_name ,code, price,p_weight )
+
+    items_div.append(p_img , name_div)
+    items_div.setAttribute('class','items_div')
+
+    quantity_div.append(quantity, remove_btn)
+
+    main_div.append(items_div, quantity_div , total)
+
+    parent.append(main_div);
+  
+
+  });
+}
 </script>

@@ -6,7 +6,7 @@ function navbar(){
             <div id = "brand_curr">
                 <p>BRANDS</p>
                 <p id = "currency">MY ACCOUNT</p>
-                <p id = "gold_rate">CART(0)</p>
+                <a href="../html/cart.html"><p id = "cart-page">CART(0)</p></a>
             </div>
         </div>
 
@@ -107,7 +107,7 @@ function navbar(){
             <a href="#">GOLDEN HARVEST</a>
             <a href="">BOOK AN APPOINTMENT</a>
             <a href="">WISHLIST</a>
-            <a href="">CART(0)</a>
+            <a href="../html/cart.html">CART(0)</a>
         </div>
     
     </div>
@@ -128,14 +128,14 @@ function navbar(){
                         <div class="row">
                             <div class="column">
                                 <h3>CATEGORY </h3>
-                                <a href="/html/products.html">ALL JEWELLERY</a>
-                                <a href="/html/products.html" id = "earrings">EARRINGS</a>
-                                <a href="/html/products.html" id = "pendants">PENDANTS</a>
-                                <a href="/html/products.html" >FINGER RINGS</a>
-                                <a href="/html/products.html" id = "mangalsutra">MANGALSUTRA</a>
-                                <a href="/html/products.html">CHAIN</a>
-                                <a href="/html/products.html" id = "necklace">NECKLACE</a>
-                                <a href="/html/products.html">NOSE PIN</a>
+                                <a href="html/products.html">ALL JEWELLERY</a>
+                                <a href="html/products.html" id = "earrings">EARRINGS</a>
+                                <a href="html/products.html" id = "pendants">PENDANTS</a>
+                                <a href="html/products.html" >FINGER RINGS</a>
+                                <a href="html/products.html" id = "mangalsutra">MANGALSUTRA</a>
+                                <a href="html/products.html">CHAIN</a>
+                                <a href="html/products.html" id = "necklace">NECKLACE</a>
+                                <a href="html/products.html">NOSE PIN</a>
                             </di
 
                             <div class="column">
