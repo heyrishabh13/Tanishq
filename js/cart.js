@@ -58,15 +58,13 @@ else if (localStorage.getItem("cart")) {
   empty_cart.style.display = 'none';
   not_empty_cart.style.display= 'block';
 function showItems() {
-  // recover data from local storage
+  // recover data from local storage having name cart
    
 
   count.innerHTML = `CART: ${cart.length} ITEMS`
 
 
   cart.forEach(({name , newPrice,images }) => {
-    // working
-    // console.log(name, newPrice,images[0], size, weight );
 //creating details container having image, name , price add other imp. stuff
     let main_div = document.createElement('div');
 
