@@ -104,11 +104,11 @@ localStorage.setItem('cart',JSON.stringify(dummy_data))
 let count = document.getElementById('count')
 
 let cart = JSON.parse(localStorage.getItem("prod_for_cart"))
-console.log('cart:', cart)
+// console.log('cart:', cart)
 let empty_cart = document.getElementById('empty_cart')
 let parent = document.getElementById('parent')
 let not_empty_cart = document.getElementById('not_empty_cart')
-console.log('kya h ye',localStorage.getItem("prod_for_cart") )
+// console.log('kya h ye',localStorage.getItem("prod_for_cart") )
 if (localStorage.getItem("prod_for_cart") == null) {
 empty_cart.style.display = 'block';
 not_empty_cart.style.display= 'none';
@@ -219,7 +219,7 @@ function showItems() {
    
     cart = arr
     count.innerHTML = `CART : <span style="font-family : sans-serif">${cart.length}</span> ITEMS`
-    localStorage.setItem('cart',JSON.stringify(cart))
+    localStorage.setItem('prod_for_cart',JSON.stringify(cart))
     parent.removeChild(main_div)
     let display_cont = document.getElementById('display_cont')
     showTotal()
