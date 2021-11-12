@@ -1,6 +1,9 @@
 import {products} from "../data/data.js"
 
 function navTop(){
+
+    
+
     let select = document.getElementById("currency")
         let sel_cur = document.getElementById("sel_curr")
         
@@ -141,22 +144,13 @@ function navTop(){
 }
 
 
-function search(query){
-    
-
-    products.forEach((product) => {
-        if(product.name.toLowerCase().split(' ').includes('pendant')){
-            arr.push(product);
-        }
-    })
-    console.log(arr);
-}
+ 
 
 
 
 
 
-export {navTop, search};
+export {navTop};
    
     
     

@@ -1,8 +1,4 @@
-body{
-    /* padding-left: 9%;
-    padding-right: 1%; */
 
-}
 .path{
     padding-top: 1%;
     padding-left: 10%;
@@ -388,7 +384,7 @@ font-weight:
 
     }
 
-    }
+    
     .bottom1{
 
     }
@@ -414,7 +410,7 @@ font-weight:
         font-weight:400;
         margin: 5%;
           color: rgb(24, 24, 24);
-        font-family (stack): "Playfair Display", serif;
+        /* font-family (stack): "Playfair Display", serif; */
         font-size: 26px;
         font-weight: 400;
 
@@ -434,7 +430,7 @@ font-weight:
 #buying-guide-plate{
     text-align: justify;
     font-size:38px;
-font-family (stack):"Playfair Display", serif;
+/* font-family (stack):"Playfair Display", serif; */
 padding-top:50px;
 padding-left:12%;
 font-weight:400;
@@ -492,7 +488,7 @@ color:white;
         margin: 5%;
         text-align: center;
         color:rgb(24, 24, 24);
-        font-family (stack):"Playfair Display", serif;
+        /* font-family (stack):"Playfair Display", serif; */
         font-size:27px;
 
     }

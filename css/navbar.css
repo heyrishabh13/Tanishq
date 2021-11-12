@@ -320,17 +320,19 @@
             
             border: 1px solid black;
         } */
-        #popu_grid1{
+        #popu_grid1, #show{
             display: grid;
             /* width: 100%; */
             grid-template-columns: 25% 70%;
             /* grid-template-rows: 100px; */
             /* border: 1px solid red; */
         }
-        #popu_grid1 div:nth-child(1) img, #popu_grid1 div:nth-child(3) img, #popu_grid1 div:nth-child(5) img{
+        /* #popu_grid1 div:nth-child(1) img, #popu_grid1 div:nth-child(3) img, #popu_grid1 div:nth-child(5) img{
+            width: 100%;
+        } */
+        #popu_grid1  img, #show img{
             width: 100%;
         }
-        
         
 
 /* mediaquery */

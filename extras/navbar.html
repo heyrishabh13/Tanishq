@@ -333,17 +333,19 @@
             
             border: 1px solid black;
         } */
-        #popu_grid1{
+        #popu_grid1, #show{
             display: grid;
             /* width: 100%; */
             grid-template-columns: 25% 70%;
             /* grid-template-rows: 100px; */
             /* border: 1px solid red; */
         }
-        #popu_grid1 div:nth-child(1) img, #popu_grid1 div:nth-child(3) img, #popu_grid1 div:nth-child(5) img{
+        /* #popu_grid1 div:nth-child(1) img, #popu_grid1 div:nth-child(3) img, #popu_grid1 div:nth-child(5) img{
+            width: 100%;
+        } */
+        #popu_grid1  img, #show img{
             width: 100%;
         }
-        
         
 
 /* mediaquery */
@@ -892,7 +894,7 @@
                             </div>
                             <div class="column">
                                 <a href="#">ALL JEWELLERY</a>
-                                <a href="earrings.html">EARRINGS</a>
+                                <a href="#">EARRINGS</a>
                                 <a href="#">PENDANTS</a>
                                 <a href="#">FINGER RINGS</a>
                                 <a href="#">MANGALSUTRA</a>
@@ -953,7 +955,7 @@
     <div id = "search_div">
         <div id = "search_div2">
             <div>
-                <input type="text" name="" id="search_inp" placeholder="Search our Products..."><i class="material-icons" id = "menu">mic</i><i class="material-icons" id = "menu">search</i>
+                <input type="text" name=""  id="search_inp" placeholder="Search our Products..."><i class="material-icons" id = "menu">mic</i><i class="material-icons" id = "menu">search</i>
             </div>
             <div id = "search_grid">
                 <div>
@@ -967,7 +969,7 @@
                 <div>
                     <p>Popular Products</p>
                     <div id = "popu_grid1">
-                        <div>
+                        <div class='image'>
                             <img src="https://staticimg.titan.co.in/Tanishq/Catalog/600212ZCDRBS00_1.jpg?impolicy=pqmed&imwidth=320" alt="">
                         </div>
                         <div>
@@ -975,7 +977,7 @@
                             <p>600212ZCDRBS00</p>
                             <p></p>
                         </div>
-                        <div>
+                        <div class='image'>
                             <img src="https://staticimg.titan.co.in/Tanishq/Catalog/513220VIX2A00_1.jpg?impolicy=pqmed&imwidth=320" alt="">
                         </div>
                         <div>
@@ -983,7 +985,7 @@
                             <p>600212ZCDRBS00</p>
                             <p></p>
                         </div>
-                        <div>
+                        <div class='image'>
                             <img src="https://staticimg.titan.co.in/Tanishq/Catalog/600102ZBARAS00_1.jpg?impolicy=pqmed&imwidth=320" alt="">
                         </div>
                         <div>
@@ -991,6 +993,9 @@
                             <p>600212ZCDRBS00</p>
                             <p></p>
                         </div>
+                    </div>
+                    <div id='show'>
+
                     </div>
                 </div>
             </div>
@@ -1141,6 +1146,100 @@
         }
     }
 
+    // debouncing
 
+    let timeId;
+
+    let input_box = document.getElementById('search_inp');
+
+    input_box.addEventListener('input', function(){
+        // search_box.style.display = 'block';
+        debounce(main, 1000)
+    });
+
+    function debounce(main, delay){
+        if(timeId){
+            clearTimeout(timeId);
+        }
+
+        timeId = setTimeout(function(){
+            main();
+        }, delay);
+    }
+
+    async function main(){
+
+        let data = await searchFunc();
+
+        console.log(data);
+
+        appendProducts(data);
+    }
+
+    function searchFunc(){
+    
+        let input = document.getElementById('search_inp').value;
+
+        let arr = [];
+
+        products.forEach((product) => {
+            if(product.name.toLowerCase().split(' ').includes(input.toLowerCase())){
+                arr.push(product);
+            }
+        })
+        
+        return arr;
+    }
+
+    function appendProducts(data){
+
+        let default_show = document.getElementById('popu_grid1');
+        let show = document.getElementById('show');
+
+        if(data.length > 0){
+            if(show.style.display == 'none'){
+                show.style.display = 'grid';
+            }
+            show.innerHTML = null;
+            default_show.style.display = 'none';
+
+            // <div>
+            //                 <img src="https://staticimg.titan.co.in/Tanishq/Catalog/600212ZCDRBS00_1.jpg?impolicy=pqmed&imwidth=320" alt="">
+            //             </div>
+            //             <div>
+            //                 <p>25 gram 24 Karat Gold Biscuit</p>
+            //                 <p>600212ZCDRBS00</p>
+            //                 <p></p>
+            //             </div>
+
+            for(let i = 0; i < 3; i++){
+
+                let product = data[i];
+
+                let img_div = document.createElement('div');
+                let img = document.createElement('img');
+                img.src = product.images[0];
+                img_div.append(img);
+
+                let content_div = document.createElement('div');
+
+                let name = document.createElement('p');
+                name.innerText = product.name;
+                
+                let type = document.createElement('p');
+                type.innerText = product.jewelleryType;
+                content_div.append(name, type);
+
+                show.append(img_div, content_div);
+            }
+                        
+        }
+        else{
+            show.style.display = 'none';
+            default_show.style.display = 'grid';
+        }
+
+
+    }
 
 </script>

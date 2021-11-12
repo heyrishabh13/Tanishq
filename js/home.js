@@ -1,14 +1,17 @@
-import {navbar} from '../components/navbar.js'
+import { navbar } from '../components/navbar.js'
 import {footer} from '../components/footer.js'
-import {navTop, search} from '../components/navTop.js';
+import {navTop} from '../components/navTop.js'
+import {navTop2} from '../components/navTop2.js'
+import {debouncing} from '../components/debouncing.js'
 
-document.querySelector('nav').innerHTML =  navbar();
-
+document.querySelector('nav').innerHTML = navbar()
 document.querySelector('footer').innerHTML = footer();
 
 navTop();
 
-search();
+navTop2();
+
+debouncing();
 
 var myIndex = 0;
     carousel();
