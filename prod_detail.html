@@ -4,220 +4,288 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Product Detail</title>
-     <link rel="preconnect" href="https://fonts.googleapis.com">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&family=Raleway:wght@200&display=swap" rel="stylesheet">
-    <!-- <link href="https://fonts.googleapis.com/icon?family=Material+Icons+outlined"
-      rel="stylesheet"> -->
-      <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
-
-
-
-    
-
-
-    <link rel="stylesheet" href="css/navbar.css">
-    <link rel="stylesheet" href="css/footer.css">
-    <link rel="stylesheet" href="css/prod_detail.css">
-</head>
-
-<body>
-    <!-- <nav></nav> -->
-    
-    <div class="path">
-        <span id="path-home">HOME &nbsp; >&nbsp; </span>PRODUCT &nbsp; >&nbsp;  <span id="product-name">Surreal Gold Neckwear</span>
-    </div>
-    <div id="prod">
-        <div class="part1">
-            <div class="prod-img">
-                <img id="curr-img" src="https://staticimg.titan.co.in/Tanishq/Catalog/510087NYAAA00_1.jpg?impolicy=pqmed&imwidth=640"/>
-            </div>
-
-            <div id="btns">
-                <a id="zoom-btn" href="#" ><u>CLICK TO ZOOM</u></a>
-                <button class="btn-try">TRY IT ON</button>
-            </div>
-
-            <div class="prod-img-down">
-                <div id="prod-img-down-1">
-                   <img id="prod-img-down-1-1" src="https://staticimg.titan.co.in/Tanishq/Catalog/510087NYAAA00_1.jpg?impolicy=pqmedlow&imwidth=320"/>
-                </div>
-                <div id="prod-img-down-2">
-                    <img id="prod-img-down-2-2" src="https://staticimg.titan.co.in/Tanishq/Catalog/510087NYAAA00_2.jpg?impolicy=pqmedlow&imwidth=320"/>
-                </div>
-            </div>
-        </div>
-
-
-        <div class="prod-detail">
-            <div class="prod-detail-1">
-                <div>
-                    <div class="prod-id-star">
-                        <div id="unique-id">510228VEAP1A002EA007411</div>
-                        
-                    </div>
-
-                    <h2 id="prod-name">Sleek Gold Bangle</h2>
-                    <p id="prod-price">PRICE &#8377; <span>49 657.00</span></p>
-                    <p><span id="incl-tax">(Incl. of all taxes)</span><a id="price-breakup">Price Breakup</a></p>
-                </div>
-                <div>
-                </div>
-            </div>
-            
-            
-            <p id="vary-alert">*Weight and Price may vary subject to the stock available.</p>
-            <div id="prod-detail-try-avl">TRY ON AVAILABLE</div>
-            <p id="style-info">Elegant Minimalistic Bangle set in 22 Karat Yellow Gold</p>
-            <a id=prod-details href="#"><u>Product details</u></a>
-
-            <div id="weight-net-qty">
-                <div id="gross-weight">
-                    <p id="gross-weight-style">Gross Weight</p>
-            <div>
-                <div>
-                    <p>Gross Weight</p>
-                    <div id="gross-wt">
-                        29.027g
-                    </div>
-                </div>
-
-                <div id="net-qty">
-                    <p id="net-qty-style">Net Qty</p>
-
-                    <div id="net-qty-n">
-                        1 N
-                    </div>
-                </div>
-            </div>
-                <div id="net-Qty-N">
-                    <p>Net Qty</p>
-                    <div>
-                        1 N hii
-                    </div>
-                </div>
-            </div>
+    <style>
+        #prod_layout{
+            width: 100%;
+        }
+        #sub_prod{
+            width: 80%;
+            margin: auto;
+            display: grid;
+            grid-template-columns: 40% 50%;
+            gap: 10%;
+            /* border: 1px solid black; */
+        }
+        p {
+            font-family: 'Roboto';
+        }
+        h2{
+            font-size: 22px;
+            font-family: "Playfair Display", serif;
+            font-weight: 400;
+        }
+        #left_img{
+            width: 400px;
+            height: 400px;
+            /* border: 1px solid black; */
+        }
+        #gros_wei{
+            display: grid;
+            grid-template-columns: 70% 10%;
+            grid-template-rows: 30px 50px;
+            gap: 15%;
+        }
+        #cart_appo{
+            display: grid;
+            grid-template-columns: 35% 55%;
+            grid-template-rows: 50px;
+            gap: 10%;
+        }
+        #ship{
+            width: 100%;
+        }
+        #click_try{
+            display: flex;
+        }
+        #click_try button{
+            margin-left: 20%;
+            width: 30%;
+            height: 30px;
+        }
+        #click_try a{
+            margin-left: -10%;
+        }
+        #sample{
+            display: grid;
+            grid-template-columns: 70px 70px;
+            grid-template-rows: 70px;
+            gap: 20%;
+            margin-left: 20%;
+        }
+        #sample img:nth-child(1), #sample img:nth-child(2){
+            width: 100%;
+            border: 1px solid black;
+        }
+        .flex{
+            position: relative;
+            left: 60%;
+            top: -93%;
+            display: flex;
+        }
+        
+        .flex p{
+            margin-top: 5px;
            
-           <div id="cart-appointment">
-               <div id="add-to-cart">
-                    ADD TO CART
-               </div>
-               <div id="appointment">
-                    BOOK AN APPOINTMENT
-               </div>
-           </div>
-           <h3 id="left-warning">
-               &#10003; ONLY 1 LEFT IN STOCK
-            </h3>
-           <img id="" src="https://www.tanishq.co.in/wps/wcm/connect/tanishq/1018d041-8048-466a-9cbd-4175282d71a9/desktop/2nd-scroll-dt-all.png?MOD=AJPERES&CACHEID=ROOTWORKSPACE.Z18_90IA1H80O0RT10QIMVSTFU3006-1018d041-8048-466a-9cbd-4175282d71a9-desktop-nODZ0Q8"/>
-
-        </div> 
-
-        <div id="part3">
-            <div id="prod-star">
-                <p><span id="five-star"> &star;&star;&star;&star;&star;</span><span>Write a review</span></p>
-            </div> 
-
-            <div class="curr">
-                <div id="curr-rs">&#8377; </div>
-                 <div id="curr-usd">$</div>
-            </div>
-
-            <div class="share-love">
-                <div id="share"><i class="material-icons" id = "room">share</i>
+        }
+        #pinco{
+            width: 60%;
+            margin: auto;
+            /* border: 1px solid black; */
+            text-align: center;
+        }
+        #cou_pin{
+            width: 100%;
+        }
+        #cou_butt{
+            display: grid;
+            grid-template-columns: 40% 40%;
+            grid-template-rows: 50px;
+            gap: 20%;
+        }
+        #pin{
+            width: 60%;
+            height: 44px;
+        }
+        #cou_butt div:nth-child(2) button{
+            width: 30%;
+            height: 50px;
+        }
+        .share_like{
+            display: grid;
+            grid-template-columns: 40px 40px;
+            grid-template-rows: 40px;
+            position: relative;
+            top: -55%;
+            left: 80%;
+        }
+        #share{
+            border: 1px solid black;
+            padding: 5px;
+        }
+        #fav{
+            border: 1px solid black;
+            padding: 5px;
+        }
+        .rupee_dollar{
+            display: grid;
+            grid-template-columns: 40px 40px;
+            grid-template-rows: 40px;
+            position: relative;
+            top: -82%;
+            left: 80%;
+        }
+        #rupee{
+            border: 1px solid black;
+            padding-left: 10px;
+        }
+        #dollar{
+            border: 1px solid black;
+            padding-left: 10px;
+        }
+        
+    </style>
+</head>
+<body>
+    <div id = "prod_layout">
+        <div id = "sub_prod">
+            <div>
+                <img id = "left_img" src="https://staticimg.titan.co.in/Tanishq/Catalog/50D1I2SJGAAA02_1.jpg?impolicy=pqmed&imwidth=640" alt="">
+                <div>&nbsp;</div>
+                <div id = "click_try">
+                    <a href="">CLICK TO ZOOM</a>
+                    <button>Try it on</button>
                 </div>
-                <div id="love">♡</div>
-            </div>
-        </div>
-
-        
-
-    </div>
-
-    <div class="bottom">
-        <div class="bottom-1">
-            <div id="">
-                <h2 id="pin-check">Pincode / Zipcode Check </h2>
-            </div>
-        </div>
-    </div>
-
-    <div class="bottom-2">
-        <div class="">
-
-        </div>
-    </div>
-
-    <div class="bottom-3">
-        <div>
-            <h1 id="buying-guide-plate">BUYING GUIDES</h1>
-        </div>
-        
-
-        <div id="buying-guide">
-            <div id="diamond">
-                <img id="img-diamond" src="https://www.tanishq.co.in/wps/wcm/connect/tanishq/3da153bb-9189-40de-940e-c5155b08b515/Guides-Ecomm-Banner-2.jpg?MOD=AJPERES&amp;CACHEID=ROOTWORKSPACE.Z18_90IA1H80O0RT10QIMVSTFU3006-3da153bb-9189-40de-940e-c5155b08b515-m-yFjiV"/>
-            </div>
-            <div id="gemstone">
-                <img id="img-gemstone" src="https://www.tanishq.co.in/wps/wcm/connect/tanishq/f546eb67-a13a-46bb-a8ea-91e2b3eaa50a/Guides-Ecomm-Banner-3.jpg?MOD=AJPERES&amp;CACHEID=ROOTWORKSPACE.Z18_90IA1H80O0RT10QIMVSTFU3006-f546eb67-a13a-46bb-a8ea-91e2b3eaa50a-m-yFjiV"/>
-            </div>
-            <div id="metal">
-                <img id="img-metal" src="https://www.tanishq.co.in/wps/wcm/connect/tanishq/6b9c9176-df13-4b5c-aff3-761857772999/Guides-Ecomm-Banner-1.jpg?MOD=AJPERES&amp;CACHEID=ROOTWORKSPACE.Z18_90IA1H80O0RT10QIMVSTFU3006-6b9c9176-df13-4b5c-aff3-761857772999-m-yFjiV"/>
-            </div>
-        </div>
-
-    </div>
-
-
-    <!-- <div class="bottom-4">
-
-    <div class="bottom 2">
-        <div class="">
-
-        </div>
-    </div>
-
-    <div>
-        <h1>BUYING GUIDES</h1>
-
-        <div id="buying-guide">
-            <div id="">
-                <img id="" src="https://www.tanishq.co.in/wps/wcm/connect/tanishq/3da153bb-9189-40de-940e-c5155b08b515/Guides-Ecomm-Banner-2.jpg?MOD=AJPERES&amp;CACHEID=ROOTWORKSPACE.Z18_90IA1H80O0RT10QIMVSTFU3006-3da153bb-9189-40de-940e-c5155b08b515-m-yFjiV"/>
+                <div>&nbsp;</div>
+                <div>&nbsp;</div>
+                <div id = "sample">
+                    <img id = "sample1" src="https://staticimg.titan.co.in/Tanishq/Catalog/50D1I2SJGAAA02_1.jpg?impolicy=pqmed&imwidth=640" alt="">
+                    <img id = "sample2" src="https://staticimg.titan.co.in/Tanishq/Catalog/50D1I2SJGAAA02_2.jpg?impolicy=pqmed&imwidth=640" alt="">
+                </div>
+                
             </div>
             <div>
-                <img id="" src="https://www.tanishq.co.in/wps/wcm/connect/tanishq/f546eb67-a13a-46bb-a8ea-91e2b3eaa50a/Guides-Ecomm-Banner-3.jpg?MOD=AJPERES&amp;CACHEID=ROOTWORKSPACE.Z18_90IA1H80O0RT10QIMVSTFU3006-f546eb67-a13a-46bb-a8ea-91e2b3eaa50a-m-yFjiV"/>
-            </div>
-            <div>
-                <img id="" src="https://www.tanishq.co.in/wps/wcm/connect/tanishq/f546eb67-a13a-46bb-a8ea-91e2b3eaa50a/Guides-Ecomm-Banner-3.jpg?MOD=AJPERES&amp;CACHEID=ROOTWORKSPACE.Z18_90IA1H80O0RT10QIMVSTFU3006-f546eb67-a13a-46bb-a8ea-91e2b3eaa50a-m-yFjiV"/>
-            </div>
-            
-    <div class="bottom-4">
+                <p>50D1I2SJGAAA022JA000137</p>
+                <h2>Graceful Diamond Stud Earrings In Rose Gold</h2>
+                <h2 id = "price_tag">PRICE ₹ 55 770.00</h2>
+                <p>(Incl. of all taxes)</p>
+                <p>*Weight and Price may vary subject to the stock available.</p>
+                <p>Be a graceful presence with this stunning jewellery crafted in 18 karat rose gold studded with diamonds. Stone Quality SI2</p>
+                <a href="">Product details</a>
+                
+                <div id = "gros_wei">
+                    <p>Gross Weight</p>
+                    <p>Qty.</p>
+                    <button id = "Weight"></button>
+                    <button>1</button>
+                </div>
+                <div>&nbsp;</div>
+                <div>&nbsp;</div>
+                <div>&nbsp;</div>
+                <div id = "cart_appo">
+                    <button onclick = "new_array()">ADD TO CART</button>
+                    <button>BOOK AN APPOINTMENT</button>
+                </div>
+                <p>ONLY 1 LEFT IN STOCK</p>
+                <img id ="ship" src="https://www.tanishq.co.in/wps/wcm/connect/tanishq/1018d041-8048-466a-9cbd-4175282d71a9/desktop/2nd-scroll-dt-all.png?MOD=AJPERES&CACHEID=ROOTWORKSPACE.Z18_90IA1H80O0RT10QIMVSTFU3006-1018d041-8048-466a-9cbd-4175282d71a9-desktop-nODZ0Q8" alt="">
 
-        <div id="bottom-4-plate">
-            You May Also Like 
+                <div class = "flex">
+                    <i class="material-icons" id = "room">star</i><i class="material-icons" id = "room">star</i><i class="material-icons" id = "room">star</i><i class="material-icons" id = "room">star</i><i class="material-icons" id = "room">star</i>
+                    <p>Write a Review</p>
+                </div>
+
+                <div class = "share_like">
+                    <i class="material-icons" id = "share">share</i>
+                    <i class="material-icons" id = "fav">favorite border</i>
+                </div>
+
+                <div class = "rupee_dollar">
+                    <i class="material-icons" id = "rupee">₹</i>
+                    <i class="material-icons" id = "dollar">$</i>
+                </div>
+            </div>
+        </div>
+        
+        <div id = "pinco">
+            <h2>Pincode / Zipcode Check</h2>
+            <div id = "cou_pin">
+                <p>FREE SHIPPING & FREE RETURNS ON ALL ORDERS</br>
+                    Find out more about our Delivery and Returns policy.</p>
+            </div>
+            <div id= "cou_butt">
+                <select name="" id="selector" >
+                    <option value="">Australia</option>
+                    <option value="">Bahrain</option>
+                    <option value="">Canada</option>
+                    <option value="">Germany</option>
+                    <option value="">India</option>
+                    <option value="">Italy</option>
+                    <option value="">Kenya</option>
+                    <option value="">Kuwait</option>
+                    <option value="">Malaysia</option>
+                    <option value="">Netherlands</option>
+                    <option value="">New Zealand</option>
+                    <option value="">Oman</option>
+                    <option value="">Portugal</option>
+                    <option value="">Katar</option>
+                    <option value="">Romania</option>
+                    <option value="">South Arabia</option>
+                    <option value="">Singapore</option>
+                    <option value="">South Africa</option>
+                    <option value="">spain</option>
+                    <option value="">United Arab Emirates</option>
+                    <option value="">United States</option>
+                    <option value="">United Kingdom</option>
+                </select>
+                <div>
+                    <input type="text" name="" id="pin"><button>CHECK</button>
+                </div>
+                
+            </div>
         </div>
 
-        <div id="items-bottom-4">
-
-        </div>
     </div>
-
-    <div class="bottom-5">
-        <div id="bottom-5-plate">
-            Customers Who Viewed This Also Viewed
-        </div>
-
-        <div id="items-bottom-5">
-
-        </div>
-    </div> -->
-
-
-    
-
-    <!-- <footer></footer> -->
 </body>
 </html>
-<script type="module" src="js/home.js"></script>
+<script>
+    let dummy_data = [
+  {
+    name: 'Shimmering Gold Mangalsutra Pendant',
+    newPrice: 14710,
+    oldPrice: 14795,
+    images: [
+      'https://staticimg.titan.co.in/Tanishq/Catalog/511193PAJAAA00_1.jpg?impolicy=pqmed&imwidth=640',
+    ],
+    purity: '22.00',
+    jewelleryType: 'Plain Gold Jewellery',
+    occasion: 'Casual Wear',
+    product: 'Pendant',
+    size : "Chain Size: 53 mm",
+    weight : "7.639g",
+  }
+];
+localStorage.setItem('prod',JSON.stringify(dummy_data))
+let store = JSON.parse(localStorage.getItem("prod"));
+
+let Weight = document.getElementById("Weight");
+Weight.textContent = Math.floor(Math.random()*20) + "g";
+
+let left_img = document.getElementById("left_img");
+let sample1 = document.getElementById("sample1");
+let sample2 = document.getElementById("sample2");
+left_img.src = store[0].images[0];
+sample1.src = store[0].images[0];
+sample2.src = store[0].images[1];
+
+let price_tag = document.getElementById("price_tag");
+price_tag.textContent = "PRICE" + " " +"₹"+ " " +store[0].newPrice;
+
+if(localStorage.getItem("prod_for_cart") == null){
+    localStorage.setItem("prod_for_cart", JSON.stringify([])) 
+} 
+
+function new_array(){
+    console.log(store[0]);
+    let local_arr = JSON.parse(localStorage.getItem("prod_for_cart"));
+    local_arr.push(store[0]);
+    localStorage.setItem("prod_for_cart", JSON.stringify(local_arr));
+}
+
+
+
+</script>
