@@ -12,13 +12,13 @@
 }
 #headings {
     display: grid;
-    grid-template-columns: 60% 30% 5%; 
+    grid-template-columns: 70% 20% 10%; 
     border : 2px dashed black ;
     margin: 10px;
 }
 #parent > div {
     display: grid;
-    grid-template-columns: 60% 30% 10%;
+    grid-template-columns: 70% 20% 10%;
     border : 2px dashed black ;
     margin : 10px;
 }
@@ -53,8 +53,47 @@ button {
     justify-content: space-between;
 }
 .items_div{
-    display : flex;
+    display : grid;
+    grid-template-columns: 30% 50%;
+    grid-gap: 8%;
     /* justify-content: left; */
     /* width : 50%; */
+    border : 3px solid black !important;
 }
-
+.image {
+    width : 160px;
+}
+#count{
+    font-size : 28px;
+}
+.quantity {
+    color: black;
+    display : inline-block;
+    border : 1px solid black;
+     /* width : 15px;
+ /*   height : 30px;  */
+    padding: 5px 10px; 
+    /* padding-left : 10px; */
+    font-size: 18px;
+}
+.signs {
+    display : inline-block;
+    color : gray;
+    margin : 5px 10px ;
+    /* border : 1px dashed black;   */
+    font-size: 30px;
+    cursor : pointer;
+}
+.signs:hover {
+    color : black;
+}
+/* .quan {
+    margin-top : 10px;
+} */
+.name {
+    font-size : 18px;
+    font-weight : 800;
+}
+#headings {
+    font-size : 18px;
+}

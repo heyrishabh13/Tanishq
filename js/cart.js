@@ -3,10 +3,10 @@ import { navbar } from '/components/navbar.js'
 // document.querySelector('nav').innerHTML = navbar()
 
 //created a dummy data for ls
-
+/*
 let dummy_data = [
   {
-    name: 'Shimmering Gold Mangalsutra Pendant',
+    name: 'Opulent Gold Jhumka Style Earrings',
     newPrice: 14710,
     oldPrice: 14795,
     images: [
@@ -37,6 +37,7 @@ let dummy_data = [
   },
 ]
 localStorage.setItem('cart',JSON.stringify(dummy_data))
+*/
 
 let count = document.getElementById('count')
 
@@ -62,9 +63,9 @@ function showItems() {
   count.innerHTML = `CART: ${cart.length} ITEMS`
 
 
-  cart.forEach(({name , newPrice,images, size, weight }) => {
+  cart.forEach(({name , newPrice,images }) => {
     // working
-    console.log(name, newPrice,images[0], size, weight );
+    // console.log(name, newPrice,images[0], size, weight );
 //creating details container having image, name , price add other imp. stuff
     let main_div = document.createElement('div');
 
@@ -75,38 +76,46 @@ function showItems() {
     let quantity_div = document.createElement('div');
 
     let quantity =  document.createElement('div');
-    quantity.innerHTML = "- 1 +"
+    quantity.innerHTML = "<div class='signs'>-</div> <div class='quantity'>1</div><div class='signs'>+</div> "
+    quantity.setAttribute('class','quan')
 
    
 
     let p_name = document.createElement('div')
     p_name.innerHTML = name
+    p_name.setAttribute('class','name')
+
+    let code =  document.createElement('div');
+    code.innerHTML = `<b>511518JCZABA002EA005967</b>`
     
     let p_img = document.createElement('img')
     p_img.src = images[0]
     p_img.setAttribute('class','image')
 
     let p_weight = document.createElement('div')
-    p_weight.innerHTML = weight
+    p_weight.innerHTML = `Weight (g): ${Math.random()*5+1}`
 
-    let p_size = document.createElement('div')
-    p_size.innerHTML = size;
+   
 
+    let price = document.createElement('div')
+    price.innerHTML = `<b>₹${newPrice}</b>`
 
     let total = document.createElement('div')
-    total.innerHTML = `₹${newPrice}`
+    total.innerHTML = `<b>₹${newPrice}</b>`
 
     let remove_btn = document.createElement('button')
     remove_btn.innerHTML = 'Remove'
 
     remove_btn.onclick =  () =>{
-      removeItem(name,main_div,parent)
+      setTimeout(()=>{
+        removeItem(name,main_div,parent)
+      },1500)
     }
     let items_div = document.createElement('div')
 
     img_div.append(p_img);
 
-    name_div.append(p_name , p_weight , p_size)
+    name_div.append(p_name ,code, price,p_weight )
 
     items_div.append(p_img , name_div)
     items_div.setAttribute('class','items_div')
@@ -143,7 +152,6 @@ function showItems() {
     localStorage.setItem('cart',JSON.stringify(cart))
     parent.removeChild(main_div)
     let display_cont = document.getElementById('display_cont')
-    display_cont.innerHTML = null
     showTotal()
     if (cart.length === 0) {
       empty_cart.style.display = 'block';
@@ -160,22 +168,13 @@ function showItems() {
     cart.forEach(({newPrice}) =>{
       sum+= +newPrice
     })
-    let initial_price = document.createElement('div')
-    initial_price.innerHTML = `ORDER TOTAL (${cart.length} ITEMS)<b> ₹${sum}</b>`
+  
 
-    let shipping = document.createElement('div')
-    shipping.innerHTML = `SHIPPING <b>FREE</b>`
+    let amt = document.getElementById('amt')
+    amt.innerHTML = `₹${sum}`
 
-    let discount = document.createElement('div')
-    discount.innerHTML = `DISCOUNT <b>₹0</b>`
-
-    let final_price = document.createElement('div')
-    final_price.innerHTML = `<b>YOU PAY ₹${sum}<b/>`
-
-    let tax = document.createElement('div')
-    tax.innerHTML = `<b>INCLUSIVE OF ALL TAXES*</b>`
-
-    parent.append(initial_price,discount,shipping,final_price,tax)
+    let final_amt = document.getElementById('final_amt')
+    final_amt.innerHTML = `₹${sum}`
   }
   showTotal() 
 
