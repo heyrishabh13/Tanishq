@@ -13,41 +13,32 @@ navTop2();
 
 debouncing();
 
-let dummy_data = [
-    {
-      name: 'Shimmering Gold Mangalsutra Pendant',
-      newPrice: 14710,
-      oldPrice: 14795,
-      images: [
-        'https://staticimg.titan.co.in/Tanishq/Catalog/511193PAJAAA00_1.jpg?impolicy=pqmed&imwidth=640',
-      ],
-      purity: '22.00',
-      jewelleryType: 'Plain Gold Jewellery',
-      occasion: 'Casual Wear',
-      product: 'Pendant',
-      size : "Chain Size: 53 mm",
-      weight : "7.639g",
-    }
-  ];
-  localStorage.setItem('prod',JSON.stringify(dummy_data))
-  let store = JSON.parse(localStorage.getItem("prod"));
+  let store = JSON.parse(localStorage.getItem("show_item"));
   let Weight = document.getElementById("Weight");
   Weight.textContent = Math.floor(Math.random()*20) + "g";
   let left_img = document.getElementById("left_img");
   let sample1 = document.getElementById("sample1");
   let sample2 = document.getElementById("sample2");
-  left_img.src = store[0].images[0];
-  sample1.src = store[0].images[0];
-  sample2.src = store[0].images[1];
+  let name = document.getElementById('name');
+
+  name.innerText = store.name;
+  left_img.src = store.images[0];
+  sample1.src = store.images[0];
+  sample2.src = store.images[1];
   let price_tag = document.getElementById("price_tag");
-  price_tag.textContent = "PRICE" + " " +"₹"+ " " +store[0].newPrice;
+  price_tag.textContent = "PRICE" + " " +"₹"+ " " + store.newPrice;
   if(localStorage.getItem("prod_for_cart") == null){
       localStorage.setItem("prod_for_cart", JSON.stringify([])) 
   } 
+
+    document.getElementById('add-to-cart').onclick = () => {
+        new_array();
+    }
+
   function new_array(){
-      console.log(store[0]);
+      console.log(store);
       let local_arr = JSON.parse(localStorage.getItem("prod_for_cart"));
-      local_arr.push(store[0]);
+      local_arr.push(store);
       localStorage.setItem("prod_for_cart", JSON.stringify(local_arr));
   }
 

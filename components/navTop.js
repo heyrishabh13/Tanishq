@@ -30,6 +30,18 @@ function navTop(){
            }
         }
         
+
+        // let cart_page = document.getElementById('cart-page')
+        // console.log(cart_page);
+
+        // cart_page.onclick = ()=> {
+
+        //     console.log('hello');
+        //     alert();
+        //     window.location.href = '../html/cart.html';
+        // }
+
+
         
     
     

@@ -1,7 +1,13 @@
 #layout{
+    
     width: 100%;
+    margin-top: 100px;
     /* border-bottom: 3px solid #f2f2f2; */
 }
+
+/* #layout > div:nth-child(1){
+    margin-top: 100px;
+} */
 .mySlides {
     display:none;
 }

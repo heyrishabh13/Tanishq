@@ -1,8 +1,11 @@
-#nav-top{
-    height: 30px;
-    border-bottom: 1px solid #5d5d5d;
+        #nav-top{
+            height: 30px;
+            border-bottom: 1px solid #5d5d5d;
+                }
+        #page_layout {
+            position: fixed; 
+            top: 0px;   
         }
-
         #nav-top {
             display: flex;
             
@@ -146,6 +149,7 @@
         margin: 30px;
         letter-spacing: 1px;
         color: rgb(24, 24, 24);
+        border-bottom: 1px solid grey ;
         }
         #logo {
         margin-left: 50px;
@@ -231,7 +235,7 @@
         .column {
         float: left;
         width: 30%;
-        padding: 10px;
+        /* padding: 0px;0# */
         margin-left: 20px;
         background-color: white;
         height: fit-content;

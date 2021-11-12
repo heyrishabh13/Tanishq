@@ -49,21 +49,22 @@ localStorage.setItem('cart',JSON.stringify(dummy_data))
 
 let count = document.getElementById('count')
 
-let cart = JSON.parse(localStorage.getItem("cart"))
+let cart = JSON.parse(localStorage.getItem("prod_for_cart"))
 console.log('cart:', cart)
 let empty_cart = document.getElementById('empty_cart')
 let parent = document.getElementById('parent')
 let not_empty_cart = document.getElementById('not_empty_cart')
-console.log('kya h ye',localStorage.getItem("cart") )
-if (localStorage.getItem("cart") == null) {
+console.log('kya h ye',localStorage.getItem("prod_for_cart") )
+if (localStorage.getItem("prod_for_cart") == null) {
 empty_cart.style.display = 'block';
 not_empty_cart.style.display= 'none';
 console.log('empty')
 }
 //   console.log(localStorage.getItem("cart"))
-else if (localStorage.getItem("cart")) {
+else if (localStorage.getItem("prod_for_cart")) {
   empty_cart.style.display = 'none';
   not_empty_cart.style.display= 'block';
+
 function showItems() {
   // recover data from local storage having name cart
    
@@ -115,7 +116,7 @@ function showItems() {
     remove_btn.onclick =  () =>{
       setTimeout(()=>{
         removeItem(name,main_div,parent)
-      },1500)
+      },500)
     }
     let items_div = document.createElement('div')
 
@@ -142,7 +143,7 @@ function showItems() {
   showItems()
 
   function removeItem(name,main_div,parent) {
-    let cart = JSON.parse(localStorage.getItem("cart"))
+    let cart = JSON.parse(localStorage.getItem("prod_for_cart"))
     
     // console.log(name)
     let arr = []
@@ -155,7 +156,7 @@ function showItems() {
    
     cart = arr
     count.innerHTML = `CART: ${cart.length} ITEMS`
-    localStorage.setItem('cart',JSON.stringify(cart))
+    localStorage.setItem('prod_for_cart',JSON.stringify(cart))
     parent.removeChild(main_div)
     let display_cont = document.getElementById('display_cont')
     showTotal()
@@ -169,7 +170,7 @@ function showItems() {
   function showTotal() {
     let parent = document.getElementById('display_cont')
 
-    let cart = JSON.parse(localStorage.getItem("cart"))
+    let cart = JSON.parse(localStorage.getItem("prod_for_cart"))
     let sum = 0
     cart.forEach(({newPrice}) =>{
       sum+= +newPrice
