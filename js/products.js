@@ -51,7 +51,9 @@ let data = JSON.parse(localStorage.getItem("specific_category"));
 
       div.onclick = function () {
 
-        localStorage.setItem('product', JSON.stringify(product));
+        localStorage.setItem('show_item', JSON.stringify(product));
+
+        
         
         window.location.href = '../html/prod_detail.html';
 

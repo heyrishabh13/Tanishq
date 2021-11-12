@@ -128,15 +128,15 @@ function navbar(){
                         <div class="row">
                             <div class="column">
                                 <h3>CATEGORY </h3>
-                                <a href="../html/products.html">ALL JEWELLERY</a>
-                                <a href="../html/products.html" id = "earrings">EARRINGS</a>
-                                <a href="../html/products.html" id = "pendants">PENDANTS</a>
-                                <a href="../html/products.html" >FINGER RINGS</a>
-                                <a href="../html/products.html" id = "mangalsutra">MANGALSUTRA</a>
-                                <a href="../html/products.html">CHAIN</a>
-                                <a href="../html/products.html" id = "necklace">NECKLACE</a>
-                                <a href="../html/products.html">NOSE PIN</a>
-                            </div>
+                                <a href="/html/products.html">ALL JEWELLERY</a>
+                                <a href="/html/products.html" id = "earrings">EARRINGS</a>
+                                <a href="/html/products.html" id = "pendants">PENDANTS</a>
+                                <a href="/html/products.html" >FINGER RINGS</a>
+                                <a href="/html/products.html" id = "mangalsutra">MANGALSUTRA</a>
+                                <a href="/html/products.html">CHAIN</a>
+                                <a href="/html/products.html" id = "necklace">NECKLACE</a>
+                                <a href="/html/products.html">NOSE PIN</a>
+                            </di
 
                             <div class="column">
                                 <h3>GENDER</h3>
