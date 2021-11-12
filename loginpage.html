@@ -134,7 +134,7 @@ button > a {
                     <li>You will get Special Previews to our Limited Collections and Sales.</li>
                     <li>You will Receive offers tailor-made for you.</li>
                 </ul>
-                <button><a href="../HTML/signuppage1.html"><b>SIGN UP NOW</b></a></button>
+                <button><a href="signuppage1.html"><b>SIGN UP NOW</b></a></button>
             </div>
         </div>
     </div>
@@ -178,24 +178,10 @@ button > a {
         });
     }
 
-    // function fetchmyData(username, token){
-    //     fetch(`https://masai-api-mocker.herokuapp.com/user/${username}`, {
-            
-    //         headers: {
-    //             "Content-Type": "application/json",
-    //             "Authorization" : `Bearer ${token}`,
-    //         },
-    //     })
-    //     .then((res) => {
-    //         return res.json();
-    //     })
-    //     .then((res) => {
-    //         console.log("res:",res);
-    //     })
-    //     .catch((err) =>{
-    //         console.log("err:",err);
-    //     })
-    // }
+    if(localStorage.getItem("user") == null){
+        localStorage.setItem("user", JSON.stringify([]));
+    }
+
     function fetchmyData(username, token){
         //console.log(username, token);
     fetch(`https://masai-api-mocker.herokuapp.com/user/${username}`, {
@@ -212,25 +198,14 @@ button > a {
 })
 .then((res) => {
     console.log("res:",res);
-    
-    //local(res.name);
-//     let name = res.name;
-//     var arr = [];
-    
-//    arr.push(name);
-//window.localStorage.setItem('youtube', JSON.stringify(username));
-
-    //window.location.href = "youtubeapi.html";
-   //let inpt = document.getElementById("inpt");
-    
- 
+    localStorage.setItem("user", JSON.stringify(res));
     
 })
 .catch((err) =>{
     console.log("err:",err);
-   
+    
 })    
-//window.location.href = "movieapp.html";
+
 }
 
 </script>

@@ -39,6 +39,7 @@ let dummy_data = [
 localStorage.setItem('cart',JSON.stringify(dummy_data))
 */
 
+
 let count = document.getElementById('count')
 
 let cart = JSON.parse(localStorage.getItem("cart"))
