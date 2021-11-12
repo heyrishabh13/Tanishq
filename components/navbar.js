@@ -128,14 +128,14 @@ function navbar(){
                         <div class="row">
                             <div class="column">
                                 <h3>CATEGORY </h3>
-                                <a href="#">ALL JEWELLERY</a>
-                                <a href="#" id = "earrings">EARRINGS</a>
-                                <a href="#" id = "pendants">PENDANTS</a>
-                                <a href="#" >FINGER RINGS</a>
-                                <a href="#" id = "mangalsutra">MANGALSUTRA</a>
-                                <a href="#">CHAIN</a>
-                                <a href="#" id = "necklace">NECKLACE</a>
-                                <a href="#">NOSE PIN</a>
+                                <a href="../html/products.html">ALL JEWELLERY</a>
+                                <a href="../html/products.html" id = "earrings">EARRINGS</a>
+                                <a href="../html/products.html" id = "pendants">PENDANTS</a>
+                                <a href="../html/products.html" >FINGER RINGS</a>
+                                <a href="../html/products.html" id = "mangalsutra">MANGALSUTRA</a>
+                                <a href="../html/products.html">CHAIN</a>
+                                <a href="../html/products.html" id = "necklace">NECKLACE</a>
+                                <a href="../html/products.html">NOSE PIN</a>
                             </div>
 
                             <div class="column">
@@ -483,7 +483,7 @@ function navbar(){
     <div id = "search_div">
         <div id = "search_div2">
             <div>
-                <input type="text" name="" id="search_inp" placeholder="Search our Products..."><i class="material-icons" id = "menu">mic</i><i class="material-icons" id = "menu">search</i>
+                <input type="text" name=""  id="search_inp" placeholder="Search our Products..."><i class="material-icons" id = "menu">mic</i><i class="material-icons" id = "menu">search</i>
             </div>
             <div id = "search_grid">
                 <div>
@@ -497,7 +497,7 @@ function navbar(){
                 <div>
                     <p>Popular Products</p>
                     <div id = "popu_grid1">
-                        <div>
+                        <div class='image'>
                             <img src="https://staticimg.titan.co.in/Tanishq/Catalog/600212ZCDRBS00_1.jpg?impolicy=pqmed&imwidth=320" alt="">
                         </div>
                         <div>
@@ -505,7 +505,7 @@ function navbar(){
                             <p>600212ZCDRBS00</p>
                             <p></p>
                         </div>
-                        <div>
+                        <div class='image'>
                             <img src="https://staticimg.titan.co.in/Tanishq/Catalog/513220VIX2A00_1.jpg?impolicy=pqmed&imwidth=320" alt="">
                         </div>
                         <div>
@@ -513,7 +513,7 @@ function navbar(){
                             <p>600212ZCDRBS00</p>
                             <p></p>
                         </div>
-                        <div>
+                        <div class='image'>
                             <img src="https://staticimg.titan.co.in/Tanishq/Catalog/600102ZBARAS00_1.jpg?impolicy=pqmed&imwidth=320" alt="">
                         </div>
                         <div>
@@ -521,6 +521,9 @@ function navbar(){
                             <p>600212ZCDRBS00</p>
                             <p></p>
                         </div>
+                    </div>
+                    <div id='show'>
+
                     </div>
                 </div>
             </div>
