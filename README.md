@@ -65,4 +65,4 @@
 ![frontpage](https://user-images.githubusercontent.com/87421824/135976908-fd35150c-3215-48f7-b21d-b402e36371ec.png)
 
 ## For more details :- 
-[Blog]( https://hashnode.com/post/cloning-of-e-commerce-website-tanishqcoin-cksxeehp10myukxs1eabcaqcc)
+[Blog]( )
