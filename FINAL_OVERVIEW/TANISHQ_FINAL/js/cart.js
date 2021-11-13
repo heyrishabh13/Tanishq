@@ -3,14 +3,18 @@ import {footer} from '../components/footer.js'
 import {navTop} from '../components/navTop.js'
 import {debouncing} from '../components/debouncing.js'
 
+// import {navTop2} from '../components/navTop2.js'
+
 document.querySelector('nav').innerHTML = navbar()
 document.querySelector('footer').innerHTML = footer();
 
 navTop();
 
+// navTop2();
+
 debouncing();
 //created a dummy data for ls
-/*
+
 let dummy_data = [
   {
     name: 'Opulent Gold Jhumka Style Earrings',
@@ -42,19 +46,69 @@ let dummy_data = [
     size : "Chain Size: 18.23 cm",
     weight : "7.639g",
   },
+  {
+    name: "Charming Ruby Pendant With Chain",
+    newPrice: 72948,
+    oldPrice: 73603,
+    images: ["https://staticimg.titan.co.in/Tanishq/Catalog/513318GDJAB18_1.jpg?impolicy=pqmed&imwidth=640"],
+    purity: "22.00",
+    jewelleryType: "Jewellery with Gemstones",
+    occasion: "Traditional and Ethnic Wear",
+    product:"Necklace"
+},
+{
+    name: "Elegant Emerald And Ruby Pendant With Chain",
+    newPrice: 53994,
+    oldPrice:  54468,
+    images: ["https://staticimg.titan.co.in/Tanishq/Catalog/513318GEBAA40_1.jpg?impolicy=pqmed&imwidth=640"],
+    purity: "22.00",
+    jewelleryType: "Jewellery with Gemstones",
+    occasion: "Traditional and Ethnic Wear",
+    product:"Necklace"
+},
+{
+    name: "Filigree Work Gold Neckwear",
+    newPrice: 137055,
+    oldPrice: 140164,
+    images: ["https://staticimg.titan.co.in/Tanishq/Catalog/513220NPLAA00_1.jpg?impolicy=pqmed&imwidth=640"],
+    purity: "22.00",
+    jewelleryType: "Plain Gold Jewellery",
+    occasion: "Traditional and Ethnic Wear",
+    product:"Necklace"
+},
+{
+    name: "Glorious Detailed Gold Haaram",
+    newPrice: 306930,
+    oldPrice: 318408,
+    images: ["https://staticimg.titan.co.in/Tanishq/Catalog/513719EDH1AAP1_1.jpg?impolicy=pqmed&imwidth=640"],
+    purity: "22.00",
+    jewelleryType: "Plain Jewellery with Stones",
+    occasion: "Traditional and Ethnic Wear",
+    product:"Necklace"
+},
+{
+    name: "Traditional Gold Leaf Pattern Haaram",
+    newPrice: 303080,
+    oldPrice:314092 ,
+    images: ["https://staticimg.titan.co.in/Tanishq/Catalog/513719EEV1AA00_1.jpg?impolicy=pqmed&imwidth=640"],
+    purity: "22.00",
+    jewelleryType: "Plain Gold Jewellery",
+    occasion: "Traditional and Ethnic Wear",
+    product:"Necklace"
+},
 ]
-localStorage.setItem('cart',JSON.stringify(dummy_data))
-*/
+localStorage.setItem('prod_for_cart',JSON.stringify(dummy_data))
+
 
 
 let count = document.getElementById('count')
 
 let cart = JSON.parse(localStorage.getItem("prod_for_cart"))
-console.log('cart:', cart)
+// console.log('cart:', cart)
 let empty_cart = document.getElementById('empty_cart')
 let parent = document.getElementById('parent')
 let not_empty_cart = document.getElementById('not_empty_cart')
-console.log('kya h ye',localStorage.getItem("prod_for_cart") )
+// console.log('kya h ye',localStorage.getItem("prod_for_cart") )
 if (localStorage.getItem("prod_for_cart") == null) {
 empty_cart.style.display = 'block';
 not_empty_cart.style.display= 'none';
@@ -69,7 +123,7 @@ function showItems() {
   // recover data from local storage having name cart
    
 
-  count.innerHTML = `CART: ${cart.length} ITEMS`
+  count.innerHTML = `CART : <span style="font-family : sans-serif">${cart.length}</span> ITEMS`
 
 
   cart.forEach(({name , newPrice,images }) => {
@@ -100,19 +154,28 @@ function showItems() {
     p_img.setAttribute('class','image')
 
     let p_weight = document.createElement('div')
-    p_weight.innerHTML = `Weight (g): ${Math.random()*5+1}`
+    let weight = Math.random()*50+10;
+    let fixed_decimal = Number.parseFloat(weight).toFixed(3)
+    p_weight.innerHTML = `Weight (g): ${fixed_decimal}`
 
    
 
     let price = document.createElement('div')
+    price.setAttribute('class','price')
     price.innerHTML = `<b>₹${newPrice}</b>`
 
     let total = document.createElement('div')
     total.innerHTML = `<b>₹${newPrice}</b>`
 
     let remove_btn = document.createElement('button')
+    remove_btn.setAttribute('class','remove_btn')
     remove_btn.innerHTML = 'Remove'
-
+    remove_btn.onmouseover = ()=>{
+      remove_btn.setAttribute('class','remove_btn_hover')
+    }
+    remove_btn.onmouseleave = ()=>{
+      remove_btn.setAttribute('class','remove_btn')
+    }
     remove_btn.onclick =  () =>{
       setTimeout(()=>{
         removeItem(name,main_div,parent)
@@ -155,7 +218,7 @@ function showItems() {
     }
    
     cart = arr
-    count.innerHTML = `CART: ${cart.length} ITEMS`
+    count.innerHTML = `CART : <span style="font-family : sans-serif">${cart.length}</span> ITEMS`
     localStorage.setItem('prod_for_cart',JSON.stringify(cart))
     parent.removeChild(main_div)
     let display_cont = document.getElementById('display_cont')
@@ -171,7 +234,7 @@ function showItems() {
     let parent = document.getElementById('display_cont')
 
     let cart = JSON.parse(localStorage.getItem("prod_for_cart"))
-    let sum = 0
+    var sum = 0
     cart.forEach(({newPrice}) =>{
       sum+= +newPrice
     })
@@ -182,6 +245,13 @@ function showItems() {
 
     let final_amt = document.getElementById('final_amt')
     final_amt.innerHTML = `₹${sum}`
+
+    let checkout = document.getElementById('btn-1')
+  checkout.onclick = () =>{
+    // console.log('12')
+    // console.log('sum:', sum)
+    localStorage.setItem('total',JSON.stringify(sum))
+  }
   }
   showTotal() 
 
