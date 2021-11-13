@@ -454,7 +454,7 @@
                             <tbody>
                                 <tr>
                                     <th colspan="4">ORDER SUBTOTAL</th>
-                                    <th>1000</th>
+                                    <th class='amount'> 1000</th>
                                 </tr>
                                 <tr>
                                     <th colspan="4">DISCOUNT</th>
@@ -469,7 +469,7 @@
                                         <h1>YOU PAY</h1>
                                         
                                     </th>
-                                    <th><h1>1000</h1></th>
+                                    <th><h1 class='amount'>1000</h1></th>
     
     
                                 </tr>
@@ -662,4 +662,14 @@
 
   });
 }
+
+let amount = JSON.parse(localStorage.getItem('total'));
+console.log(amount);
+
+let amount_arr = document.querySelectorAll('.amount');
+
+amount_arr.forEach( (el) => {
+    console.log(el);
+    el.innerText = '₹' + amount;
+})
 </script>

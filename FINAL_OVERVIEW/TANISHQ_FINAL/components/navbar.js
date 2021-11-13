@@ -102,7 +102,7 @@ function navbar(){
         </div>
         
         <div>
-            <a href="loginpage.html" id = "user_l">LOGIN</a>
+            <a href="html/loginpage.html" id = "user_l">LOGIN</a>
             <a href="#">ENCIRCLE</a>
             <a href="#">GOLDEN HARVEST</a>
             <a href="">BOOK AN APPOINTMENT</a>
