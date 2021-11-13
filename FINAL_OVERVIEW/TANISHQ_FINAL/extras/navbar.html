@@ -1,0 +1,1246 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&family=Raleway:wght@200&display=swap" rel="stylesheet">
+    <title>navbar</title>
+    <style>
+        #nav-top{
+    height: 30px;
+    border-bottom: 1px solid #5d5d5d;
+        }
+
+        #nav-top {
+            display: flex;
+            
+            
+        }
+        #nav-top > div{
+            /* border: 1px solid red; */
+            justify-content: space-evenly;
+            
+        }
+        #nav-top > div:nth-child(1){
+            /* flex-grow: 1; */
+            text-align: center;
+            margin-left: 40px;
+        }
+        #nav-top > div:nth-child(1) a {
+            margin-right: 20px;
+            margin-left: 20px;
+            font-size: 12px;
+            font-family: 'Raleway';
+            font-weight: 600;
+            color: #5d5d5d;
+        }
+        #nav-top > div:nth-child(2){
+            flex-grow: 1;
+            text-align: right;
+            margin-right: 60px;
+        }
+        #nav-top > div:nth-child(2) a {
+            margin-left: 30px;
+            font-size: 12px;
+            font-family: 'Raleway';
+            font-weight: 600;
+            color: #5d5d5d;
+        }
+        /* img{
+            width: 100%;
+        } */
+        #nav-bottom{
+            display: flex;
+            height: 60px;
+            /* border: 1px solid black; */
+            justify-content: space-evenly;
+            padding-top: 10px;
+        
+        }
+        #nav-bottom > div{
+            /* border: 1px solid red; */
+            padding-top: 20px;
+        }
+
+        .panel-heading a {
+            font-size: 14px;
+            font-family: 'Raleway';
+            font-weight: 800;
+            color: #5d5d5d;
+        }
+        #container{
+            width: 80%;
+            display: grid;
+            grid-template-columns:  repeat(3, 24%);
+            grid-gap: 5%;
+            margin:auto;
+        }
+        a{
+            color: black;
+            text-decoration: none;
+        }
+        .search_location{
+            display: flex;
+            margin-right: 0px;
+        }
+        .search_location a {
+            margin-right: 50px;
+        }
+
+        .panel-heading a:hover .dropdown-content{
+            display: block;
+        }
+        #sel_curr{
+            display: none;
+            
+            width: 100%;
+            height: 150px;
+            background-color: black;
+        }
+        #sel_curr p {
+            text-align: center;
+            font-size: 18px;
+            padding-top: 10px;
+            word-spacing: 3px;
+            letter-spacing: 3px;
+            color: white;
+        }
+        #inr, #usd{
+            width: 200px;
+            height: 52px;
+            margin-left: 30px;
+            color: white;
+            background-color: black;
+            border: none;
+            border: 1px solid white;
+            margin-top: 25px;
+        }
+        #brand_curr{
+            display: flex;
+            font-size: 12px;
+            margin-top: -9px;
+            flex-grow: 1;
+            font-family: 'Raleway';
+            font-weight: 800;
+            color: #5d5d5d;
+            cursor: pointer;
+        }
+        #three_div{
+            
+            width: 100%;
+            height: 150px;
+            /* border: 1px solid black; */
+            background-color: #b1a16e;
+        }
+        #three_butt{
+            display: grid;
+            grid-template-columns: 320px 320px 320px;
+            grid-template-rows: 50px;
+            gap: 30px;
+            padding: 50px;
+            margin-left: 130px;
+        }
+        #three_butt button {
+            border: none;
+            border: 2px solid white;
+            background-color: #b1a16e;
+            color: white;
+        }
+        #div2 {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        height: 43px;
+        margin: 30px;
+        letter-spacing: 1px;
+        color: rgb(24, 24, 24);
+        border-bottom: 1px solid black;
+        }
+        #logo {
+        margin-left: 50px;
+        margin-right: 10px;
+        margin-top: -10px;
+        width: 100px;
+        height: 50px;
+        }
+        #topnav2 {
+        display: flex;
+        flex-direction: row;
+        list-style-type: none;
+        }
+        .top > li {
+        padding: 16px 20px;
+        color: #181818;
+        font-size: 13px;
+        font-weight: bold;
+        font-family: sans-serif;
+        }
+        .ulnav {
+        font-size: 13px;
+        font-weight: bold;
+        margin: 0px;
+        padding: 0px;
+        box-sizing: border-box;
+        }
+        .navbar {
+        overflow: hidden;
+        }
+        .dropdown {
+        display: right;
+        overflow: hidden;
+        }
+        .dropdown .dropbtn {
+        border: none;
+        outline: none;
+        color: #181818;
+
+        padding: 14px 14px;
+        font-size: 12px;
+        background-color: inherit;
+        font: inherit;
+        margin: 0;
+        }
+        .dropdown-content {
+        display: none;
+        position: absolute;
+        background-color: white;
+        width: 100%;
+        left: 0;
+        box-shadow: 2px 8px 16px 0px rgba(0, 0, 0, 0.2);
+        z-index: 1;
+        }
+        .dropdown-content .header {
+        /* background: #f9f9f9; */
+        padding-bottom: 20px;
+        }
+        .dropdown:hover .dropdown-content {
+        display: block;
+        font-family: Roboto, sans-serif;
+        font-weight: 400;
+        line-height: 10px;
+        font-size: 12px;
+        text-decoration: underline;
+        }
+        .dropbtn {
+        font-size: 12px;
+        word-spacing: 5px;
+        color: #181818;
+        opacity: 0.8;
+        }
+        .dropbtn:hover {
+        text-decoration: underline;
+        text-underline-offset: 15px;
+        cursor: pointer;
+        }
+        .row:after {
+        content: "";
+        display: table;
+        clear: both;
+        }
+        .column {
+        float: left;
+        width: 30%;
+        padding: 10px;
+        margin-left: 20px;
+        background-color: white;
+        height: fit-content;
+        }
+
+        .column a {
+        float: none;
+        color: black;
+        padding: 12px;
+        padding-bottom: 10px;
+        text-decoration: none;
+        display: block;
+        text-align: left;
+        }
+        .column a:hover {
+        /* color: #181818; */
+        font-weight: 900;
+        }
+        #search {
+        margin-left: 50px;
+        margin-right: 30px;
+        width: 10px;
+        cursor: pointer;
+        }
+        #room {
+        margin-left: 50px;
+        margin-right: 30px;
+        width: 10px;
+        cursor: pointer;
+        }
+        #search_div{
+            width: 100%;
+            height: 500px;
+            /* border: 1px solid black; */
+            display: none;
+        }
+        #search_div2{
+            width: 70%;
+            height: 100%;
+            margin: auto;
+        }
+        #search_div2 div:nth-child(1) {
+            display: grid;
+            grid-template-columns: 100% 4% 4%;
+            grid-template-rows: 60px;
+            justify-items:center;
+        }
+        #search_div2 div:nth-child(1) i{
+            margin-left: -131px;
+            margin-top: 20px;
+            /* border-right: 1px solid grey; */
+            
+        }
+        #search_inp{
+            width: 100%;
+            height: 60px;
+            text-align: center;
+            background-color: #f6f6f6;
+            border: none;
+        }
+        #search_inp::placeholder{
+            font-size: 16px;
+            font-family: "Playfair Display";
+        }
+        #search_grid {
+            display: grid;
+            grid-template-columns: 50% 50%;
+            grid-template-rows: 440px;
+            /* border: 1px solid blue; */
+        }
+        #search_grid div:nth-child(1){
+            display: flex;
+            flex-direction: column;
+            font-size: 18px;
+            font-family: "Playfair Display";
+        }
+        #search_grid div:nth-child(1) p{
+            margin-left: 30px;
+        }
+        #search_grid div:nth-child(2) p {
+            font-size: 18px;
+            font-family: "Playfair Display";
+        }
+        /* #popu_prod{
+            width: 100%;
+            
+            border: 1px solid black;
+        } */
+        #popu_grid1, #show{
+            display: grid;
+            /* width: 100%; */
+            grid-template-columns: 25% 70%;
+            /* grid-template-rows: 100px; */
+            /* border: 1px solid red; */
+        }
+        /* #popu_grid1 div:nth-child(1) img, #popu_grid1 div:nth-child(3) img, #popu_grid1 div:nth-child(5) img{
+            width: 100%;
+        } */
+        #popu_grid1  img, #show img{
+            width: 100%;
+        }
+        
+
+/* mediaquery */
+
+        #mediaQ{
+            display: none;       
+        }
+        @media only screen and (max-width:800px){
+            #page_layout{
+                display: none;
+            }
+            #mediaQ{
+                width: 100%;
+                display: block;
+            }
+            #nav-m-top{
+                height: 30px;
+                border-bottom: 1px solid #5d5d5d;
+                display: flex;
+            }
+            #nav-m-top > div{
+                /* border: 1px solid red; */
+                justify-content: space-evenly;
+            }
+            #nav-m-top > div:nth-child(1){
+                /* flex-grow: 1; */
+                text-align: center;
+                margin-left: 40px;
+            }
+            #nav-m-top > div:nth-child(1) a {
+                margin-right: 20px;
+                margin-left: 20px;
+                font-size: 12px;
+                font-family: 'Raleway';
+                font-weight: 600;
+                color: #5d5d5d;
+            }
+            #brand_curr{
+                width: 100%;
+                display: flex;
+                font-size: 12px;
+                margin-top: -9px;
+                /* flex-grow: 1; */
+                font-family: 'Raleway';
+                flex-grow:1;
+                font-weight: 800;
+                color: #57544d;
+                cursor: pointer;
+                flex-wrap: wrap;
+            }
+            #brand_curr p:nth-child(1){
+                text-align: left;
+                margin-left: -28%;
+            }
+            #brand_curr p:nth-child(2){
+                text-align: center;
+                margin-left: 5%;
+            }
+            #brand_curr p:nth-child(3){
+                text-align: right;
+                margin-right: -20%;
+            }
+            #nav-m-bottom{
+                height: 60px;
+                border-bottom: 1px solid #5d5d5d;
+                display: flex;
+            }
+            #ham{
+                width: 100%;
+                display: grid;
+                grid-template-columns: 10% 60% 10%;
+                grid-template-rows: 100%;
+                gap: 10%;
+                
+            }
+            #ham div:nth-child(1){
+                border-right: 1px solid grey;
+            }
+            #ham div:nth-child(2) img{
+                width: 25%;
+                margin-left: 40%;
+                margin-top: 2%;
+            }
+            #ham div:nth-child(1) i{
+                padding: 25%; 
+                margin-left: 5%;
+                
+            }
+            #ham div:nth-child(3) {
+                border-left: 1px solid grey;
+            }
+            #ham div:nth-child(3) i{
+                 padding: 25%;
+                margin-left: 10%;
+            }
+            #ham_drop{
+                width: 100%;
+                display: none;
+            }
+            #cell{
+                height: 50px;
+                border-bottom: 1px solid grey;
+                /* justify-content: space-around; */
+            }
+            #cell h3 {
+                padding: 2%;
+                font-size: 12px;
+                font-family: 'Raleway';
+                color: #1a1e1f;
+                letter-spacing: 2px;
+                font-weight: 700;
+                
+            }
+            /* #cell h3 span{
+                margin-left: 80%;
+                margin-top: 5%;
+                font-size: 25px;
+                font-weight: 900;
+            } */
+            
+        }
+
+
+    </style>
+</head>
+<body>
+    <!-- mediaqeury -->
+    <div id = "mediaQ">
+        <div id='nav-m-top'>
+            <div id = "brand_curr">
+                <p>BRANDS</p>
+                <p id = "currency">MY ACCOUNT</p>
+                <p id = "cart-page">CART(0)</p>
+            </div>
+        </div>
+
+        <div id='nav-m-bottom'>
+            <div id = "ham">
+                <div><i class="material-icons" id = "menu">menu</i></div>
+                <div><img src="https://www.tanishq.co.in/wps/wcm/connect/tanishq/c5124844-8ad5-41af-99bd-1e561480f9fb/TanishqLogo-mobile.png?MOD=AJPERES&CACHEID=ROOTWORKSPACE.Z18_90IA1H80O0RT10QIMVSTFU3006-c5124844-8ad5-41af-99bd-1e561480f9fb-mC0fAsK" alt=""></div>
+                <div><i class="material-icons" id = "me_search">search</i></div>
+            </div>
+        </div>
+
+        <div id = "ham_drop">
+            <div id = "cell">
+                <h3>GOLD RATE </h3>
+            </div>
+            <div id = "cell">
+                <h3>BOOK AN APPOINTMENT</h3>
+            </div>
+            <div id = "cell">
+                <h3>LIVE VIDEO CALL</h3>
+            </div>
+            <div id = "cell">
+                <h3>CONNECT ON WHATSAPP</h3>
+            </div>
+            <div id = "cell">
+                <h3>ALL JEWELLERY</h3>
+            </div>
+            <div id = "cell">
+                <h3>GOLD</h3>
+            </div>
+            <div id = "cell">
+                <h3>DIAMOND</h3>
+            </div>
+            <div id = "cell">
+                <h3>ENGAEMENT RINGS</h3>
+            </div>
+            <div id = "cell">
+                <h3>DIGITAL GOLD</h3>
+            </div>
+            <div id = "cell">
+                <h3>COLLECTIONS</h3>
+            </div>
+            <div id = "cell">
+                <h3>RIVAAH</h3>
+            </div>
+            <div id = "cell">
+                <h3>MIA</h3>
+            </div>
+            <div id = "cell">
+                <h3>GOLDEN HARVEST</h3>
+            </div>
+            <div id = "cell">
+                <h3>RIVAAH AASHIRWAAD</h3>
+            </div>
+            <div id = "cell">
+                <h3>ENCIRCLE</h3>
+            </div>
+            <div id = "cell">
+                <h3>FIND A STORE</h3>
+            </div>
+            <div id = "cell">
+                <h3>WISHLIST</h3>
+            </div>
+            <div id = "cell">
+                <h3>CURRENCY</h3>
+            </div>
+        </div>
+    </div>
+
+    <!-- without_mediaquery -->
+<div id = "page_layout">
+    <div id = "sel_curr">
+        <p>SELECT A CURRENCY</p>
+        <div>
+            <button id = "inr">INR ₹</button>
+            <button id = "usd">USD $</button>
+        </div>
+    </div>
+    <div id = "three_div">
+        <div id = "three_butt">
+            <button>18 KT GOLD RATE 1GM = ₹3820.08</button>
+            <button>22 KT GOLD RATE 1GM = ₹4669.00</button>
+            <button>24 KT GOLD RATE 1GM = ₹5093.41</button>
+        </div>
+    </div>
+    
+
+    <div id='nav-top'>
+        <div id = "brand_curr">
+            <p>BRANDS</p>
+            <p id = "currency">CURRENCY SELECTOR</p>
+            <p id = "gold_rate">GOLD RATE</p>
+        </div>
+        
+        <div>
+            <a href="loginpage.html" id = "user_l">LOGIN</a>
+            <a href="#">ENCIRCLE</a>
+            <a href="#">GOLDEN HARVEST</a>
+            <a href="">BOOK AN APPOINTMENT</a>
+            <a href="">WISHLIST</a>
+            <a href="../html/cart.html">CART(0)</a>
+        </div>
+    
+    </div>
+    
+    <div id="div2">
+
+        <img id="logo" src="https://www.tanishq.co.in/wps/wcm/connect/tanishq/cb53f671-01d0-449e-b18d-a4e61e6ffa0b/TanishqLogo.png?MOD=AJPERES&CACHEID=ROOTWORKSPACE.Z18_90IA1H80O0RT10QIMVSTFU3006-cb53f671-01d0-449e-b18d-a4e61e6ffa0b-mC036IT" alt="">
+
+        <ul id="topnav2" class="top ulnav" >
+
+
+            <div class="navbar">
+
+                <div class="dropdown">
+                    <button class="dropbtn">ALL JEWELLERY</button>
+                    <div class="dropdown-content">
+                        <div class="header"></div>
+                        <div class="row">
+                            <div class="column">
+                                <h3>CATEGORY </h3>
+                                <a href="#">ALL JEWELLERY</a>
+                                <a href="#" id = "earrings">EARRINGS</a>
+                                <a href="#" id = "pendants">PENDANTS</a>
+                                <a href="#" >FINGER RINGS</a>
+                                <a href="#" id = "mangalsutra">MANGALSUTRA</a>
+                                <a href="#">CHAIN</a>
+                                <a href="#" id = "necklace">NECKLACE</a>
+                                <a href="#">NOSE PIN</a>
+                            </div>
+
+                            <div class="column">
+                                <h3>GENDER</h3>
+                                <a href="#">MEN</a>
+                                <a href="#">WOMEN</a>
+                                <a href="#">KIDS</a>
+                                <a href="#">UNISEX</a>
+                            </div>
+                            <div class="column">
+                                <h3>PRICE BRAND</h3>
+                                <a href="#">5000</a>
+                                <a href="#">5K - 10K</a>
+                                <a href="#">10K - 20K</a>
+                                <a href="#">20K - 30K</a>
+                                <a href="#">30K - 40K</a>
+                                <a href="#">40K - 50K</a>
+                                <a href="#">50K</a>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="navbar">
+
+                <div class="dropdown">
+                    <button class="dropbtn" >GOLD</button>
+                    <div class="dropdown-content">
+                        <div class="header"></div>
+                        <div class="row">
+                            <div class="column">
+                                <h3>OTHER CATEGORIES</h3>
+                                <a href="#">CHAIN</a>
+                                <a href="#">MANGALSUTRA</a>
+                                <a href="#">NECKWEAR</a>
+                                <a href="#">NOSE PIN</a>
+                                <a href="#">NECKWEAR SET</a>
+                                <a href="#">BANGLE</a>
+                                <a href="#">BRACELET</a>
+                                <a href="#">PARTY</a>
+                            </div>
+                            <div class="column">
+                                <h3>GOLD COIN</h3>
+                                <a href="#">1 GRAMS</a>
+                                <a href="#">2 GRAMS</a>
+                                <a href="#">4 GRAMS</a>
+                                <a href="#">5 GRAMS</a>
+                                <a href="#">8 GRAMS</a>
+                                <a href="#">10 GRAMS</a>
+                                <a href="#">25 GRAMS</a>
+                                <a href="#">50 GRAMS</a>
+                                <a href="#">100 GRAMS</a>
+                                <a href="#">500 GRAMS</a>
+                                <a href="#">1000 GRAMS</a>
+                            </div>
+                            <div class="column">
+                                <h3>METAL COLOUR</h3>
+                                <a href="#">YELLOW</a>
+                                <a href="#">ROSE</a>
+                                <a href="#">WHITE</a>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+
+
+
+            <div class="navbar">
+
+                <div class="dropdown">
+                    <button class="dropbtn" >DIAMOND
+                    </button>
+                    <div class="dropdown-content">
+                        <div class="header">
+
+                        </div>
+                        <div class="row">
+                            <div class="column">
+                                <h3>EARINGS</h3>
+                                <a href="#">STUD</a>
+                                <a href="#">HOOP</a>
+                                <a href="#">DROP</a>
+                                <a href="#">DROP</a>
+                                <a href="#">JHUMKA</a>
+                            </div>
+                            <div class="column">
+                                <h3>PENDANTS</h3>
+                                <a href="#">DAILY</a>
+                                <a href="#">PARTY</a>
+                                <a href="#">WORKWEAR</a>
+                                <a href="#">TRADITIONAL</a>
+                            </div>
+                            <div class="column">
+                                <h3>FINGER RING</h3>
+                                <a href="#">ENGAEMENT RINGS</a>
+                                <a href="#">SOLITARIES</a>
+                                <a href="#">CASUAL</a>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+
+
+
+            <div class="navbar">
+
+                <div class="dropdown">
+                    <button class="dropbtn" >ENGAEMENT RINGS</button>
+                    <div class="dropdown-content">
+                        <div class="header">
+
+                        </div>
+                        <div class="row">
+                            <div class="column">
+                                <h3>GOLD</h3>
+                                <a href="#">CHAIN</a>
+                                <a href="#">MANGALSUTRA</a>
+                                <a href="#">NECKWEAR</a>
+                                <a href="#">NOSE PIN</a>
+                                <a href="#">NECKWEAR SET</a>
+                                <a href="#">BANGLE</a>
+                                <a href="#">BRACELET</a>
+                                <a href="#">PARTY</a>
+                            </div>
+                            <div class="column">
+                                <h3>DIAMOND</h3>
+                                <a href="#">ALL JEWELLERY</a>
+                                <a href="earrings.html">EARRINGS</a>
+                                <a href="#">PENDANTS</a>
+                                <a href="#">FINGER RINGS</a>
+                                <a href="#">MANGALSUTRA</a>
+                                <a href="#">CHAIN</a>
+                                <a href="#">NECKLACE</a>
+                                <a href="#">NOSE PIN</a>
+                            </div>
+                            <div class="column">
+                                <h3>PLATINUM</h3>
+                                <a href="#">NECKLACE</a>
+                                <a href="earrings.html">EARRINGS</a>
+                                <a href="#">CHAINS</a>
+                                <a href="#">EARINGS</a>
+                                <a href="#">CHAINS</a>
+                                <a href="#">EARINGS</a>
+                                <a href="#">CHAINS</a>
+
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="navbar">
+
+                <div class="dropdown">
+                    <button class="dropbtn" >DIGITAL GOLD</button>
+                    <div class="dropdown-content">
+                        <div class="header">
+
+                        </div>
+                        <div class="row">
+                            <div class="column">
+                                <h3>22K GOLD</h3>
+                                <a href="#">DIAMOND CHAINS</a>
+                                <a href="#">GOLD CHAINS</a>
+                                <a href="#">GOLD SMALL CHAINS</a>
+                                <a href="#">GOLD ROUND STYLISH CHAINS</a>
+                                <a href="#">GOLD CATEGORIES CHAINS</a>
+                                <a href="#">SMALL SIZES GOLD RINGS</a>
+                                <a href="#">MEDIUM SIZES GOLD RINGS</a>
+                                <a href="#">LARGE SIZES GOLD RINGS</a>
+                                <a href="#"> EXTRA LARGE SIZES GOLD RINGS</a>
+
+                            </div>
+                            <div class="column">
+                                <h3>24K GOLD</h3>
+                                <a href="#">CROWNS</a>
+                                <a href="earrings.html">EARRINGS</a>
+                                <a href="#">HAIRPINS</a>
+                                <a href="#">NECKLACE</a>
+                                <a href="#">TORC</a>
+                                <a href="#">BRACELET</a>
+                                <a href="#">ARMLET</a>
+                                <a href="#">CUFFS LINKS</a>
+                            </div>
+
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="navbar">
+
+                <div class="dropdown">
+                    <button class="dropbtn" >COLLECTIONS
+                    </button>
+                    <div class="dropdown-content">
+                        <div class="header">
+
+                        </div>
+                        <div class="row">
+                            <div class="column">
+                                <h3>MEN</h3>
+                                <a href="#">DIAMOND CHAINS</a>
+                                <a href="#">GOLD CHAINS</a>
+                                <a href="#">PLATINUM CHAINS</a>
+                                <a href="#">GOLD ROUND STYLISH CHAINS</a>
+                                <a href="#">SILVER CATEGORIES CHAINS</a>
+                                <a href="#">SMALL SIZES RINGS</a>
+                                <a href="#">MEDIUM SIZES RINGS</a>
+                                <a href="#">LARGE SIZES RINGS</a>
+                                <a href="#"> EXTRA LARGE SIZES RINGS</a>
+                            </div>
+                            <div class="column">
+                                <h3>WOMEN HEAD & NECK JEWELLERY</h3>
+                                <a href="#">CROWNS</a>
+                                <a href="earrings.html">EARRINGS</a>
+                                <a href="#">HAIRPINS</a>
+                                <a href="#">NECKLACE</a>
+                                <a href="#">TORC</a>
+                                <a href="#">BRACELET</a>
+                                <a href="#">ARMLET</a>
+                                <a href="#">CUFFS LINKS</a>
+                            </div>
+                            <div class="column">
+                                <h3>WOMEN OTHER JEWELLERY</h3>
+                                <a href="#">RINGS</a>
+                                <a href="#">BELLY CHAIN</a>
+                                <a href="#">CHATELAINE</a>
+                                <a href="#">BROOCH</a>
+                                <a href="#">ANKLETS</a>
+                                <a href="#">TOE RINGS</a>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+
+
+            <div class="navbar">
+
+                <div class="dropdown">
+                    <button class="dropbtn" >RIVAAH
+                    </button>
+                    <div class="dropdown-content">
+                        <div class="header">
+
+                        </div>
+                        <div class="row">
+                            <div class="column">
+                                <a href="#">DIAMOND CHAINS</a>
+                                <a href="#">GOLD CHAINS</a>
+                                <a href="#">PLATINUM CHAINS</a>
+                                <a href="#">GOLD ROUND STYLISH CHAINS</a>
+                                <a href="#">SILVER CATEGORIES CHAINS</a>
+                                <a href="#">SMALL SIZES RINGS</a>
+                                <a href="#">MEDIUM SIZES RINGS</a>
+                                <a href="#">LARGE SIZES RINGS</a>
+                                <a href="#"> EXTRA LARGE SIZES RINGS</a>
+                            </div>
+                            <div class="column">
+                                <a href="#">NECKLACE</a>
+                                <a href="earrings.html">EARRINGS</a>
+                                <a href="#">CHAINS</a>
+                                <a href="#">EARRINGS</a>
+                                <a href="#">CHAINS</a>
+                                <a href="#">EARINGS</a>
+                                <a href="#">CHAINS</a>
+
+                            </div>
+                            <div class="column">
+                                <a href="#">ALL JEWELLERY</a>
+                                <a href="#">EARRINGS</a>
+                                <a href="#">PENDANTS</a>
+                                <a href="#">FINGER RINGS</a>
+                                <a href="#">MANGALSUTRA</a>
+                                <a href="#">CHAIN</a>
+                                <a href="#">NECKLACE</a>
+                                <a href="#">NOSE PIN</a>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="navbar">
+
+                <div class="dropdown">
+                    <button class="dropbtn" >MIA
+                    </button>
+                    <div class="dropdown-content">
+                        <div class="header">
+
+                        </div>
+                        <div class="row">
+                            <div class="column">
+                                <h3>CATEGORY</h3>
+                                <a href="earrings.html">EARRINGS</a>
+                                <a href="#">PENDANTS</a>
+                                <a href="#">BRACELET</a>
+                                <a href="#">RINGS</a>
+                                <a href="#">NECKWEAR</a>
+                            </div>
+                            <div class="column">
+                                <h3>COLLECTIONS</h3>
+                                <h3>MIA X DISNEY - THE PRINCESS</h3>
+                                <a href="#">BIRTHSTONE</a>
+                                <a href="#">MIA FESTIVE</a>
+                                <a href="#">MIA GLAM</a>
+                                <a href="#">MIA WINGS</a>
+                                <a href="#">MIA ALLROUNDERS</a>
+                                <a href="#">FRIENDS OF BRIDE</a>
+                            </div>
+
+                        </div>
+
+                    </div>
+                </div>
+                
+            </div>
+            <i class="material-icons" id = "room">room</i>
+            <i class="material-icons" id = "search">search</i>
+            <!-- <li class="icn-1"><i class="fas fa-map-marker-alt"></i></li>
+            <li class="icn-2"><i class="fas fa-search"></i></li> -->
+        </ul>
+
+    </div>
+    
+    <div id = "search_div">
+        <div id = "search_div2">
+            <div>
+                <input type="text" name=""  id="search_inp" placeholder="Search our Products..."><i class="material-icons" id = "mic">mic</i><i class="material-icons" id = "mic_se">search</i>
+            </div>
+            <div id = "search_grid">
+                <div>
+                    <p>Your Recent Searches</p>
+                    <p></p>
+                    <p>Rings</p>
+                    <p>Necklace</p>
+                    <p>Pendants</p>
+                    <p>Mangalsutra</p>
+                </div>
+                <div>
+                    <p>Popular Products</p>
+                    <div id = "popu_grid1">
+                        <div class='image'>
+                            <img src="https://staticimg.titan.co.in/Tanishq/Catalog/600212ZCDRBS00_1.jpg?impolicy=pqmed&imwidth=320" alt="">
+                        </div>
+                        <div>
+                            <p>25 gram 24 Karat Gold Biscuit</p>
+                            <p>600212ZCDRBS00</p>
+                            <p></p>
+                        </div>
+                        <div class='image'>
+                            <img src="https://staticimg.titan.co.in/Tanishq/Catalog/513220VIX2A00_1.jpg?impolicy=pqmed&imwidth=320" alt="">
+                        </div>
+                        <div>
+                            <p>Stylish slick Bangles</p>
+                            <p>600212ZCDRBS00</p>
+                            <p></p>
+                        </div>
+                        <div class='image'>
+                            <img src="https://staticimg.titan.co.in/Tanishq/Catalog/600102ZBARAS00_1.jpg?impolicy=pqmed&imwidth=320" alt="">
+                        </div>
+                        <div>
+                            <p>10 gram 24 Karat Gold Coin</p>
+                            <p>600212ZCDRBS00</p>
+                            <p></p>
+                        </div>
+                    </div>
+                    <div id='show'>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>
+<script>
+    // user_name_at_login
+
+    let user_l = document.getElementById("user_l");
+    let user = JSON.parse(localStorage.getItem("user"));
+    if(user == null){
+        user_l.textContent = "Login";
+    } else {
+        user_l.textContent = (user.name +" " +"(Logout)");
+    }
+    
+    
+        let select = document.getElementById("currency")
+        let sel_cur = document.getElementById("sel_curr")
+        
+        sel_cur.style.display = "none";
+        select.onclick = () => {
+           if(sel_cur.style.display == "block"){
+               sel_cur.style.display = "none";
+           } else {
+               sel_cur.style.display = "block";
+               three_div.style.display = "none";
+           }
+        }
+
+        let gold_rate = document.getElementById("gold_rate")
+        let three_div = document.getElementById("three_div")
+        
+        three_div.style.display = "none";
+        gold_rate.onclick = () => {
+           if(three_div.style.display == "block"){
+            three_div.style.display = "none";
+           } else {
+            three_div.style.display = "block";
+            sel_cur.style.display = "none"
+           }
+        }
+        
+        
+    
+    
+    // document.getElementById("currency").onclick = () => {
+    //     let select = document.getElementById("sel_cur")
+    //     ind++;
+    //     select.style.display = "block"
+        // if(ind == 1){
+        //     select.style.display = "block";
+        //     ind = 0;
+        // }
+    //}
+</script>
+<script type="module">
+    import {products} from "./data/data.js"
+        console.log(products);
+
+    
+
+    if(localStorage.getItem("specific_category") == null){
+        localStorage.setItem("specific_category", JSON.stringify([]));
+    }
+
+    function push(){
+        let earrings = document.getElementById("earrings");
+        let pendants = document.getElementById("pendants");
+        let mangalsutra = document.getElementById("mangalsutra");
+        let necklace = document.getElementById("necklace");
+        let array = [];
+        earrings.onclick = () =>{
+            products.forEach(element => {
+            
+            //console.log(element.product);
+                if(element.product == "Earrings"){
+                    array.push(element);
+                }
+            });
+            localStorage.setItem("specific_category", JSON.stringify(array));
+            array = [];
+        }
+        pendants.onclick = () =>{
+            products.forEach(element => {
+            
+            //console.log(element.product);
+                if(element.product == "Pendant"){
+                    array.push(element);
+                }
+            });
+            localStorage.setItem("specific_category", JSON.stringify(array));
+            array = [];
+        }
+        mangalsutra.onclick = () =>{
+            products.forEach(element => {
+            
+            //console.log(element.product);
+                if(element.product == "Mangalsutra"){
+                    array.push(element);
+                }
+            });
+            localStorage.setItem("specific_category", JSON.stringify(array));
+            array = [];
+
+        }
+        necklace.onclick = () =>{
+            products.forEach(element => {
+            
+            //console.log(element.product);
+                if(element.product == "Necklace"){
+                    array.push(element);
+                }
+            });
+            localStorage.setItem("specific_category", JSON.stringify(array));
+            array = [];
+        }
+                
+        
+    }
+    push();
+
+
+
+    // script_of_mediaquery
+    
+    let menu = document.getElementById("menu");
+    let ham_drop = document.getElementById("ham_drop")
+    menu.onclick = () =>{
+        if(ham_drop.style.display == "none"){
+            ham_drop.style.display = "block";
+        } else {
+            ham_drop.style.display = "none";
+        }
+    }
+        
+
+    let search = document.getElementById("search");
+    let search_div = document.getElementById("search_div");
+    search.onclick = () =>{
+        if(search_div.style.display == "none"){
+            search_div.style.display = "block";
+        } else {
+            search_div.style.display = "none";
+        }
+    }
+
+    // debouncing
+
+    let timeId;
+
+    let input_box = document.getElementById('search_inp');
+
+    input_box.addEventListener('input', function(){
+        // search_box.style.display = 'block';
+        debounce(main, 1000)
+    });
+
+    function debounce(main, delay){
+        if(timeId){
+            clearTimeout(timeId);
+        }
+
+        timeId = setTimeout(function(){
+            main();
+        }, delay);
+    }
+
+    async function main(){
+
+        let data = await searchFunc();
+
+        console.log(data);
+
+        appendProducts(data);
+    }
+
+    function searchFunc(){
+    
+        let input = document.getElementById('search_inp').value;
+
+        let arr = [];
+
+        products.forEach((product) => {
+            if(product.name.toLowerCase().split(' ').includes(input.toLowerCase())){
+                arr.push(product);
+            }
+        })
+        
+        return arr;
+    }
+
+    function appendProducts(data){
+
+        let default_show = document.getElementById('popu_grid1');
+        let show = document.getElementById('show');
+
+        if(data.length > 0){
+            if(show.style.display == 'none'){
+                show.style.display = 'grid';
+            }
+            show.innerHTML = null;
+            default_show.style.display = 'none';
+
+            // <div>
+            //                 <img src="https://staticimg.titan.co.in/Tanishq/Catalog/600212ZCDRBS00_1.jpg?impolicy=pqmed&imwidth=320" alt="">
+            //             </div>
+            //             <div>
+            //                 <p>25 gram 24 Karat Gold Biscuit</p>
+            //                 <p>600212ZCDRBS00</p>
+            //                 <p></p>
+            //             </div>
+
+            for(let i = 0; i < 3; i++){
+
+                let product = data[i];
+
+                let img_div = document.createElement('div');
+                let img = document.createElement('img');
+                img.src = product.images[0];
+                img_div.append(img);
+
+                let content_div = document.createElement('div');
+
+                let name = document.createElement('p');
+                name.innerText = product.name;
+                
+                let type = document.createElement('p');
+                type.innerText = product.jewelleryType;
+                content_div.append(name, type);
+
+                show.append(img_div, content_div);
+            }
+                        
+        }
+        else{
+            show.style.display = 'none';
+            default_show.style.display = 'grid';
+        }
+
+
+    }
+
+</script>
