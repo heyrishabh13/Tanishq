@@ -220,6 +220,41 @@
         #payment-info{
             display: none;
         }
+        #con_pay{
+            margin-left: 50px;
+            width: 280px;
+            height: 50px;
+            border: none;
+            background-color: black;
+            color: white;
+        }
+        #card-info h3{
+            font-family: 'Raleway', sans-serif;
+            font-size: 14px;
+            letter-spacing: 2px;
+            text-align: center;
+        }
+        #card-info p:nth-child(2){
+            font-family: 'Roboto', serif;
+            font-size: 18px;
+            text-align: center;
+        }
+        #nautanki{
+            font-family: 'Roboto', serif;
+            font-size: 16px;
+            text-align: center;
+        }
+        #card-info div {
+            margin-left: 70px;
+        } 
+        #pay_order{
+            width: 280px;
+            height: 50px;
+            border: none;
+            background-color: black;
+            color: white;
+            margin-left: 150px;
+        }
       
     </style>
 </head>
@@ -402,7 +437,7 @@
                         </tbody>
                     </table> -->
 
-                    <button onclick="gotoPayment()">CONTINUE TO PAYMENT</button>
+                    <button onclick="gotoPayment()" id = "con_pay">CONTINUE TO PAYMENT</button>
 
                 </div>
                 
@@ -460,7 +495,8 @@
                     
                     <div id='card-info' class='border'>
                         <h3>CREDIT CARD / DEBIT CARD / NET BANKING / WALLET</h3>
-                        <h3>Use your Credit Cards, Debit Cards, Wallets or Netbanking</h3>
+                    
+                        <p>Use your Credit Cards, Debit Cards, Wallets or Netbanking</p>
                         
                         <div>
                             <img class='img-width' src="https://www.tanishq.co.in/wps/wcm/connect/tanishq/c2e24c1f-930d-453b-a829-58027175d6e8/Visa_Razorpay.svg?MOD=AJPERES&CACHEID=ROOTWORKSPACE.Z18_90IA1H80O0RT10QIMVSTFU3006-c2e24c1f-930d-453b-a829-58027175d6e8-nNmx7rM" alt="">
@@ -471,9 +507,10 @@
                             <img class='img-width' src="https://www.tanishq.co.in/wps/wcm/connect/tanishq/4393ecb6-0d51-4c8b-b4ea-f8b276a12ea1/Diners_Razorpay.svg?MOD=AJPERES&CACHEID=ROOTWORKSPACE.Z18_90IA1H80O0RT10QIMVSTFU3006-4393ecb6-0d51-4c8b-b4ea-f8b276a12ea1-nNmw5Lo" alt="">
                             <img class='img-width' src="https://www.tanishq.co.in/wps/wcm/connect/tanishq/95860dc1-e524-41b6-b912-91569181d58a/International_Razorpay.svg?MOD=AJPERES&CACHEID=ROOTWORKSPACE.Z18_90IA1H80O0RT10QIMVSTFU3006-95860dc1-e524-41b6-b912-91569181d58a-nOygmGy" alt="">
                         </div>
-                        <button>PAY FOR YOUR ORDER</button>
+                    </br>
+                        <button id = "pay_order">PAY FOR YOUR ORDER</button>
                         
-                        <p>By placing the order, you have read and agreed the <a href="#">Terms and Conditions</a> and <a href="#">Privacy Policy</a> of Tanishq.co.in</p>
+                        <p id = "nautanki">By placing the order, you have read and agreed the <a href="#">Terms and Conditions</a> and <a href="#">Privacy Policy</a> of Tanishq.co.in</p>
                     </div> 
                     
                     <div id='upi' class='border'>
