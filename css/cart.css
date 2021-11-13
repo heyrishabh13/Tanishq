@@ -7,6 +7,8 @@
     margin: 10px;
 }
 #parent > div {
+
+
     display: grid;
     grid-template-columns: 70% 20% 10%;
     margin : 10px;
@@ -42,6 +44,8 @@ button {
 #order_summray {
     /* border : 2px dashed red; */
     height : 500px;
+
+    
     position: sticky ;
     top :0px;
 }
