@@ -18,7 +18,7 @@
 `cd Tanishq-Web-Clone`
 
 ## Presentation :-
-[Demo of project]()
+[Demo of project]( https://drive.google.com/file/d/1fyjOn_4EHX_9haKZkBuoDklBB1eBnSn9/view?usp=sharing )
 
 ## Contributers :- 
 - #### [Rishabh Kamboj](https://www.linkedin.com/in/rishabh-kamboj-b76583113/)
@@ -65,4 +65,4 @@
 ![frontpage](https://user-images.githubusercontent.com/87421824/135976908-fd35150c-3215-48f7-b21d-b402e36371ec.png)
 
 ## For more details :- 
-[Blog]( )
+[Blog]( https://medium.com/@rishabhkamboj/cloning-of-e-commerce-website-tanishq-co-in-73b0f3c97fd9 )
