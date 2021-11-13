@@ -234,7 +234,7 @@ function showItems() {
     let parent = document.getElementById('display_cont')
 
     let cart = JSON.parse(localStorage.getItem("prod_for_cart"))
-    let sum = 0
+    var sum = 0
     cart.forEach(({newPrice}) =>{
       sum+= +newPrice
     })
@@ -245,6 +245,13 @@ function showItems() {
 
     let final_amt = document.getElementById('final_amt')
     final_amt.innerHTML = `₹${sum}`
+
+    let checkout = document.getElementById('btn-1')
+  checkout.onclick = () =>{
+    // console.log('12')
+    // console.log('sum:', sum)
+    localStorage.setItem('total',JSON.stringify(sum))
+  }
   }
   showTotal() 
 
