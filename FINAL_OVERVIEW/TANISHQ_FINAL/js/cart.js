@@ -15,89 +15,89 @@ navTop();
 debouncing();
 //created a dummy data for ls
 
-let dummy_data = [
-  {
-    name: 'Opulent Gold Jhumka Style Earrings',
-    newPrice: 14710,
-    oldPrice: 14795,
-    images: [
-      'https://staticimg.titan.co.in/Tanishq/Catalog/511193PAJAAA00_1.jpg?impolicy=pqmed&imwidth=640',
-    ],
-    purity: '22.00',
-    jewelleryType: 'Plain Gold Jewellery',
-    occasion: 'Casual Wear',
-    product: 'Pendant',
-    size : "Chain Size: 53 mm",
-    weight : "7.639g",
-  },
-  {
-    name: 'Traditional 22 Karat Gold Half Moon Pendant',
-    newPrice: '39787',
-    oldPrice: '40221',
-    images: [
-      'https://staticimg.titan.co.in/Tanishq/Catalog/511194PSHAAA00_1.jpg?impolicy=pqmed&imwidth=640',
-      'https://staticimg.titan.co.in/Tanishq/Catalog/511194PSHAAA00_2.jpg?impolicy=pqmed&imwidth=640',
-      'https://staticimg.titan.co.in/Tanishq/Catalog/511194PSHAAA00_3.jpg?impolicy=pqmed&imwidth=640',
-    ],
-    purity: '22.00',
-    jewelleryType: 'Plain Gold Jewellery',
-    occasion: 'Casual Wear',
-    product: 'Pendant',
-    size : "Chain Size: 18.23 cm",
-    weight : "7.639g",
-  },
-  {
-    name: "Charming Ruby Pendant With Chain",
-    newPrice: 72948,
-    oldPrice: 73603,
-    images: ["https://staticimg.titan.co.in/Tanishq/Catalog/513318GDJAB18_1.jpg?impolicy=pqmed&imwidth=640"],
-    purity: "22.00",
-    jewelleryType: "Jewellery with Gemstones",
-    occasion: "Traditional and Ethnic Wear",
-    product:"Necklace"
-},
-{
-    name: "Elegant Emerald And Ruby Pendant With Chain",
-    newPrice: 53994,
-    oldPrice:  54468,
-    images: ["https://staticimg.titan.co.in/Tanishq/Catalog/513318GEBAA40_1.jpg?impolicy=pqmed&imwidth=640"],
-    purity: "22.00",
-    jewelleryType: "Jewellery with Gemstones",
-    occasion: "Traditional and Ethnic Wear",
-    product:"Necklace"
-},
-{
-    name: "Filigree Work Gold Neckwear",
-    newPrice: 137055,
-    oldPrice: 140164,
-    images: ["https://staticimg.titan.co.in/Tanishq/Catalog/513220NPLAA00_1.jpg?impolicy=pqmed&imwidth=640"],
-    purity: "22.00",
-    jewelleryType: "Plain Gold Jewellery",
-    occasion: "Traditional and Ethnic Wear",
-    product:"Necklace"
-},
-{
-    name: "Glorious Detailed Gold Haaram",
-    newPrice: 306930,
-    oldPrice: 318408,
-    images: ["https://staticimg.titan.co.in/Tanishq/Catalog/513719EDH1AAP1_1.jpg?impolicy=pqmed&imwidth=640"],
-    purity: "22.00",
-    jewelleryType: "Plain Jewellery with Stones",
-    occasion: "Traditional and Ethnic Wear",
-    product:"Necklace"
-},
-{
-    name: "Traditional Gold Leaf Pattern Haaram",
-    newPrice: 303080,
-    oldPrice:314092 ,
-    images: ["https://staticimg.titan.co.in/Tanishq/Catalog/513719EEV1AA00_1.jpg?impolicy=pqmed&imwidth=640"],
-    purity: "22.00",
-    jewelleryType: "Plain Gold Jewellery",
-    occasion: "Traditional and Ethnic Wear",
-    product:"Necklace"
-},
-]
-localStorage.setItem('prod_for_cart',JSON.stringify(dummy_data))
+// let dummy_data = [
+//   {
+//     name: 'Opulent Gold Jhumka Style Earrings',
+//     newPrice: 14710,
+//     oldPrice: 14795,
+//     images: [
+//       'https://staticimg.titan.co.in/Tanishq/Catalog/511193PAJAAA00_1.jpg?impolicy=pqmed&imwidth=640',
+//     ],
+//     purity: '22.00',
+//     jewelleryType: 'Plain Gold Jewellery',
+//     occasion: 'Casual Wear',
+//     product: 'Pendant',
+//     size : "Chain Size: 53 mm",
+//     weight : "7.639g",
+//   },
+//   {
+//     name: 'Traditional 22 Karat Gold Half Moon Pendant',
+//     newPrice: '39787',
+//     oldPrice: '40221',
+//     images: [
+//       'https://staticimg.titan.co.in/Tanishq/Catalog/511194PSHAAA00_1.jpg?impolicy=pqmed&imwidth=640',
+//       'https://staticimg.titan.co.in/Tanishq/Catalog/511194PSHAAA00_2.jpg?impolicy=pqmed&imwidth=640',
+//       'https://staticimg.titan.co.in/Tanishq/Catalog/511194PSHAAA00_3.jpg?impolicy=pqmed&imwidth=640',
+//     ],
+//     purity: '22.00',
+//     jewelleryType: 'Plain Gold Jewellery',
+//     occasion: 'Casual Wear',
+//     product: 'Pendant',
+//     size : "Chain Size: 18.23 cm",
+//     weight : "7.639g",
+//   },
+//   {
+//     name: "Charming Ruby Pendant With Chain",
+//     newPrice: 72948,
+//     oldPrice: 73603,
+//     images: ["https://staticimg.titan.co.in/Tanishq/Catalog/513318GDJAB18_1.jpg?impolicy=pqmed&imwidth=640"],
+//     purity: "22.00",
+//     jewelleryType: "Jewellery with Gemstones",
+//     occasion: "Traditional and Ethnic Wear",
+//     product:"Necklace"
+// },
+// {
+//     name: "Elegant Emerald And Ruby Pendant With Chain",
+//     newPrice: 53994,
+//     oldPrice:  54468,
+//     images: ["https://staticimg.titan.co.in/Tanishq/Catalog/513318GEBAA40_1.jpg?impolicy=pqmed&imwidth=640"],
+//     purity: "22.00",
+//     jewelleryType: "Jewellery with Gemstones",
+//     occasion: "Traditional and Ethnic Wear",
+//     product:"Necklace"
+// },
+// {
+//     name: "Filigree Work Gold Neckwear",
+//     newPrice: 137055,
+//     oldPrice: 140164,
+//     images: ["https://staticimg.titan.co.in/Tanishq/Catalog/513220NPLAA00_1.jpg?impolicy=pqmed&imwidth=640"],
+//     purity: "22.00",
+//     jewelleryType: "Plain Gold Jewellery",
+//     occasion: "Traditional and Ethnic Wear",
+//     product:"Necklace"
+// },
+// {
+//     name: "Glorious Detailed Gold Haaram",
+//     newPrice: 306930,
+//     oldPrice: 318408,
+//     images: ["https://staticimg.titan.co.in/Tanishq/Catalog/513719EDH1AAP1_1.jpg?impolicy=pqmed&imwidth=640"],
+//     purity: "22.00",
+//     jewelleryType: "Plain Jewellery with Stones",
+//     occasion: "Traditional and Ethnic Wear",
+//     product:"Necklace"
+// },
+// {
+//     name: "Traditional Gold Leaf Pattern Haaram",
+//     newPrice: 303080,
+//     oldPrice:314092 ,
+//     images: ["https://staticimg.titan.co.in/Tanishq/Catalog/513719EEV1AA00_1.jpg?impolicy=pqmed&imwidth=640"],
+//     purity: "22.00",
+//     jewelleryType: "Plain Gold Jewellery",
+//     occasion: "Traditional and Ethnic Wear",
+//     product:"Necklace"
+// },
+// ]
+// localStorage.setItem('prod_for_cart',JSON.stringify(dummy_data))
 
 
 
