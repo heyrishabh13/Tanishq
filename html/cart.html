@@ -4,32 +4,32 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Cart Page</title>
-    <link rel="stylesheet" href="../css/cart.css" />
+    <title>Cart</title>
+ 
+    <link rel="stylesheet" href="/css/navbar.css" />
+    <link rel="stylesheet" href="/css/footer.css">
+    <link rel="stylesheet" href="/css/cart.css" />
+    <link rel="shortcut icon" href="https://www.tanishq.co.in/favicon.png" type="image/png">
 
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&family=Raleway:wght@200&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="../css/footer.css">
-    <link rel="stylesheet" href="../css/navbar.css">
-    <link rel="shortcut icon" href="https://www.tanishq.co.in/favicon.png" type="image/png">
-    <!-- <link rel="stylesheet" href="css/footer.css"> -->
   </head>
   <body>
     <nav></nav>
     <div id="cart_main_div">
       <div id="quick_nav">
-        <a href="index.html"><span>Home</span></a>
+        <a href="/index.html"><span id='inside_quick_nav'>Home</span></a>
         >
         <span>Cart</span>
       </div>
       <div id="cart">
         <div id="empty_cart">
-          <h1>Cart</h1>
-          <h2>YOUR CART IS EMPTY.</h2>
-           <a href="index.html"><button>Continue Shopping</button></a>
+          <div>CART</div>
+          <div>YOUR CART IS EMPTY.</div>
+           <a href="/index.html"><button id="empty-cart-btn">Continue Shopping</button></a>
         </div>
        <div id="not_empty_cart">
            <div id="count"></div>
@@ -60,19 +60,19 @@
                 <tbody>
                   <tr>
                     <td>ORDER TOTAL (2 ITEMS) </td>
-                    <td id="amt"></td>
+                    <td id="amt" class='bold' ></td>
                   </tr>
                   <tr>
                     <td>Discount</td>
-                    <td>₹0</td>
+                    <td class='bold' >₹0</td>
                   </tr>
                   <tr>
-                    <td>SHIPPING </td>
-                    <td>FREE</td>
+                    <td calss="font-size">SHIPPING </td>
+                    <td class='bold' >FREE</td>
                   </tr>
                   <tr>
-                    <td>YOU PAY</td>
-                    <td id='final_amt'></td>
+                    <td class="extra-bold" >YOU PAY</td>
+                    <td id='final_amt' class="extra-bold"></td>
                   </tr>
                 </tbody>
                </table>
@@ -80,8 +80,8 @@
 
               </div>
           <div id="checkout_btns">
-                <a href="../ckeckout.html"><button>PROCEED TO CHECKOUT</button></a>
-              <a href="../index.html"><button>CONTINUE SHOPPING</button></a>
+                <a href="/ckeckout.html"><button id="btn-1" >PROCEED TO CHECKOUT</button></a>
+              <a href="/index.html"><button  id="btn-2" >CONTINUE SHOPPING</button></a>
           </div>
             </div>
         </div>
