@@ -97,7 +97,7 @@ let dummy_data = [
     product:"Necklace"
 },
 ]
-localStorage.setItem('prod_for_cart',JSON.stringify(dummy_data))
+// localStorage.setItem('prod_for_cart',JSON.stringify(dummy_data))
 
 
 

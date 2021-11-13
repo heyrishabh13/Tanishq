@@ -9,6 +9,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&family=Raleway:wght@200&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/css/cart.css" />
     <style>
         #page_layout{
             width: 100%;
@@ -213,44 +214,7 @@
         #payment-info{
             display: none;
         }
-        #items_details {
-            border : 1px solid green;
-            width : 60%;
-        }
-        #headings {
-            display: grid;
-            grid-template-columns: 70% 20% 10%; 
-            border : 2px dashed black ;
-            margin: 10px;
-            font-size: 18px;
-        }
-        #parent > div {
-            display: grid;
-            grid-template-columns: 70% 20% 10%;
-            border : 2px dashed black ;
-            margin : 10px;
-        }
-        #parent > div > div {
-            border : 1px solid green;
-            margin-top : 10px;
-        }
-        .image {
-            width : 160px;
-        }
-        .name {
-            font-size : 18px;
-            font-weight : 800;
-        }
-        .quantity {
-            color: black;
-            display : inline-block;
-            border : 1px solid black;
-            /* width : 15px;
-        /*   height : 30px;  */
-            padding: 5px 10px; 
-            /* padding-left : 10px; */
-            font-size: 18px;
-        }
+      
     </style>
 </head>
 <body>
@@ -639,6 +603,14 @@
     let remove_btn = document.createElement('button')
     remove_btn.innerHTML = 'Remove'
 
+    remove_btn.setAttribute('class','remove_btn')
+    remove_btn.innerHTML = 'Remove'
+    remove_btn.onmouseover = ()=>{
+      remove_btn.setAttribute('class','remove_btn_hover')
+    }
+    remove_btn.onmouseleave = ()=>{
+      remove_btn.setAttribute('class','remove_btn')
+    }
     remove_btn.onclick =  () =>{
       setTimeout(()=>{
         removeItem(name,main_div,parent)
