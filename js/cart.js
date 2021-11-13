@@ -14,7 +14,7 @@ navTop();
 
 debouncing();
 //created a dummy data for ls
-/*
+
 let dummy_data = [
   {
     name: 'Opulent Gold Jhumka Style Earrings',
@@ -97,10 +97,10 @@ let dummy_data = [
     product:"Necklace"
 },
 ]
-localStorage.setItem('cart',JSON.stringify(dummy_data))
+localStorage.setItem('prod_for_cart',JSON.stringify(dummy_data))
 
 
-*/
+
 let count = document.getElementById('count')
 
 let cart = JSON.parse(localStorage.getItem("prod_for_cart"))
