@@ -272,7 +272,7 @@
                     <h2>SIGNED IN AS</h2>
                 </div>
                 <div>
-                    <h2>wattamwargaj@gmail.com</h2>
+                    <h2 id = "billie">wattamwargaj@gmail.com</h2>
                 </div>
             </div>
 
@@ -525,6 +525,12 @@
 </body>
 </html>
 <script>
+
+    
+
+
+
+
     let stage2 = document.getElementById("oncl");
     let disp1 = document.getElementById("disp1");
     let disp2 = document.getElementById("disp2");
@@ -551,7 +557,8 @@
     let email_ch = document.getElementById("email_ch")
     let username_ch = document.getElementById("username_ch")
     let review_disp2 = document.getElementById('review_disp2');
-
+    let billie = document.getElementById("billie");
+    
 
 
     let user = JSON.parse(localStorage.getItem("user"));
@@ -560,7 +567,7 @@
     mob_ch.textContent = user.mobile;
     email_ch.textContent = user.email;
     username_ch.textContent = user.username;
-
+    billie.textContent = user.email;
 
     function infoDone(){
         let count_mark = document.getElementById('2nd_count_mark');
