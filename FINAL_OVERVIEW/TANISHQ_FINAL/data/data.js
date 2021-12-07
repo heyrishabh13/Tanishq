@@ -248,6 +248,155 @@ const products = [
         occasion: "Traditional and Ethnic Wear",
         product: "Earrings"
     },
+    //mangalsutra data below
+    // p-1
+    {
+        name: "Ethereal Floral Diamond Mangalsutra",
+        newPrice: 41771,
+        oldPrice: 43969,
+        images: ['https://staticimg.titan.co.in/Tanishq/Catalog/502999YCNAA32_1.jpg?imwidth=640','https://staticimg.titan.co.in/Tanishq/Catalog/502999YCNAA32_2.jpg?imwidth=640','https://staticimg.titan.co.in/Tanishq/Catalog/502999YCNAA32_3.jpg?imwidth=640'],
+        purity: "18.00",
+        jewelleryType: "Diamond Jewellery",
+        occasion: "Traditional and Ethnic Wear",
+        product: "Mangalsutra"
+    },
+    //p-2
+    {
+        name: "Tanishq Mangalam 18 Karat Yellow Gold Diamond Mangalsutra",
+        newPrice: 44345,
+        oldPrice: 46679,
+        images: ['https://staticimg.titan.co.in/Tanishq/Catalog/503117YGPAA32_1.jpg?imwidth=640'],
+        purity: "18.00",
+        jewelleryType: "Diamond Jewellery",
+        occasion: "Traditional and Ethnic Wear",
+        product: "Mangalsutra"
+    },
+
+//p-3
+    {
+        name: "Floral Bliss Diamond Mangalsutra",
+        newPrice: 75003,
+        oldPrice: 78950,
+        images: ['https://staticimg.titan.co.in/Tanishq/Catalog/503920YLAAA32_1.jpg?impolicy=pqmed&imwidth=640','https://staticimg.titan.co.in/Tanishq/Catalog/503920YLAAA32_2.jpg?impolicy=pqmed&imwidth=640','https://staticimg.titan.co.in/Tanishq/Catalog/503920YLAAA32_3.jpg?impolicy=pqmed&imwidth=640'],
+        purity: "18.00",
+        jewelleryType: "Diamond Jewellery",
+        occasion: "Traditional and Ethnic Wear",
+        product: "Mangalsutra"
+    },
+
+
+//p-4
+    {
+        name: "Leaf Inspired Diamond Mangalsutra",
+        newPrice: 80561,
+        oldPrice: 84801,
+        images: ['https://staticimg.titan.co.in/Tanishq/Catalog/503920YKZAA32_1.jpg?impolicy=pqmed&imwidth=640','https://staticimg.titan.co.in/Tanishq/Catalog/503920YKZAA32_2.jpg?impolicy=pqmed&imwidth=640','https://staticimg.titan.co.in/Tanishq/Catalog/503920YKZAA32_3.jpg?impolicy=pqmed&imwidth=640'],
+        purity: "18.00",
+        jewelleryType: "Diamond Jewellery",
+        occasion: "Traditional and Ethnic Wear",
+        product: "Mangalsutra"
+    },
+
+
+//p-5
+    {
+        name: "Dainty Artistic Diamond Mangalsutra",
+        newPrice: 79230,
+        oldPrice: 83400,
+        images: ['https://staticimg.titan.co.in/Tanishq/Catalog/503920YLLAA32_1.jpg?impolicy=pqmed&imwidth=640','https://staticimg.titan.co.in/Tanishq/Catalog/503920YLLAA32_2.jpg?impolicy=pqmed&imwidth=640','https://staticimg.titan.co.in/Tanishq/Catalog/503920YLLAA32_3.jpg?impolicy=pqmed&imwidth=640'],
+        purity: "18.00",
+        jewelleryType: "Diamond Jewellery",
+        occasion: "Traditional and Ethnic Wear",
+        product: "Mangalsutra"
+    },
+
+
+//p-6
+    {
+        name: "Sparkling Diamond Mangalsutra",
+        newPrice: 85774,
+        oldPrice: 90289,
+        images: ['https://staticimg.titan.co.in/Tanishq/Catalog/502015YJIAA32_1.jpg','https://staticimg.titan.co.in/Tanishq/Catalog/502015YJIAA32_2.jpg'],
+        purity: "18.00",
+        jewelleryType: "Diamond Jewellery",
+        occasion: "Traditional and Ethnic Wear",
+        product: "Mangalsutra"
+    },
+
+
+//p-7
+    {
+        name: "Charming Diamond Mangalsutra",
+        newPrice: 94698,
+        oldPrice: 99682,
+        images: ['https://staticimg.titan.co.in/Tanishq/Catalog/502015YLXAA32_1.jpg','https://staticimg.titan.co.in/Tanishq/Catalog/502015YLXAA32_2.jpg','https://staticimg.titan.co.in/Tanishq/Catalog/502015YLXAA32_3.jpg'],
+        purity: "18.00",
+        jewelleryType: "Diamond Jewellery",
+        occasion: "Traditional and Ethnic Wear",
+        product: "Mangalsutra"
+    },
+
+
+//p-8
+    {
+        name: "Mesmerising Diamond Mangalsutra",
+        newPrice: 93340,
+        oldPrice: 102571,
+        images: ['https://staticimg.titan.co.in/Tanishq/Catalog/502614YFHAA32_1.jpg','https://staticimg.titan.co.in/Tanishq/Catalog/502614YFHAA32_2.jpg','https://staticimg.titan.co.in/Tanishq/Catalog/502614YFHAA32_3.jpg'],
+        purity: "18.00",
+        jewelleryType: "Diamond Jewellery",
+        occasion: "Traditional and Ethnic Wear",
+        product: "Mangalsutra"
+    },
+
+
+//p-9
+    {
+        name: "Elegant Teardrop Diamond Mangalsutra",
+        newPrice: 54112,
+        oldPrice: 56960,
+        images: ['https://staticimg.titan.co.in/Tanishq/Catalog/502999YCEAA32_1.jpg','https://staticimg.titan.co.in/Tanishq/Catalog/502999YCEAA32_2.jpg','https://staticimg.titan.co.in/Tanishq/Catalog/502999YCEAA32_3.jpg'],
+        purity: "18.00",
+        jewelleryType: "Diamond Jewellery",
+        occasion: "Traditional and Ethnic Wear",
+        product: "Mangalsutra"
+    },
+
+
+//p-10
+    {
+        name: "Exquisite Floral Diamond Mangalsutra",
+        newPrice: 63941,
+        oldPrice: 67307,
+        images: ['https://staticimg.titan.co.in/Tanishq/Catalog/502999YCLAA32_1.jpg','https://staticimg.titan.co.in/Tanishq/Catalog/502999YCLAA32_2.jpg','https://staticimg.titan.co.in/Tanishq/Catalog/502999YCLAA32_3.jpg'],
+        purity: "18.00",
+        jewelleryType: "Diamond Jewellery",
+        occasion: "Traditional and Ethnic Wear",
+        product: "Mangalsutra"
+    },
+
+    {
+        name: "Radiant Floral Diamond Mangalsutra",
+        newPrice: 62968,
+        oldPrice: 66282,
+        images: ['https://staticimg.titan.co.in/Tanishq/Catalog/502999YCWAA32_1.jpg','https://staticimg.titan.co.in/Tanishq/Catalog/502999YCWAA32_2.jpg','https://staticimg.titan.co.in/Tanishq/Catalog/502999YCWAA32_3.jpg'],
+        purity: "18.00",
+        jewelleryType: "Diamond Jewellery",
+        occasion: "Traditional and Ethnic Wear",
+        product: "Mangalsutra"
+    },
+
+    {
+        name: "18 Karat Gold And Diamond Mangalsutra",
+        newPrice: 68588,
+        oldPrice: 72198,
+        images: ['https://staticimg.titan.co.in/Tanishq/Catalog/503416YGZAA32_1.jpg','https://staticimg.titan.co.in/Tanishq/Catalog/503416YGZAA32_2.jpg','https://staticimg.titan.co.in/Tanishq/Catalog/503416YGZAA32_3.jpg'],
+        purity: "18.00",
+        jewelleryType: "Diamond Jewellery",
+        occasion: "Traditional and Ethnic Wear",
+        product: "Mangalsutra"
+    },
+
 
 
 

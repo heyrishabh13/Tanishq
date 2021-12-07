@@ -1,7 +1,13 @@
 #layout{
+    
     width: 100%;
+    margin-top: 100px;
     /* border-bottom: 3px solid #f2f2f2; */
 }
+
+/* #layout > div:nth-child(1){
+    margin-top: 100px;
+} */
 .mySlides {
     display:none;
 }
@@ -178,4 +184,33 @@ nav{
     position: sticky;
     top: 0px;
     background-color: white;
+}
+@media only screen and (max-width:800px){
+    #new_div{
+        overflow-x: scroll; 
+    }
+    #shop_img{
+        width: 100%;
+        grid: none;
+    }
+    #left{
+        width: 100%;
+    }
+    #right{
+        display: grid;
+        grid-template-columns: 49% 49%;
+        grid-template-rows: 49% 49%;
+    }
+    #diff_jwels1{
+        display: grid;
+        grid-template-columns: 40% 40%;
+        grid-template-rows: 40% 40% 40%;
+    }
+    #diff_jwels2{
+        display: grid;
+        grid-template-columns: 240px;
+        grid-template-rows: 45px;
+        margin-top: 10px;
+        margin-left: 415px;
+    }
 }

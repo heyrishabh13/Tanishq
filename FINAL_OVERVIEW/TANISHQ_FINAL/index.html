@@ -4,221 +4,22 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&family=Raleway:wght@200&display=swap" rel="stylesheet">
-    <title>Document</title>
-    <style>
-        #layout{
-            width: 100%;
-            /* border-bottom: 3px solid #f2f2f2; */
-        }
-        .mySlides {
-            display:none;
-        }
-        #slide_div{
-            max-width:100%;
-            margin: auto;
-        }
-        #slide_div img{
-            width: 100%;
-        }
-        #category_div{
-            width: 100%;
-            height: 380px;
-            border-bottom: 3px solid #eeeeee;
-            margin: auto;
-        }
-        #category_div .category_para .para{
-            font-size: 38px;
-            font-weight: 400;
-            font-family: "Playfair Display", sans-serif;
-            /* margin: auto; */
-            text-align: center;
-        }
-        #category_div #category_img{
-            display: flex;
-            width: 90%;
-            overflow-x: hidden;
-            margin: auto;
-        }
-        #category_div #category_img img{
-            width: 17%;
-        }
-        #button_layout{
-            display: flex;
-            margin-left: 47%;
-        }
-        #slide_num{
-            font-size: 23px;
-            font-weight: 400;
-            font-family: "Playfair Display", sans-serif;
-        }
-        #slideLeft{
-            border: none;
-            font-size: 25px;
-            font-weight:400;
-            background-color: white;
-            
-        }
-        #slideRight{
-            border: none;
-            font-size: 24px;
-            background-color: white;
-            font-weight:400;
-        }
-        #discount_div{
-            width: 100%;
-            /* border: 1px solid black; */
-        }
-        #off{
-            font-size: 38px;
-            font-family: "Playfair Display";
-            font-weight:600;
-            text-align: center;
-        }
-        #description{
-            font-size: 12px;
-            font-family: "Raleway", sans-serif;
-            font-weight:600;
-            text-align: center;
-             /* line-height: -50px;  */
-        }
-        #decoration_off{
-            line-height: 18px;
-        }
-        #diff_jwels1{
-            margin-left: 20%;
-            display: grid;
-            grid-template-columns: 14% 14% 14% 14% 14% ;
-            grid-template-rows: 170%;
-            gap: 25px;
-        }
-        #diff_jwels1 button{
-            border-radius: 5px;
-            border: none;
-            font-size: 80%;
-            background-color: #b0a16e;
-            color: white;
-            font-weight: 800;
-        }
-        #diff_jwels2 {
-            margin-left: 46.2%;
-            display: grid;
-            grid-template-columns: 21% ;
-            grid-template-rows: 35px;
-            gap: 25px;
-        }
-        #diff_jwels2 button{
-            border-radius: 5px;
-            border: none;
-            background-color: #b0a16e;
-            color: white;
-            font-weight: 800;
-        }
-        #shop_img{
-            display: grid;
-            grid-template-columns: 63% 36%;
-            grid-template-rows: 400px;
-            gap: 10px;
-        }
-        #left img{
-            width: 100%;
-            height: 100%;
-        }
-        #right{
-            display: grid; 
-            grid-template-columns: 49% 49%;
-            grid-template-rows: 49% 49%;
-            gap: 10px; 
-            /* border: 2px solid black; */
-        }
-        #right img{
-            width: 100%;
-            height: 100%;
-        }
-        #new_layout{
-            width: 90%;
-            margin: auto;
-        }
-        #new_text{
-            font-size: 38px;
-            font-family: "Playfair Display", sans-serif;
-            font-weight:400;
-            text-align: center;
-             /* line-height: -50px;  */
-        }
-        #new_div{
-            display: grid;
-            grid-template-columns: 30% 30% 30%;
-            grid-template-rows: 100%;
-            gap: 3%;
-            /* border: 1px solid black; */
-        }
-        #new_div img{
-            width: 100%;
-            height: 100%;
-            margin-left: 50px;
-        }
-        #utsaah_vid{
-            margin: auto;
-            width: 90%;
-            /* border: 4px solid black; */
-        }
-        #mithila{
-            width: 100%;
-        }
-        #mithila img{
-            width: 100%;
-        }
-        /* #last_layout{
-            width: 90%;
-            margin: auto;
-        } */
-        #last_div{
-            display: grid;
-            grid-template-columns: 32% 32% 32%;
-            grid-template-rows: 100px;
-            gap: 20px;
-            background-color: #f3f0e9;
-            text-align: center;
-            /* border: 1px solid black; */
-        }
-        @media only screen and (max-width:800px){
-            #new_div{
-                overflow-x: scroll; 
-            }
-            #shop_img{
-                width: 100%;
-                grid: none;
-            }
-            #left{
-                width: 100%;
-            }
-            #right{
-                display: grid;
-                grid-template-columns: 49% 49%;
-                grid-template-rows: 49% 49%;
-            }
-            #diff_jwels1{
-                display: grid;
-                grid-template-columns: 40% 40%;
-                grid-template-rows: 40% 40% 40%;
-            }
-            #diff_jwels2{
-                display: grid;
-                grid-template-columns: 240px;
-                grid-template-rows: 45px;
-                margin-top: 10px;
-                margin-left: 415px;
-            }
-        }
-       
-      
-    </style>
+    <title>Tanishq | Online Gold & Diamond Jewellery Shopping Store</title>
+    <link rel="stylesheet" href="css/footer.css">
+    <link rel="stylesheet" href="css/home.css">
+    <link rel="stylesheet" href="css/navbar.css">
+    <link rel="shortcut icon" href="https://www.tanishq.co.in/favicon.png" type="image/png">
 </head>
 <body>
+    <nav>
+
+    </nav>
+
     <div id = "layout">
 
         <!-- slidshow -->
@@ -376,36 +177,12 @@
                 </div>
             </div>
     </div>
+
+    <footer>
+
+    </footer>
     
 </body>
 </html>
 
-
-<script>
-    var myIndex = 0;
-    carousel();
-    
-    function carousel() {
-      var i;
-      var x = document.getElementsByClassName("mySlides");
-      for (i = 0; i < x.length; i++) {
-        x[i].style.display = "none";  
-      }
-      myIndex++;
-      if (myIndex > x.length) {myIndex = 1}    
-      x[myIndex-1].style.display = "block";  
-      setTimeout(carousel, 2000); // Change image every 2 seconds
-    }
-
-    const buttonRight = document.getElementById('slideRight');
-    const buttonLeft = document.getElementById('slideLeft');
-
-    buttonRight.onclick = function() {
-       document.getElementById('category_img').scrollLeft += 330;
-       document.getElementById('slide_num').textContent = "2 / 2"
-    };
-    buttonLeft.onclick = function() {
-       document.getElementById('category_img').scrollLeft -= 330;
-       document.getElementById('slide_num').textContent = "1 / 2"
-    };
-</script>
+<script type="module" src="js/home.js"></script>
